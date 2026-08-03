@@ -1,8 +1,815 @@
 {
  "days": [
   {
+   "date": "2025-08-04",
+   "total_usd": 3224590,
+   "tokens": {
+    "BRLA": {
+     "usd": 3224590
+    }
+   }
+  },
+  {
+   "date": "2025-08-11",
+   "total_usd": 4212638,
+   "tokens": {
+    "BRLA": {
+     "usd": 4212638
+    }
+   }
+  },
+  {
+   "date": "2025-08-18",
+   "total_usd": 5315386,
+   "tokens": {
+    "BRLA": {
+     "usd": 5315386
+    }
+   }
+  },
+  {
+   "date": "2025-08-25",
+   "total_usd": 9276679,
+   "tokens": {
+    "BRLA": {
+     "usd": 9276679
+    }
+   }
+  },
+  {
+   "date": "2025-09-01",
+   "total_usd": 3380602,
+   "tokens": {
+    "BRLA": {
+     "usd": 3380602
+    }
+   }
+  },
+  {
+   "date": "2025-09-08",
+   "total_usd": 13995387,
+   "tokens": {
+    "BRLA": {
+     "usd": 13995387
+    }
+   }
+  },
+  {
+   "date": "2025-09-15",
+   "total_usd": 16720224,
+   "tokens": {
+    "BRLA": {
+     "usd": 16720224
+    }
+   }
+  },
+  {
+   "date": "2025-09-22",
+   "total_usd": 5581709,
+   "tokens": {
+    "BRLA": {
+     "usd": 5581709
+    }
+   }
+  },
+  {
+   "date": "2025-09-29",
+   "total_usd": 21442645,
+   "tokens": {
+    "BRLA": {
+     "usd": 21442645
+    }
+   }
+  },
+  {
+   "date": "2025-10-06",
+   "total_usd": 19790276,
+   "tokens": {
+    "BRLA": {
+     "usd": 19790276
+    }
+   }
+  },
+  {
+   "date": "2025-10-13",
+   "total_usd": 34816948,
+   "tokens": {
+    "BRLA": {
+     "usd": 34816948
+    }
+   }
+  },
+  {
+   "date": "2025-10-20",
+   "total_usd": 3732749,
+   "tokens": {
+    "BRLA": {
+     "usd": 3732749
+    }
+   }
+  },
+  {
+   "date": "2025-10-27",
+   "total_usd": 4246655,
+   "tokens": {
+    "BRLA": {
+     "usd": 4246655
+    }
+   }
+  },
+  {
+   "date": "2025-11-03",
+   "total_usd": 4066601,
+   "tokens": {
+    "BRLA": {
+     "usd": 4066601
+    }
+   }
+  },
+  {
+   "date": "2025-11-10",
+   "total_usd": 5058424,
+   "tokens": {
+    "BRLA": {
+     "usd": 5058424
+    }
+   }
+  },
+  {
+   "date": "2025-11-17",
+   "total_usd": 3836334,
+   "tokens": {
+    "BRLA": {
+     "usd": 3836334
+    }
+   }
+  },
+  {
+   "date": "2025-11-24",
+   "total_usd": 3584004,
+   "tokens": {
+    "BRLA": {
+     "usd": 3584004
+    }
+   }
+  },
+  {
+   "date": "2025-12-01",
+   "total_usd": 3591506,
+   "tokens": {
+    "BRLA": {
+     "usd": 3591506
+    }
+   }
+  },
+  {
+   "date": "2025-12-08",
+   "total_usd": 5047947,
+   "tokens": {
+    "BRLA": {
+     "usd": 3641729
+    },
+    "BRL1": {
+     "usd": 1406218
+    }
+   }
+  },
+  {
+   "date": "2025-12-15",
+   "total_usd": 4972940,
+   "tokens": {
+    "BRLA": {
+     "usd": 3561320
+    },
+    "BRL1": {
+     "usd": 1411620
+    }
+   }
+  },
+  {
+   "date": "2025-12-22",
+   "total_usd": 5318865,
+   "tokens": {
+    "BRLA": {
+     "usd": 4004314
+    },
+    "BRL1": {
+     "usd": 1314551
+    }
+   }
+  },
+  {
+   "date": "2025-12-29",
+   "total_usd": 5016705,
+   "tokens": {
+    "BRLA": {
+     "usd": 3703290
+    },
+    "BRL1": {
+     "usd": 1313415
+    }
+   }
+  },
+  {
+   "date": "2026-01-05",
+   "total_usd": 4766046,
+   "tokens": {
+    "BRLA": {
+     "usd": 3532769
+    },
+    "BRL1": {
+     "usd": 1233277
+    }
+   }
+  },
+  {
+   "date": "2026-01-12",
+   "total_usd": 7543987,
+   "tokens": {
+    "BRLA": {
+     "usd": 6126591
+    },
+    "BRL1": {
+     "usd": 1171436
+    },
+    "cREAL": {
+     "usd": 245960
+    }
+   }
+  },
+  {
+   "date": "2026-01-19",
+   "total_usd": 92984132,
+   "tokens": {
+    "BRLA": {
+     "usd": 4246163
+    },
+    "BRL1": {
+     "usd": 1170964
+    },
+    "cREAL": {
+     "usd": 228691
+    },
+    "BRZ": {
+     "usd": 87338314
+    }
+   }
+  },
+  {
+   "date": "2026-01-26",
+   "total_usd": 93038504,
+   "tokens": {
+    "BRLA": {
+     "usd": 3670781
+    },
+    "BRL1": {
+     "usd": 1188252
+    },
+    "cREAL": {
+     "usd": 224029
+    },
+    "BRZ": {
+     "usd": 87955442
+    }
+   }
+  },
+  {
+   "date": "2026-02-02",
+   "total_usd": 99634832,
+   "tokens": {
+    "BRLA": {
+     "usd": 10316573
+    },
+    "BRL1": {
+     "usd": 1154946
+    },
+    "cREAL": {
+     "usd": 214677
+    },
+    "BRZ": {
+     "usd": 87948636
+    }
+   }
+  },
+  {
+   "date": "2026-02-09",
+   "total_usd": 98531229,
+   "tokens": {
+    "BRLA": {
+     "usd": 8188356
+    },
+    "BRL1": {
+     "usd": 1236341
+    },
+    "cREAL": {
+     "usd": 223155
+    },
+    "BRZ": {
+     "usd": 88883377
+    }
+   }
+  },
+  {
+   "date": "2026-02-16",
+   "total_usd": 122336772,
+   "tokens": {
+    "BRLA": {
+     "usd": 12264448
+    },
+    "BRL1": {
+     "usd": 1314382
+    },
+    "cREAL": {
+     "usd": 209927
+    },
+    "BRLV": {
+     "usd": 19388985
+    },
+    "BRZ": {
+     "usd": 89159030
+    }
+   }
+  },
+  {
+   "date": "2026-02-23",
+   "total_usd": 103384440,
+   "tokens": {
+    "BRLA": {
+     "usd": 11844811
+    },
+    "BRL1": {
+     "usd": 1322536
+    },
+    "cREAL": {
+     "usd": 209682
+    },
+    "BRZ": {
+     "usd": 90007411
+    }
+   }
+  },
+  {
+   "date": "2026-03-02",
+   "total_usd": 132809739,
+   "tokens": {
+    "BRLA": {
+     "usd": 14017625
+    },
+    "BRL1": {
+     "usd": 1217733
+    },
+    "cREAL": {
+     "usd": 233176
+    },
+    "BRLV": {
+     "usd": 29337565
+    },
+    "BRZ": {
+     "usd": 88003640
+    }
+   }
+  },
+  {
+   "date": "2026-03-09",
+   "total_usd": 144632249,
+   "tokens": {
+    "BRLA": {
+     "usd": 14164237
+    },
+    "BRL1": {
+     "usd": 1192401
+    },
+    "cREAL": {
+     "usd": 237781
+    },
+    "BRLV": {
+     "usd": 41628903
+    },
+    "BRZ": {
+     "usd": 87408927
+    }
+   }
+  },
+  {
+   "date": "2026-03-16",
+   "total_usd": 145183037,
+   "tokens": {
+    "BRLA": {
+     "usd": 14532999
+    },
+    "BRL1": {
+     "usd": 1173865
+    },
+    "cREAL": {
+     "usd": 224818
+    },
+    "BRLV": {
+     "usd": 41611101
+    },
+    "BRZ": {
+     "usd": 87640254
+    }
+   }
+  },
+  {
+   "date": "2026-03-23",
+   "total_usd": 145704787,
+   "tokens": {
+    "BRLA": {
+     "usd": 15100918
+    },
+    "BRL1": {
+     "usd": 1122954
+    },
+    "cREAL": {
+     "usd": 211435
+    },
+    "BRLV": {
+     "usd": 41314597
+    },
+    "BRZ": {
+     "usd": 87954883
+    }
+   }
+  },
+  {
+   "date": "2026-03-30",
+   "total_usd": 148339442,
+   "tokens": {
+    "BRLA": {
+     "usd": 14661654
+    },
+    "BRL1": {
+     "usd": 1136652
+    },
+    "cREAL": {
+     "usd": 204030
+    },
+    "BRLV": {
+     "usd": 43087949
+    },
+    "BRZ": {
+     "usd": 89249157
+    }
+   }
+  },
+  {
+   "date": "2026-04-06",
+   "total_usd": 112794131,
+   "tokens": {
+    "BRLA": {
+     "usd": 15330571
+    },
+    "BRL1": {
+     "usd": 1095391
+    },
+    "cREAL": {
+     "usd": 209077
+    },
+    "BRLV": {
+     "usd": 43590764
+    },
+    "BRZ": {
+     "usd": 52568328
+    }
+   }
+  },
+  {
+   "date": "2026-04-13",
+   "total_usd": 114363235,
+   "tokens": {
+    "BRLA": {
+     "usd": 15428732
+    },
+    "BRL1": {
+     "usd": 1207681
+    },
+    "cREAL": {
+     "usd": 214156
+    },
+    "BRLV": {
+     "usd": 44419780
+    },
+    "BRZ": {
+     "usd": 53092886
+    }
+   }
+  },
+  {
+   "date": "2026-04-20",
+   "total_usd": 115175126,
+   "tokens": {
+    "BRLA": {
+     "usd": 16117261
+    },
+    "BRL1": {
+     "usd": 1385365
+    },
+    "cREAL": {
+     "usd": 227697
+    },
+    "BRLV": {
+     "usd": 44265572
+    },
+    "BRZ": {
+     "usd": 53179231
+    }
+   }
+  },
+  {
+   "date": "2026-04-27",
+   "total_usd": 124812087,
+   "tokens": {
+    "BRLA": {
+     "usd": 15456301
+    },
+    "BRL1": {
+     "usd": 1521939
+    },
+    "cREAL": {
+     "usd": 217241
+    },
+    "BRLV": {
+     "usd": 54044194
+    },
+    "BRZ": {
+     "usd": 53572412
+    }
+   }
+  },
+  {
+   "date": "2026-05-04",
+   "total_usd": 125732169,
+   "tokens": {
+    "BRLA": {
+     "usd": 15780972
+    },
+    "BRL1": {
+     "usd": 1327292
+    },
+    "cREAL": {
+     "usd": 213029
+    },
+    "BRLV": {
+     "usd": 54294116
+    },
+    "BRZ": {
+     "usd": 54116760
+    }
+   }
+  },
+  {
+   "date": "2026-05-11",
+   "total_usd": 139700063,
+   "tokens": {
+    "BRLA": {
+     "usd": 16792494
+    },
+    "BRL1": {
+     "usd": 1502177
+    },
+    "cREAL": {
+     "usd": 240029
+    },
+    "BRLV": {
+     "usd": 68701036
+    },
+    "BRZ": {
+     "usd": 52464327
+    }
+   }
+  },
+  {
+   "date": "2026-05-18",
+   "total_usd": 147128845,
+   "tokens": {
+    "BRLA": {
+     "usd": 19061024
+    },
+    "BRL1": {
+     "usd": 1455609
+    },
+    "cREAL": {
+     "usd": 226591
+    },
+    "BRLV": {
+     "usd": 73676959
+    },
+    "BRZ": {
+     "usd": 52708662
+    }
+   }
+  },
+  {
+   "date": "2026-05-25",
+   "total_usd": 158953718,
+   "tokens": {
+    "BRLA": {
+     "usd": 31280496
+    },
+    "BRL1": {
+     "usd": 1666272
+    },
+    "cREAL": {
+     "usd": 234284
+    },
+    "BRLV": {
+     "usd": 73126527
+    },
+    "BRZ": {
+     "usd": 52646139
+    }
+   }
+  },
+  {
+   "date": "2026-06-01",
+   "total_usd": 81302663,
+   "tokens": {
+    "BRLA": {
+     "usd": 26763394
+    },
+    "BRL1": {
+     "usd": 1938301
+    },
+    "cREAL": {
+     "usd": 209909
+    },
+    "BRZ": {
+     "usd": 52391059
+    }
+   }
+  },
+  {
+   "date": "2026-06-08",
+   "total_usd": 164248223,
+   "tokens": {
+    "BRLA": {
+     "usd": 38937678
+    },
+    "BRL1": {
+     "usd": 1965455
+    },
+    "cREAL": {
+     "usd": 189781
+    },
+    "BRLV": {
+     "usd": 71047998
+    },
+    "BRZ": {
+     "usd": 52107311
+    }
+   }
+  },
+  {
+   "date": "2026-06-15",
+   "total_usd": 156154178,
+   "tokens": {
+    "BRLA": {
+     "usd": 29491395
+    },
+    "BRL1": {
+     "usd": 2231290
+    },
+    "cREAL": {
+     "usd": 226311
+    },
+    "BRLV": {
+     "usd": 72968847
+    },
+    "BRZ": {
+     "usd": 51236335
+    }
+   }
+  },
+  {
+   "date": "2026-06-22",
+   "total_usd": 168588032,
+   "tokens": {
+    "BRLA": {
+     "usd": 43175769
+    },
+    "BRL1": {
+     "usd": 2449895
+    },
+    "cREAL": {
+     "usd": 228274
+    },
+    "BRLV": {
+     "usd": 71871318
+    },
+    "BRZ": {
+     "usd": 50862776
+    }
+   }
+  },
+  {
+   "date": "2026-06-29",
+   "total_usd": 152555216,
+   "tokens": {
+    "BRLA": {
+     "usd": 27935350
+    },
+    "BRL1": {
+     "usd": 2689262
+    },
+    "cREAL": {
+     "usd": 223276
+    },
+    "BRLV": {
+     "usd": 71358803
+    },
+    "BRZ": {
+     "usd": 50348525
+    }
+   }
+  },
+  {
+   "date": "2026-07-06",
+   "total_usd": 149131497,
+   "tokens": {
+    "BRLA": {
+     "usd": 22348978
+    },
+    "BRL1": {
+     "usd": 2654596
+    },
+    "cREAL": {
+     "usd": 210356
+    },
+    "BRLV": {
+     "usd": 72371362
+    },
+    "BRZ": {
+     "usd": 51546205
+    }
+   }
+  },
+  {
+   "date": "2026-07-13",
+   "total_usd": 153111328,
+   "tokens": {
+    "BRLA": {
+     "usd": 26491232
+    },
+    "BRL1": {
+     "usd": 2638711
+    },
+    "cREAL": {
+     "usd": 218530
+    },
+    "BRLV": {
+     "usd": 72244738
+    },
+    "BRZ": {
+     "usd": 51518117
+    }
+   }
+  },
+  {
+   "date": "2026-07-20",
+   "total_usd": 148610584,
+   "tokens": {
+    "BRLA": {
+     "usd": 20495235
+    },
+    "BRL1": {
+     "usd": 2882398
+    },
+    "cREAL": {
+     "usd": 210021
+    },
+    "BRLV": {
+     "usd": 73063708
+    },
+    "BRZ": {
+     "usd": 51959222
+    }
+   }
+  },
+  {
+   "date": "2026-07-27",
+   "total_usd": 147808102,
+   "tokens": {
+    "BRLA": {
+     "usd": 19727588
+    },
+    "BRL1": {
+     "usd": 2984013
+    },
+    "cREAL": {
+     "usd": 209467
+    },
+    "BRLV": {
+     "usd": 72741569
+    },
+    "BRZ": {
+     "usd": 52145465
+    }
+   }
+  },
+  {
    "date": "2026-08-03",
-   "total_usd": 118091192.6,
+   "total_usd": 118139637.77,
    "tokens": {
     "BRLV": {
      "usd": 73436722.64,
@@ -13,15 +820,15 @@
      "supply": 112581574.07
     },
     "BRZ": {
-     "usd": 14774112.49,
-     "supply": 75576706.58
+     "usd": 14771356.87,
+     "supply": 75607862.42
     },
     "BRLA": {
-     "usd": 5188418.77,
-     "supply": 26545744.08
+     "usd": 5240892.15,
+     "supply": 26804204.83
     },
     "BRL1": {
-     "usd": 2496568.93,
+     "usd": 2495296.34,
      "supply": 12725909.54
     },
     "cREAL": {
@@ -32,5 +839,5 @@
   }
  ],
  "note": "smoke-test seed; replaced by backfill + live runs",
- "backfill_note": "Pre-launch history via CoinGecko market-cap series (listed tokens only); from launch day, values come from direct on-chain reads."
+ "backfill_note": "Pre-launch float history: CoinGecko market-cap series (weekly sampling + final point), fetched 2026-08-03 via public API. Listed tokens only; merged into history.json by collect.py for dates BEFORE launch day (2026-08-03) \u2014 never overwrites live on-chain days."
 }
