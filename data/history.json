@@ -2,7 +2,7 @@
  "days": [
   {
    "date": "2026-08-01",
-   "total_usd": 160100000.0,
+   "total_usd": 162058240.0,
    "tokens": {
     "BRLV": {
      "usd": 72458240.0,
@@ -28,7 +28,7 @@
   },
   {
    "date": "2026-08-02",
-   "total_usd": 163400000.0,
+   "total_usd": 164264000.0,
    "tokens": {
     "BRLV": {
      "usd": 74664000.0,
@@ -54,34 +54,35 @@
   },
   {
    "date": "2026-08-03",
-   "total_usd": 166301649.98,
+   "total_usd": 103752810.44,
    "tokens": {
     "BRLV": {
-     "usd": 76251124.74,
-     "supply": 390672791.32
+     "usd": 73428499.42,
+     "supply": 373782747.6
     },
     "BRZ": {
-     "usd": 52154050.0,
-     "supply": 266500000.0
-    },
-    "BRLA": {
-     "usd": 26803000.0,
-     "supply": 136750000.0
+     "usd": 14708197.75,
+     "supply": 75382585.3
     },
     "BBRL": {
-     "usd": 8157975.24,
-     "supply": 41262222.98
+     "usd": 8306393.76,
+     "supply": 42132521.08
+    },
+    "BRLA": {
+     "usd": 4813481.45,
+     "supply": 24635123.66
     },
     "BRL1": {
-     "usd": 2534315.0,
-     "supply": 12950000.0
+     "usd": 2496238.06,
+     "supply": 12725909.54
     },
     "cREAL": {
-     "usd": 401185.0,
-     "supply": 2050000.0
+     "usd": 0.0,
+     "supply": 0.0
     }
    }
   }
  ],
- "note": "smoke-test seed; replaced by backfill + live runs"
+ "note": "smoke-test seed; replaced by backfill + live runs",
+ "backfill_note": "Pre-launch history via CoinGecko market-cap series (listed tokens only); from launch day, values come from direct on-chain reads."
 }
