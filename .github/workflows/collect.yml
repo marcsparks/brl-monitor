@@ -9,6 +9,14 @@ on:
         description: "also run one-time history backfill"
         required: false
         default: "no"
+      volumes_pages:
+        description: "volumes scan page cap per chain (blank = 40)"
+        required: false
+        default: ""
+      volumes_days:
+        description: "force volumes re-backfill this many days (blank = incremental)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -27,7 +35,15 @@ jobs:
       - name: Collect
         run: python collector/collect.py
       - name: Volumes scan
-        run: cd collector && python volumes.py
+        env:
+          VOLUMES_PAGE_CAP: ${{ github.event.inputs.volumes_pages }}
+        run: |
+          cd collector
+          if [ -n "${{ github.event.inputs.volumes_days }}" ]; then
+            python volumes.py --backfill-days "${{ github.event.inputs.volumes_days }}"
+          else
+            python volumes.py
+          fi
         continue-on-error: true
       - name: Commit data
         run: |
