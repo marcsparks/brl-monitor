@@ -212,6 +212,12 @@ def main():
     today = datetime.date.today().isoformat()
     hist_path = DATA / "history.json"
     hist = json.loads(hist_path.read_text()) if hist_path.exists() else {"days": []}
+    # data hygiene: v0 shipped 2 pre-launch smoke-seed days (fixture values, not
+    # collected data). Drop any pre-launch day carrying per-token "supply" —
+    # real pre-launch rows come only from the CoinGecko backfill, which writes
+    # "usd" alone. Launch day = 2026-08-03 (first live collector run).
+    hist["days"] = [d for d in hist["days"] if d["date"] >= "2026-08-03"
+                    or not any("supply" in (v or {}) for v in (d.get("tokens") or {}).values())]
     day_row = {"date": today, "total_usd": out["total_onchain_brl_usd"],
                "tokens": {r["symbol"]: {"usd": r["usd"], "supply": r["supply"]} for r in out["tokens"]}}
     hist["days"] = [d for d in hist["days"] if d["date"] != today] + [day_row]

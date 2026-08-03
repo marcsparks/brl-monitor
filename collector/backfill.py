@@ -33,7 +33,7 @@ def main():
             date = datetime.datetime.fromtimestamp(ts / 1000, datetime.timezone.utc).date().isoformat()
             row = by_date.setdefault(date, {"date": date, "total_usd": None, "tokens": {}})
             row["tokens"].setdefault(t["symbol"], {})["usd"] = round(mcap, 2)
-        time.sleep(2)  # CoinGecko free-tier rate limit
+        time.sleep(15)  # CoinGecko free tier: ~5-15 calls/min — space generously
         print(f"backfilled {t['symbol']}")
 
     for row in by_date.values():
