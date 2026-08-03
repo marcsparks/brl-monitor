@@ -218,6 +218,32 @@ def main():
     # "usd" alone. Launch day = 2026-08-03 (first live collector run).
     hist["days"] = [d for d in hist["days"] if d["date"] >= "2026-08-03"
                     or not any("supply" in (v or {}) for v in (d.get("tokens") or {}).values())]
+    # pre-launch backfill: merge data/backfill_coingecko.json (weekly CoinGecko
+    # market-cap points, usd only, provenance in that file) for dates BEFORE
+    # launch day — live on-chain days always win and are never overwritten
+    bf_path = DATA / "backfill_coingecko.json"
+    if bf_path.exists():
+        bf = json.loads(bf_path.read_text())
+        by_date = {d["date"]: d for d in hist["days"]}
+        for sym, series in (bf.get("series") or {}).items():
+            for d, usd in series:
+                # snap to the week's Monday so all tokens share a weekly grid —
+                # each value is a real CoinGecko reading from that week (weekly
+                # granularity is declared in the note; no interpolation)
+                dt = datetime.date.fromisoformat(d)
+                monday = (dt - datetime.timedelta(days=dt.weekday())).isoformat()
+                if monday >= "2026-08-03":
+                    continue
+                row = by_date.setdefault(monday, {"date": monday, "total_usd": None, "tokens": {}})
+                if "supply" in ((row["tokens"] or {}).get(sym) or {}):
+                    continue  # never overwrite a live on-chain day
+                row["tokens"][sym] = {"usd": usd}
+        for row in by_date.values():
+            if row["date"] < "2026-08-03":
+                vals = [v.get("usd") for v in row["tokens"].values() if v.get("usd")]
+                row["total_usd"] = round(sum(vals), 2) if vals else None
+        hist["days"] = sorted(by_date.values(), key=lambda d: d["date"])
+        hist["backfill_note"] = bf.get("_note")
     day_row = {"date": today, "total_usd": out["total_onchain_brl_usd"],
                "tokens": {r["symbol"]: {"usd": r["usd"], "supply": r["supply"]} for r in out["tokens"]}}
     hist["days"] = [d for d in hist["days"] if d["date"] != today] + [day_row]
