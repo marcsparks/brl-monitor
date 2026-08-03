@@ -2,99 +2,99 @@
  "daily": {
   "BRLV": {
    "2026-08-03": {
-    "mint": 21602.1,
-    "burn": 3340007.0,
-    "transfer": 2331.06,
+    "mint": 21460.04,
+    "burn": 3318043.0,
+    "transfer": 2315.73,
     "count": 13,
     "_chains": {
      "Base": {
-      "mint": 21602.1,
-      "burn": 3340007.0,
-      "transfer": 2331.06,
+      "mint": 21460.04,
+      "burn": 3318043.0,
+      "transfer": 2315.73,
       "count": 13
      }
     }
    },
    "2026-08-02": {
-    "mint": 1.12,
+    "mint": 1.11,
     "burn": 0.0,
-    "transfer": 392.94,
+    "transfer": 390.36,
     "count": 2,
     "_chains": {
      "Base": {
-      "mint": 1.12,
+      "mint": 1.11,
       "burn": 0.0,
-      "transfer": 392.94,
+      "transfer": 390.36,
       "count": 2
      }
     }
    },
    "2026-07-31": {
-    "mint": 21696.2,
+    "mint": 21553.52,
     "burn": 0.0,
-    "transfer": 13823.29,
+    "transfer": 13732.39,
     "count": 26,
     "_chains": {
      "Base": {
-      "mint": 21696.2,
+      "mint": 21553.52,
       "burn": 0.0,
-      "transfer": 13823.29,
+      "transfer": 13732.39,
       "count": 26
      }
     }
    },
    "2026-07-30": {
-    "mint": 3361788.45,
+    "mint": 3339681.21,
     "burn": 0.0,
-    "transfer": 4221.11,
+    "transfer": 4193.35,
     "count": 35,
     "_chains": {
      "Base": {
-      "mint": 3361788.45,
+      "mint": 3339681.21,
       "burn": 0.0,
-      "transfer": 4221.11,
+      "transfer": 4193.35,
       "count": 35
      }
     }
    },
    "2026-07-29": {
-    "mint": 21584.35,
+    "mint": 21442.41,
     "burn": 0.0,
-    "transfer": 18859.82,
+    "transfer": 18735.8,
     "count": 46,
     "_chains": {
      "Base": {
-      "mint": 21584.35,
+      "mint": 21442.41,
       "burn": 0.0,
-      "transfer": 18859.82,
+      "transfer": 18735.8,
       "count": 46
      }
     }
    },
    "2026-07-28": {
-    "mint": 21568.21,
+    "mint": 21426.37,
     "burn": 0.0,
-    "transfer": 7552.17,
+    "transfer": 7502.51,
     "count": 27,
     "_chains": {
      "Base": {
-      "mint": 21568.21,
+      "mint": 21426.37,
       "burn": 0.0,
-      "transfer": 7552.17,
+      "transfer": 7502.51,
       "count": 27
      }
     }
    },
    "2026-07-27": {
-    "mint": 21697.63,
+    "mint": 21554.94,
     "burn": 0.0,
-    "transfer": 7542.61,
+    "transfer": 7493.01,
     "count": 45,
     "_chains": {
      "Base": {
-      "mint": 21697.63,
+      "mint": 21554.94,
       "burn": 0.0,
-      "transfer": 7542.61,
+      "transfer": 7493.01,
       "count": 45
      }
     }
@@ -102,97 +102,97 @@
    "2026-07-26": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 243.14,
+    "transfer": 241.54,
     "count": 3,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 243.14,
+      "transfer": 241.54,
       "count": 3
      }
     }
    },
    "2026-07-24": {
-    "mint": 21565.89,
+    "mint": 21424.07,
     "burn": 0.0,
-    "transfer": 6369.74,
+    "transfer": 6327.85,
     "count": 36,
     "_chains": {
      "Base": {
-      "mint": 21565.89,
+      "mint": 21424.07,
       "burn": 0.0,
-      "transfer": 6369.74,
+      "transfer": 6327.85,
       "count": 36
      }
     }
    },
    "2026-07-23": {
-    "mint": 28605.02,
+    "mint": 28416.91,
     "burn": 0.0,
-    "transfer": 8126.29,
+    "transfer": 8072.85,
     "count": 43,
     "_chains": {
      "Base": {
-      "mint": 28605.02,
+      "mint": 28416.91,
       "burn": 0.0,
-      "transfer": 8126.29,
+      "transfer": 8072.85,
       "count": 43
      }
     }
    },
    "2026-07-22": {
-    "mint": 21765.24,
+    "mint": 21622.11,
     "burn": 0.0,
-    "transfer": 13161.34,
+    "transfer": 13074.8,
     "count": 29,
     "_chains": {
      "Base": {
-      "mint": 21765.24,
+      "mint": 21622.11,
       "burn": 0.0,
-      "transfer": 13161.34,
+      "transfer": 13074.8,
       "count": 29
      }
     }
    },
    "2026-07-21": {
-    "mint": 21587.48,
+    "mint": 21445.52,
     "burn": 0.0,
-    "transfer": 14315.14,
+    "transfer": 14221.0,
     "count": 26,
     "_chains": {
      "Base": {
-      "mint": 21587.48,
+      "mint": 21445.52,
       "burn": 0.0,
-      "transfer": 14315.14,
+      "transfer": 14221.0,
       "count": 26
      }
     }
    },
    "2026-07-20": {
-    "mint": 22216.11,
+    "mint": 22070.02,
     "burn": 0.0,
-    "transfer": 3269.05,
+    "transfer": 3247.55,
     "count": 26,
     "_chains": {
      "Base": {
-      "mint": 22216.11,
+      "mint": 22070.02,
       "burn": 0.0,
-      "transfer": 3269.05,
+      "transfer": 3247.55,
       "count": 26
      }
     }
    },
    "2026-07-17": {
-    "mint": 21723.39,
+    "mint": 21580.54,
     "burn": 0.0,
-    "transfer": 4605.45,
+    "transfer": 4575.16,
     "count": 21,
     "_chains": {
      "Base": {
-      "mint": 21723.39,
+      "mint": 21580.54,
       "burn": 0.0,
-      "transfer": 4605.45,
+      "transfer": 4575.16,
       "count": 21
      }
     }
@@ -200,55 +200,55 @@
    "2026-07-16": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 7746.3,
+    "transfer": 7695.36,
     "count": 35,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 7746.3,
+      "transfer": 7695.36,
       "count": 35
      }
     }
    },
    "2026-07-15": {
-    "mint": 54664.5,
+    "mint": 54305.02,
     "burn": 0.0,
-    "transfer": 32883.33,
+    "transfer": 32667.09,
     "count": 49,
     "_chains": {
      "Base": {
-      "mint": 54664.5,
+      "mint": 54305.02,
       "burn": 0.0,
-      "transfer": 32883.33,
+      "transfer": 32667.09,
       "count": 49
      }
     }
    },
    "2026-07-14": {
-    "mint": 10182.11,
+    "mint": 10115.15,
     "burn": 0.0,
-    "transfer": 41719.94,
+    "transfer": 41445.58,
     "count": 82,
     "_chains": {
      "Base": {
-      "mint": 10182.11,
+      "mint": 10115.15,
       "burn": 0.0,
-      "transfer": 41719.94,
+      "transfer": 41445.58,
       "count": 82
      }
     }
    },
    "2026-07-13": {
-    "mint": 21815.56,
+    "mint": 21672.1,
     "burn": 0.0,
-    "transfer": 45326.55,
+    "transfer": 45028.48,
     "count": 64,
     "_chains": {
      "Base": {
-      "mint": 21815.56,
+      "mint": 21672.1,
       "burn": 0.0,
-      "transfer": 45326.55,
+      "transfer": 45028.48,
       "count": 64
      }
     }
@@ -256,13 +256,13 @@
    "2026-07-12": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 235.89,
+    "transfer": 234.34,
     "count": 1,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 235.89,
+      "transfer": 234.34,
       "count": 1
      }
     }
@@ -270,27 +270,27 @@
    "2026-07-11": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 19843.57,
+    "transfer": 19713.08,
     "count": 3,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 19843.57,
+      "transfer": 19713.08,
       "count": 3
      }
     }
    },
    "2026-07-10": {
-    "mint": 21641.37,
+    "mint": 21499.06,
     "burn": 0.0,
-    "transfer": 7579.07,
+    "transfer": 7529.23,
     "count": 39,
     "_chains": {
      "Base": {
-      "mint": 21641.37,
+      "mint": 21499.06,
       "burn": 0.0,
-      "transfer": 7579.07,
+      "transfer": 7529.23,
       "count": 39
      }
     }
@@ -298,55 +298,55 @@
    "2026-07-09": {
     "mint": 0.03,
     "burn": 0.0,
-    "transfer": 6314.22,
+    "transfer": 6272.7,
     "count": 22,
     "_chains": {
      "Base": {
       "mint": 0.03,
       "burn": 0.0,
-      "transfer": 6314.22,
+      "transfer": 6272.7,
       "count": 22
      }
     }
    },
    "2026-07-08": {
-    "mint": 43129.87,
+    "mint": 42846.25,
     "burn": 0.0,
-    "transfer": 26121.39,
+    "transfer": 25949.61,
     "count": 36,
     "_chains": {
      "Base": {
-      "mint": 43129.87,
+      "mint": 42846.25,
       "burn": 0.0,
-      "transfer": 26121.39,
+      "transfer": 25949.61,
       "count": 36
      }
     }
    },
    "2026-07-07": {
-    "mint": 244.93,
-    "burn": 38213.61,
-    "transfer": 29127.16,
+    "mint": 243.32,
+    "burn": 37962.32,
+    "transfer": 28935.62,
     "count": 31,
     "_chains": {
      "Base": {
-      "mint": 244.93,
-      "burn": 38213.61,
-      "transfer": 29127.16,
+      "mint": 243.32,
+      "burn": 37962.32,
+      "transfer": 28935.62,
       "count": 31
      }
     }
    },
    "2026-07-06": {
-    "mint": 23281.84,
+    "mint": 23128.74,
     "burn": 0.0,
-    "transfer": 29575.07,
+    "transfer": 29380.58,
     "count": 50,
     "_chains": {
      "Base": {
-      "mint": 23281.84,
+      "mint": 23128.74,
       "burn": 0.0,
-      "transfer": 29575.07,
+      "transfer": 29380.58,
       "count": 50
      }
     }
@@ -354,13 +354,13 @@
    "2026-07-05": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 27382.76,
+    "transfer": 27202.69,
     "count": 54,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 27382.76,
+      "transfer": 27202.69,
       "count": 54
      }
     }
@@ -368,83 +368,83 @@
    "2026-07-04": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 986.28,
+    "transfer": 979.8,
     "count": 3,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 986.28,
+      "transfer": 979.8,
       "count": 3
      }
     }
    },
    "2026-07-03": {
-    "mint": 1428973.31,
+    "mint": 1419576.33,
     "burn": 0.0,
-    "transfer": 4269.55,
+    "transfer": 4241.48,
     "count": 16,
     "_chains": {
      "Base": {
-      "mint": 1428973.31,
+      "mint": 1419576.33,
       "burn": 0.0,
-      "transfer": 4269.55,
+      "transfer": 4241.48,
       "count": 16
      }
     }
    },
    "2026-07-02": {
-    "mint": 10.66,
+    "mint": 10.59,
     "burn": 0.0,
-    "transfer": 10001.63,
+    "transfer": 9935.86,
     "count": 41,
     "_chains": {
      "Base": {
-      "mint": 10.66,
+      "mint": 10.59,
       "burn": 0.0,
-      "transfer": 10001.63,
+      "transfer": 9935.86,
       "count": 41
      }
     }
    },
    "2026-07-01": {
-    "mint": 0.55,
-    "burn": 1170358.17,
-    "transfer": 10087.84,
+    "mint": 0.54,
+    "burn": 1162661.86,
+    "transfer": 10021.51,
     "count": 39,
     "_chains": {
      "Base": {
-      "mint": 0.55,
-      "burn": 1170358.17,
-      "transfer": 10087.84,
+      "mint": 0.54,
+      "burn": 1162661.86,
+      "transfer": 10021.51,
       "count": 39
      }
     }
    },
    "2026-06-30": {
-    "mint": 0.13,
+    "mint": 0.12,
     "burn": 0.0,
-    "transfer": 3666.23,
+    "transfer": 3642.13,
     "count": 6,
     "_chains": {
      "Base": {
-      "mint": 0.13,
+      "mint": 0.12,
       "burn": 0.0,
-      "transfer": 3666.23,
+      "transfer": 3642.13,
       "count": 6
      }
     }
    },
    "2026-06-29": {
-    "mint": 23128.88,
+    "mint": 22976.79,
     "burn": 0.0,
-    "transfer": 13253.5,
+    "transfer": 13166.35,
     "count": 24,
     "_chains": {
      "Base": {
-      "mint": 23128.88,
+      "mint": 22976.79,
       "burn": 0.0,
-      "transfer": 13253.5,
+      "transfer": 13166.35,
       "count": 24
      }
     }
@@ -452,13 +452,13 @@
    "2026-06-28": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 273.78,
+    "transfer": 271.98,
     "count": 4,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 273.78,
+      "transfer": 271.98,
       "count": 4
      }
     }
@@ -466,69 +466,69 @@
    "2026-06-26": {
     "mint": 0.03,
     "burn": 0.0,
-    "transfer": 7538.61,
+    "transfer": 7489.04,
     "count": 29,
     "_chains": {
      "Base": {
       "mint": 0.03,
       "burn": 0.0,
-      "transfer": 7538.61,
+      "transfer": 7489.04,
       "count": 29
      }
     }
    },
    "2026-06-25": {
     "mint": 0.03,
-    "burn": 68764.85,
-    "transfer": 8472.91,
+    "burn": 68312.65,
+    "transfer": 8417.2,
     "count": 35,
     "_chains": {
      "Base": {
       "mint": 0.03,
-      "burn": 68764.85,
-      "transfer": 8472.91,
+      "burn": 68312.65,
+      "transfer": 8417.2,
       "count": 35
      }
     }
    },
    "2026-06-24": {
-    "mint": 21859.62,
+    "mint": 21715.88,
     "burn": 0.0,
-    "transfer": 18028.11,
+    "transfer": 17909.55,
     "count": 57,
     "_chains": {
      "Base": {
-      "mint": 21859.62,
+      "mint": 21715.88,
       "burn": 0.0,
-      "transfer": 18028.11,
+      "transfer": 17909.55,
       "count": 57
      }
     }
    },
    "2026-06-23": {
-    "mint": 3791.92,
+    "mint": 3766.98,
     "burn": 0.0,
-    "transfer": 5299.26,
+    "transfer": 5264.41,
     "count": 24,
     "_chains": {
      "Base": {
-      "mint": 3791.92,
+      "mint": 3766.98,
       "burn": 0.0,
-      "transfer": 5299.26,
+      "transfer": 5264.41,
       "count": 24
      }
     }
    },
    "2026-06-22": {
-    "mint": 196471.03,
+    "mint": 195179.03,
     "burn": 0.0,
-    "transfer": 3361.72,
+    "transfer": 3339.61,
     "count": 17,
     "_chains": {
      "Base": {
-      "mint": 196471.03,
+      "mint": 195179.03,
       "burn": 0.0,
-      "transfer": 3361.72,
+      "transfer": 3339.61,
       "count": 17
      }
     }
@@ -536,83 +536,83 @@
    "2026-06-21": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 5.64,
+    "transfer": 5.6,
     "count": 1,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 5.64,
+      "transfer": 5.6,
       "count": 1
      }
     }
    },
    "2026-06-19": {
     "mint": 0.03,
-    "burn": 1227.94,
-    "transfer": 3569.08,
+    "burn": 1219.87,
+    "transfer": 3545.61,
     "count": 20,
     "_chains": {
      "Base": {
       "mint": 0.03,
-      "burn": 1227.94,
-      "transfer": 3569.08,
+      "burn": 1219.87,
+      "transfer": 3545.61,
       "count": 20
      }
     }
    },
    "2026-06-18": {
-    "mint": 21922.15,
-    "burn": 72596.03,
-    "transfer": 8126.68,
+    "mint": 21777.99,
+    "burn": 72118.64,
+    "transfer": 8073.24,
     "count": 40,
     "_chains": {
      "Base": {
-      "mint": 21922.15,
-      "burn": 72596.03,
-      "transfer": 8126.68,
+      "mint": 21777.99,
+      "burn": 72118.64,
+      "transfer": 8073.24,
       "count": 40
      }
     }
    },
    "2026-06-17": {
-    "mint": 68.12,
+    "mint": 67.67,
     "burn": 0.0,
-    "transfer": 16344.73,
+    "transfer": 16237.25,
     "count": 53,
     "_chains": {
      "Base": {
-      "mint": 68.12,
+      "mint": 67.67,
       "burn": 0.0,
-      "transfer": 16344.73,
+      "transfer": 16237.25,
       "count": 53
      }
     }
    },
    "2026-06-16": {
-    "mint": 22040.03,
+    "mint": 21895.1,
     "burn": 0.0,
-    "transfer": 6167.03,
+    "transfer": 6126.48,
     "count": 36,
     "_chains": {
      "Base": {
-      "mint": 22040.03,
+      "mint": 21895.1,
       "burn": 0.0,
-      "transfer": 6167.03,
+      "transfer": 6126.48,
       "count": 36
      }
     }
    },
    "2026-06-15": {
-    "mint": 21999.03,
+    "mint": 21854.36,
     "burn": 0.0,
-    "transfer": 8054.11,
+    "transfer": 8001.15,
     "count": 34,
     "_chains": {
      "Base": {
-      "mint": 21999.03,
+      "mint": 21854.36,
       "burn": 0.0,
-      "transfer": 8054.11,
+      "transfer": 8001.15,
       "count": 34
      }
     }
@@ -620,97 +620,97 @@
    "2026-06-14": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 202.11,
+    "transfer": 200.79,
     "count": 1,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 202.11,
+      "transfer": 200.79,
       "count": 1
      }
     }
    },
    "2026-06-13": {
-    "mint": 30.03,
+    "mint": 29.83,
     "burn": 0.0,
-    "transfer": 4518.93,
+    "transfer": 4489.21,
     "count": 3,
     "_chains": {
      "Base": {
-      "mint": 30.03,
+      "mint": 29.83,
       "burn": 0.0,
-      "transfer": 4518.93,
+      "transfer": 4489.21,
       "count": 3
      }
     }
    },
    "2026-06-12": {
-    "mint": 22118.62,
+    "mint": 21973.17,
     "burn": 0.0,
-    "transfer": 7084.07,
+    "transfer": 7037.48,
     "count": 46,
     "_chains": {
      "Base": {
-      "mint": 22118.62,
+      "mint": 21973.17,
       "burn": 0.0,
-      "transfer": 7084.07,
+      "transfer": 7037.48,
       "count": 46
      }
     }
    },
    "2026-06-11": {
-    "mint": 294.74,
+    "mint": 292.8,
     "burn": 0.0,
-    "transfer": 8327.2,
+    "transfer": 8272.44,
     "count": 45,
     "_chains": {
      "Base": {
-      "mint": 294.74,
+      "mint": 292.8,
       "burn": 0.0,
-      "transfer": 8327.2,
+      "transfer": 8272.44,
       "count": 45
      }
     }
    },
    "2026-06-10": {
     "mint": 0.03,
-    "burn": 1355.65,
-    "transfer": 7121.62,
+    "burn": 1346.74,
+    "transfer": 7074.79,
     "count": 34,
     "_chains": {
      "Base": {
       "mint": 0.03,
-      "burn": 1355.65,
-      "transfer": 7121.62,
+      "burn": 1346.74,
+      "transfer": 7074.79,
       "count": 34
      }
     }
    },
    "2026-06-09": {
-    "mint": 23265.94,
+    "mint": 23112.94,
     "burn": 0.0,
-    "transfer": 8406.59,
+    "transfer": 8351.31,
     "count": 39,
     "_chains": {
      "Base": {
-      "mint": 23265.94,
+      "mint": 23112.94,
       "burn": 0.0,
-      "transfer": 8406.59,
+      "transfer": 8351.31,
       "count": 39
      }
     }
    },
    "2026-06-08": {
-    "mint": 2.05,
-    "burn": 569.77,
-    "transfer": 17588.89,
+    "mint": 2.03,
+    "burn": 566.02,
+    "transfer": 17473.22,
     "count": 39,
     "_chains": {
      "Base": {
-      "mint": 2.05,
-      "burn": 569.77,
-      "transfer": 17588.89,
+      "mint": 2.03,
+      "burn": 566.02,
+      "transfer": 17473.22,
       "count": 39
      }
     }
@@ -718,111 +718,111 @@
    "2026-06-07": {
     "mint": 0.01,
     "burn": 0.0,
-    "transfer": 334.36,
+    "transfer": 332.16,
     "count": 2,
     "_chains": {
      "Base": {
       "mint": 0.01,
       "burn": 0.0,
-      "transfer": 334.36,
+      "transfer": 332.16,
       "count": 2
      }
     }
    },
    "2026-06-06": {
-    "mint": 6.02,
+    "mint": 5.98,
     "burn": 0.0,
-    "transfer": 58.94,
+    "transfer": 58.55,
     "count": 2,
     "_chains": {
      "Base": {
-      "mint": 6.02,
+      "mint": 5.98,
       "burn": 0.0,
-      "transfer": 58.94,
+      "transfer": 58.55,
       "count": 2
      }
     }
    },
    "2026-06-05": {
     "mint": 0.03,
-    "burn": 1.96,
-    "transfer": 1.18,
+    "burn": 1.95,
+    "transfer": 1.17,
     "count": 6,
     "_chains": {
      "Base": {
       "mint": 0.03,
-      "burn": 1.96,
-      "transfer": 1.18,
+      "burn": 1.95,
+      "transfer": 1.17,
       "count": 6
      }
     }
    },
    "2026-06-04": {
-    "mint": 37.3,
+    "mint": 37.06,
     "burn": 0.0,
-    "transfer": 491.18,
+    "transfer": 487.95,
     "count": 3,
     "_chains": {
      "Base": {
-      "mint": 37.3,
+      "mint": 37.06,
       "burn": 0.0,
-      "transfer": 491.18,
+      "transfer": 487.95,
       "count": 3
      }
     }
    },
    "2026-06-03": {
-    "mint": 21922.19,
-    "burn": 95288.43,
+    "mint": 21778.03,
+    "burn": 94661.82,
     "transfer": 0.0,
     "count": 5,
     "_chains": {
      "Base": {
-      "mint": 21922.19,
-      "burn": 95288.43,
+      "mint": 21778.03,
+      "burn": 94661.82,
       "transfer": 0.0,
       "count": 5
      }
     }
    },
    "2026-06-02": {
-    "mint": 21922.25,
+    "mint": 21778.09,
     "burn": 0.0,
-    "transfer": 21664.92,
+    "transfer": 21522.45,
     "count": 18,
     "_chains": {
      "Base": {
-      "mint": 21922.25,
+      "mint": 21778.09,
       "burn": 0.0,
-      "transfer": 21664.92,
+      "transfer": 21522.45,
       "count": 18
      }
     }
    },
    "2026-06-01": {
-    "mint": 21916.05,
+    "mint": 21771.93,
     "burn": 0.0,
-    "transfer": 14375.0,
+    "transfer": 14280.47,
     "count": 26,
     "_chains": {
      "Base": {
-      "mint": 21916.05,
+      "mint": 21771.93,
       "burn": 0.0,
-      "transfer": 14375.0,
+      "transfer": 14280.47,
       "count": 26
      }
     }
    },
    "2026-05-31": {
-    "mint": 3.45,
+    "mint": 3.43,
     "burn": 0.0,
-    "transfer": 231.56,
+    "transfer": 230.04,
     "count": 2,
     "_chains": {
      "Base": {
-      "mint": 3.45,
+      "mint": 3.43,
       "burn": 0.0,
-      "transfer": 231.56,
+      "transfer": 230.04,
       "count": 2
      }
     }
@@ -830,13 +830,13 @@
    "2026-05-30": {
     "mint": 0.03,
     "burn": 0.0,
-    "transfer": 49.9,
+    "transfer": 49.58,
     "count": 4,
     "_chains": {
      "Base": {
       "mint": 0.03,
       "burn": 0.0,
-      "transfer": 49.9,
+      "transfer": 49.58,
       "count": 4
      }
     }
@@ -844,69 +844,69 @@
    "2026-05-29": {
     "mint": 0.07,
     "burn": 0.0,
-    "transfer": 7260.63,
+    "transfer": 7212.88,
     "count": 24,
     "_chains": {
      "Base": {
       "mint": 0.07,
       "burn": 0.0,
-      "transfer": 7260.63,
+      "transfer": 7212.88,
       "count": 24
      }
     }
    },
    "2026-05-28": {
-    "mint": 51392.61,
-    "burn": 63302.96,
-    "transfer": 5274.62,
+    "mint": 51054.65,
+    "burn": 62886.67,
+    "transfer": 5239.93,
     "count": 30,
     "_chains": {
      "Base": {
-      "mint": 51392.61,
-      "burn": 63302.96,
-      "transfer": 5274.62,
+      "mint": 51054.65,
+      "burn": 62886.67,
+      "transfer": 5239.93,
       "count": 30
      }
     }
    },
    "2026-05-27": {
-    "mint": 11725.84,
+    "mint": 11648.73,
     "burn": 0.0,
-    "transfer": 5731.34,
+    "transfer": 5693.65,
     "count": 29,
     "_chains": {
      "Base": {
-      "mint": 11725.84,
+      "mint": 11648.73,
       "burn": 0.0,
-      "transfer": 5731.34,
+      "transfer": 5693.65,
       "count": 29
      }
     }
    },
    "2026-05-26": {
-    "mint": 10228.24,
+    "mint": 10160.98,
     "burn": 0.0,
-    "transfer": 10421.27,
+    "transfer": 10352.74,
     "count": 20,
     "_chains": {
      "Base": {
-      "mint": 10228.24,
+      "mint": 10160.98,
       "burn": 0.0,
-      "transfer": 10421.27,
+      "transfer": 10352.74,
       "count": 20
      }
     }
    },
    "2026-05-25": {
-    "mint": 22069.8,
-    "burn": 58941.3,
-    "transfer": 3467.05,
+    "mint": 21924.66,
+    "burn": 58553.7,
+    "transfer": 3444.25,
     "count": 20,
     "_chains": {
      "Base": {
-      "mint": 22069.8,
-      "burn": 58941.3,
-      "transfer": 3467.05,
+      "mint": 21924.66,
+      "burn": 58553.7,
+      "transfer": 3444.25,
       "count": 20
      }
     }
@@ -914,83 +914,83 @@
    "2026-05-24": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 296.44,
+    "transfer": 294.49,
     "count": 1,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 296.44,
+      "transfer": 294.49,
       "count": 1
      }
     }
    },
    "2026-05-22": {
-    "mint": 10196.37,
+    "mint": 10129.31,
     "burn": 0.0,
-    "transfer": 6148.95,
+    "transfer": 6108.52,
     "count": 34,
     "_chains": {
      "Base": {
-      "mint": 10196.37,
+      "mint": 10129.31,
       "burn": 0.0,
-      "transfer": 6148.95,
+      "transfer": 6108.52,
       "count": 34
      }
     }
    },
    "2026-05-21": {
-    "mint": 34723.06,
+    "mint": 34494.72,
     "burn": 0.0,
-    "transfer": 4761.25,
+    "transfer": 4729.94,
     "count": 31,
     "_chains": {
      "Base": {
-      "mint": 34723.06,
+      "mint": 34494.72,
       "burn": 0.0,
-      "transfer": 4761.25,
+      "transfer": 4729.94,
       "count": 31
      }
     }
    },
    "2026-05-20": {
-    "mint": 34187.06,
+    "mint": 33962.24,
     "burn": 0.0,
-    "transfer": 6033.41,
+    "transfer": 5993.73,
     "count": 25,
     "_chains": {
      "Base": {
-      "mint": 34187.06,
+      "mint": 33962.24,
       "burn": 0.0,
-      "transfer": 6033.41,
+      "transfer": 5993.73,
       "count": 25
      }
     }
    },
    "2026-05-19": {
-    "mint": 6.39,
+    "mint": 6.35,
     "burn": 0.0,
-    "transfer": 8740.76,
+    "transfer": 8683.28,
     "count": 44,
     "_chains": {
      "Base": {
-      "mint": 6.39,
+      "mint": 6.35,
       "burn": 0.0,
-      "transfer": 8740.76,
+      "transfer": 8683.28,
       "count": 44
      }
     }
    },
    "2026-05-18": {
-    "mint": 11744.87,
+    "mint": 11667.63,
     "burn": 0.0,
-    "transfer": 4650.83,
+    "transfer": 4620.25,
     "count": 33,
     "_chains": {
      "Base": {
-      "mint": 11744.87,
+      "mint": 11667.63,
       "burn": 0.0,
-      "transfer": 4650.83,
+      "transfer": 4620.25,
       "count": 33
      }
     }
@@ -998,13 +998,13 @@
    "2026-05-17": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 226.68,
+    "transfer": 225.19,
     "count": 1,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 226.68,
+      "transfer": 225.19,
       "count": 1
      }
     }
@@ -1012,145 +1012,243 @@
    "2026-05-16": {
     "mint": 0.03,
     "burn": 0.0,
-    "transfer": 5894.13,
+    "transfer": 5855.37,
     "count": 4,
     "_chains": {
      "Base": {
       "mint": 0.03,
       "burn": 0.0,
-      "transfer": 5894.13,
+      "transfer": 5855.37,
       "count": 4
      }
     }
    },
    "2026-05-15": {
-    "mint": 5088598.9,
+    "mint": 5055136.1,
     "burn": 0.0,
-    "transfer": 10047.99,
+    "transfer": 9981.91,
     "count": 52,
     "_chains": {
      "Base": {
-      "mint": 5088598.9,
+      "mint": 5055136.1,
       "burn": 0.0,
-      "transfer": 10047.99,
+      "transfer": 9981.91,
       "count": 52
      }
     }
    },
    "2026-05-14": {
-    "mint": 5905855.81,
+    "mint": 5867018.7,
     "burn": 0.0,
-    "transfer": 3234.76,
+    "transfer": 3213.49,
     "count": 35,
     "_chains": {
      "Base": {
-      "mint": 5905855.81,
+      "mint": 5867018.7,
       "burn": 0.0,
-      "transfer": 3234.76,
+      "transfer": 3213.49,
       "count": 35
      }
     }
    },
    "2026-05-13": {
-    "mint": 0.02,
+    "mint": 4891142.6,
     "burn": 0.0,
-    "transfer": 2711.3,
-    "count": 19,
+    "transfer": 5410.83,
+    "count": 67,
     "_chains": {
      "Base": {
-      "mint": 0.02,
+      "mint": 4891142.6,
       "burn": 0.0,
-      "transfer": 2711.3,
-      "count": 19
+      "transfer": 5410.83,
+      "count": 67
+     }
+    }
+   },
+   "2026-05-12": {
+    "mint": 3903560.82,
+    "burn": 0.0,
+    "transfer": 39996.45,
+    "count": 27,
+    "_chains": {
+     "Base": {
+      "mint": 3903560.82,
+      "burn": 0.0,
+      "transfer": 39996.45,
+      "count": 27
+     }
+    }
+   },
+   "2026-05-11": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 19796.54,
+    "count": 15,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 19796.54,
+      "count": 15
+     }
+    }
+   },
+   "2026-05-09": {
+    "mint": 0.03,
+    "burn": 0.0,
+    "transfer": 2953.02,
+    "count": 12,
+    "_chains": {
+     "Base": {
+      "mint": 0.03,
+      "burn": 0.0,
+      "transfer": 2953.02,
+      "count": 12
+     }
+    }
+   },
+   "2026-05-08": {
+    "mint": 11648.68,
+    "burn": 0.0,
+    "transfer": 18466.42,
+    "count": 18,
+    "_chains": {
+     "Base": {
+      "mint": 11648.68,
+      "burn": 0.0,
+      "transfer": 18466.42,
+      "count": 18
+     }
+    }
+   },
+   "2026-05-07": {
+    "mint": 11680.11,
+    "burn": 94935.07,
+    "transfer": 4403.18,
+    "count": 34,
+    "_chains": {
+     "Base": {
+      "mint": 11680.11,
+      "burn": 94935.07,
+      "transfer": 4403.18,
+      "count": 34
+     }
+    }
+   },
+   "2026-05-06": {
+    "mint": 11648.7,
+    "burn": 0.0,
+    "transfer": 3708.01,
+    "count": 29,
+    "_chains": {
+     "Base": {
+      "mint": 11648.7,
+      "burn": 0.0,
+      "transfer": 3708.01,
+      "count": 29
+     }
+    }
+   },
+   "2026-05-05": {
+    "mint": 0.01,
+    "burn": 0.0,
+    "transfer": 4617.18,
+    "count": 13,
+    "_chains": {
+     "Base": {
+      "mint": 0.01,
+      "burn": 0.0,
+      "transfer": 4617.18,
+      "count": 13
      }
     }
    }
   },
   "BRZ": {
    "2026-08-03": {
-    "mint": 30949.73,
-    "burn": 5374.87,
-    "transfer": 446132.75,
-    "count": 2136,
+    "mint": 111169.45,
+    "burn": 25192.89,
+    "transfer": 1991332.47,
+    "count": 8255,
     "_chains": {
      "Polygon": {
-      "mint": 25591.3,
-      "burn": 5374.87,
-      "transfer": 400858.47,
-      "count": 2000
+      "mint": 105812.3,
+      "burn": 25192.89,
+      "transfer": 1945964.31,
+      "count": 8109
      },
      "Base": {
-      "mint": 5358.43,
+      "mint": 5357.15,
       "burn": 0.0,
-      "transfer": 45274.28,
-      "count": 136
+      "transfer": 45368.16,
+      "count": 146
      }
     }
    },
    "2026-07-31": {
-    "mint": 773.85,
+    "mint": 773.67,
     "burn": 0.0,
-    "transfer": 20181.2,
+    "transfer": 20176.34,
     "count": 68,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 6839.7,
+      "transfer": 6838.05,
       "count": 1
      },
      "Base": {
-      "mint": 773.85,
+      "mint": 773.67,
       "burn": 0.0,
-      "transfer": 13341.5,
+      "transfer": 13338.29,
       "count": 67
      }
     }
    },
    "2026-07-30": {
-    "mint": 2284.74,
-    "burn": 4944.23,
-    "transfer": 46561.92,
+    "mint": 2284.19,
+    "burn": 4943.04,
+    "transfer": 46550.73,
     "count": 256,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 70.75,
+      "transfer": 70.74,
       "count": 2
      },
      "Base": {
-      "mint": 2284.74,
-      "burn": 4944.23,
-      "transfer": 46491.17,
+      "mint": 2284.19,
+      "burn": 4943.04,
+      "transfer": 46479.99,
       "count": 254
      }
     }
    },
    "2026-07-27": {
-    "mint": 6045.84,
-    "burn": 4480.51,
-    "transfer": 64149.76,
+    "mint": 6044.38,
+    "burn": 4479.43,
+    "transfer": 64134.34,
     "count": 162,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 46.65,
+      "transfer": 46.64,
       "count": 1
      },
      "Base": {
-      "mint": 6045.84,
-      "burn": 4480.51,
-      "transfer": 64103.11,
+      "mint": 6044.38,
+      "burn": 4479.43,
+      "transfer": 64087.7,
       "count": 161
      }
     }
    },
    "2026-07-26": {
-    "mint": 943.13,
+    "mint": 942.9,
     "burn": 0.0,
-    "transfer": 9673.04,
+    "transfer": 9670.72,
     "count": 55,
     "_chains": {
      "Ethereum": {
@@ -1160,29 +1258,29 @@
       "count": 2
      },
      "Base": {
-      "mint": 943.13,
+      "mint": 942.9,
       "burn": 0.0,
-      "transfer": 9672.97,
+      "transfer": 9670.65,
       "count": 53
      }
     }
    },
    "2026-07-25": {
-    "mint": 2438.4,
+    "mint": 2437.82,
     "burn": 0.0,
-    "transfer": 28830.9,
+    "transfer": 28823.96,
     "count": 111,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 97.4,
+      "transfer": 97.37,
       "count": 1
      },
      "Base": {
-      "mint": 2438.4,
+      "mint": 2437.82,
       "burn": 0.0,
-      "transfer": 28733.5,
+      "transfer": 28726.59,
       "count": 110
      }
     }
@@ -1190,299 +1288,413 @@
    "2026-07-24": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 4658.61,
+    "transfer": 4657.49,
     "count": 40,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 390.44,
+      "transfer": 390.35,
       "count": 1
      },
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 4268.17,
+      "transfer": 4267.14,
       "count": 39
      }
     }
    },
    "2026-07-16": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 9.77,
-    "count": 1,
+    "mint": 2673.45,
+    "burn": 1408.33,
+    "transfer": 16995.25,
+    "count": 168,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
       "transfer": 9.77,
       "count": 1
+     },
+     "Base": {
+      "mint": 2673.45,
+      "burn": 1408.33,
+      "transfer": 16985.48,
+      "count": 167
      }
     }
    },
    "2026-07-12": {
-    "mint": 0.0,
+    "mint": 1489.14,
     "burn": 0.0,
-    "transfer": 391.81,
-    "count": 7,
+    "transfer": 10601.1,
+    "count": 85,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 391.81,
+      "transfer": 391.71,
       "count": 7
+     },
+     "Base": {
+      "mint": 1489.14,
+      "burn": 0.0,
+      "transfer": 10209.39,
+      "count": 78
      }
     }
    },
    "2026-07-09": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 283.56,
-    "count": 6,
+    "mint": 152.8,
+    "burn": 1658.44,
+    "transfer": 17047.99,
+    "count": 204,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 283.56,
+      "transfer": 283.5,
       "count": 6
+     },
+     "Base": {
+      "mint": 152.8,
+      "burn": 1658.44,
+      "transfer": 16764.49,
+      "count": 198
      }
     }
    },
    "2026-07-04": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 382.87,
-    "count": 1,
+    "mint": 3129.75,
+    "burn": 94.1,
+    "transfer": 36714.65,
+    "count": 175,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 382.87,
+      "transfer": 382.77,
       "count": 1
+     },
+     "Base": {
+      "mint": 3129.75,
+      "burn": 94.1,
+      "transfer": 36331.88,
+      "count": 174
      }
     }
    },
    "2026-07-03": {
-    "mint": 0.0,
+    "mint": 2663.36,
     "burn": 0.0,
-    "transfer": 1756.34,
-    "count": 3,
+    "transfer": 19816.0,
+    "count": 133,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 1756.34,
+      "transfer": 1755.92,
       "count": 3
+     },
+     "Base": {
+      "mint": 2663.36,
+      "burn": 0.0,
+      "transfer": 18060.08,
+      "count": 130
      }
     }
    },
    "2026-07-02": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 1381.9,
-    "count": 2,
+    "mint": 2671.85,
+    "burn": 1023.81,
+    "transfer": 51275.24,
+    "count": 200,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 1381.9,
+      "transfer": 1381.57,
       "count": 2
+     },
+     "Base": {
+      "mint": 2671.85,
+      "burn": 1023.81,
+      "transfer": 49893.67,
+      "count": 198
      }
     }
    },
    "2026-07-01": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 28.8,
-    "count": 10,
+    "mint": 22859.91,
+    "burn": 43079.55,
+    "transfer": 344179.39,
+    "count": 575,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
       "transfer": 28.8,
       "count": 10
+     },
+     "Base": {
+      "mint": 22859.91,
+      "burn": 43079.55,
+      "transfer": 344150.59,
+      "count": 565
      }
     }
    },
    "2026-06-30": {
-    "mint": 0.0,
+    "mint": 11136.15,
     "burn": 0.0,
-    "transfer": 352.59,
-    "count": 2,
+    "transfer": 66163.48,
+    "count": 257,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 352.59,
+      "transfer": 352.51,
       "count": 2
+     },
+     "Base": {
+      "mint": 11136.15,
+      "burn": 0.0,
+      "transfer": 65810.97,
+      "count": 255
      }
     }
    },
    "2026-06-29": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 965.25,
-    "count": 1,
+    "mint": 4108.9,
+    "burn": 290.39,
+    "transfer": 110493.88,
+    "count": 328,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 965.25,
+      "transfer": 965.02,
       "count": 1
+     },
+     "Base": {
+      "mint": 4108.9,
+      "burn": 290.39,
+      "transfer": 109528.86,
+      "count": 327
      }
     }
    },
    "2026-06-26": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 832.48,
-    "count": 2,
+    "mint": 473.71,
+    "burn": 5003.2,
+    "transfer": 34479.17,
+    "count": 164,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 832.48,
+      "transfer": 832.28,
       "count": 2
+     },
+     "Base": {
+      "mint": 473.71,
+      "burn": 5003.2,
+      "transfer": 33646.89,
+      "count": 162
      }
     }
    },
    "2026-06-25": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 261.81,
-    "count": 1,
+    "mint": 1170.1,
+    "burn": 2622.82,
+    "transfer": 34835.94,
+    "count": 226,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 261.81,
+      "transfer": 261.75,
       "count": 1
+     },
+     "Base": {
+      "mint": 1170.1,
+      "burn": 2622.82,
+      "transfer": 34574.19,
+      "count": 225
      }
     }
    },
    "2026-06-22": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 52.52,
-    "count": 3,
+    "transfer": 19832.51,
+    "count": 196,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 52.52,
+      "transfer": 52.51,
       "count": 3
+     },
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 19780.0,
+      "count": 193
      }
     }
    },
    "2026-06-21": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 17.58,
-    "count": 3,
+    "transfer": 13063.45,
+    "count": 150,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 17.58,
+      "transfer": 17.57,
       "count": 3
+     },
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 13045.88,
+      "count": 147
      }
     }
    },
    "2026-06-19": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 405.03,
-    "count": 15,
+    "mint": 1212.8,
+    "burn": 2344.48,
+    "transfer": 34232.53,
+    "count": 194,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 405.03,
+      "transfer": 404.93,
       "count": 15
+     },
+     "Base": {
+      "mint": 1212.8,
+      "burn": 2344.48,
+      "transfer": 33827.6,
+      "count": 179
      }
     }
    },
    "2026-06-16": {
-    "mint": 0.0,
+    "mint": 1120.67,
     "burn": 0.0,
-    "transfer": 8403.06,
-    "count": 3,
+    "transfer": 33695.26,
+    "count": 217,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 8403.06,
+      "transfer": 8401.04,
       "count": 3
+     },
+     "Base": {
+      "mint": 1120.67,
+      "burn": 0.0,
+      "transfer": 25294.22,
+      "count": 214
      }
     }
    },
    "2026-06-15": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 53.64,
-    "count": 1,
+    "mint": 990.28,
+    "burn": 1439.83,
+    "transfer": 43617.34,
+    "count": 260,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 53.64,
+      "transfer": 53.62,
       "count": 1
+     },
+     "Base": {
+      "mint": 990.28,
+      "burn": 1439.83,
+      "transfer": 43563.72,
+      "count": 259
      }
     }
    },
    "2026-06-14": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 966.77,
-    "count": 2,
+    "transfer": 6678.38,
+    "count": 158,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 966.77,
+      "transfer": 966.54,
       "count": 2
+     },
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 5711.84,
+      "count": 156
      }
     }
    },
    "2026-06-13": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 24.04,
-    "count": 1,
+    "mint": 1828.61,
+    "burn": 996.18,
+    "transfer": 22159.06,
+    "count": 182,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 24.04,
+      "transfer": 24.03,
       "count": 1
+     },
+     "Base": {
+      "mint": 1828.61,
+      "burn": 996.18,
+      "transfer": 22135.03,
+      "count": 181
      }
     }
    },
    "2026-06-11": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 137.5,
-    "count": 3,
+    "mint": 44062.76,
+    "burn": 5917.09,
+    "transfer": 252268.63,
+    "count": 1072,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 137.5,
+      "transfer": 137.47,
       "count": 3
+     },
+     "Base": {
+      "mint": 44062.76,
+      "burn": 5917.09,
+      "transfer": 252131.16,
+      "count": 1069
      }
     }
    },
    "2026-06-10": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 2561.23,
+    "transfer": 2560.61,
     "count": 6,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 2561.23,
+      "transfer": 2560.61,
       "count": 6
      }
     }
@@ -1490,13 +1702,13 @@
    "2026-06-09": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 904.91,
+    "transfer": 904.69,
     "count": 5,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 904.91,
+      "transfer": 904.69,
       "count": 5
      }
     }
@@ -1504,13 +1716,13 @@
    "2026-06-08": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 789.74,
+    "transfer": 789.55,
     "count": 10,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 789.74,
+      "transfer": 789.55,
       "count": 10
      }
     }
@@ -1532,13 +1744,13 @@
    "2026-06-06": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 169.82,
+    "transfer": 169.78,
     "count": 2,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 169.82,
+      "transfer": 169.78,
       "count": 2
      }
     }
@@ -1546,13 +1758,13 @@
    "2026-05-31": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 398.75,
+    "transfer": 398.65,
     "count": 2,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 398.75,
+      "transfer": 398.65,
       "count": 2
      }
     }
@@ -1560,13 +1772,13 @@
    "2026-05-30": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 487.71,
+    "transfer": 487.59,
     "count": 20,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 487.71,
+      "transfer": 487.59,
       "count": 20
      }
     }
@@ -1574,13 +1786,13 @@
    "2026-05-28": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 373.83,
+    "transfer": 373.74,
     "count": 2,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 373.83,
+      "transfer": 373.74,
       "count": 2
      }
     }
@@ -1588,13 +1800,13 @@
    "2026-05-21": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 7816.8,
+    "transfer": 7814.92,
     "count": 2,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 7816.8,
+      "transfer": 7814.92,
       "count": 2
      }
     }
@@ -1602,13 +1814,13 @@
    "2026-05-19": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 15.44,
+    "transfer": 15.43,
     "count": 1,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 15.44,
+      "transfer": 15.43,
       "count": 1
      }
     }
@@ -1616,13 +1828,13 @@
    "2026-05-11": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 3712.98,
+    "transfer": 3712.09,
     "count": 1,
     "_chains": {
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 3712.98,
+      "transfer": 3712.09,
       "count": 1
      }
     }
@@ -1642,172 +1854,458 @@
     }
    },
    "2026-08-02": {
-    "mint": 0.0,
-    "burn": 0.0,
-    "transfer": 8276.12,
-    "count": 21,
+    "mint": 17574.49,
+    "burn": 2308.84,
+    "transfer": 133161.47,
+    "count": 1912,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 8276.12,
+      "transfer": 8274.13,
       "count": 21
+     },
+     "Polygon": {
+      "mint": 17574.49,
+      "burn": 2308.84,
+      "transfer": 124887.34,
+      "count": 1891
      }
     }
    },
    "2026-08-01": {
-    "mint": 2240.7,
+    "mint": 2240.16,
     "burn": 0.0,
-    "transfer": 16195.44,
+    "transfer": 16191.55,
     "count": 69,
     "_chains": {
      "Base": {
-      "mint": 2240.7,
+      "mint": 2240.16,
       "burn": 0.0,
-      "transfer": 16195.44,
+      "transfer": 16191.55,
       "count": 69
      }
     }
    },
    "2026-07-29": {
-    "mint": 5678.7,
-    "burn": 3093.78,
-    "transfer": 67615.22,
+    "mint": 5677.34,
+    "burn": 3093.03,
+    "transfer": 67598.96,
     "count": 203,
     "_chains": {
      "Base": {
-      "mint": 5678.7,
-      "burn": 3093.78,
-      "transfer": 67615.22,
+      "mint": 5677.34,
+      "burn": 3093.03,
+      "transfer": 67598.96,
       "count": 203
      }
     }
    },
    "2026-07-28": {
-    "mint": 1485.34,
-    "burn": 6316.06,
-    "transfer": 40373.67,
+    "mint": 1484.99,
+    "burn": 6314.54,
+    "transfer": 40363.96,
     "count": 97,
     "_chains": {
      "Base": {
-      "mint": 1485.34,
-      "burn": 6316.06,
-      "transfer": 40373.67,
+      "mint": 1484.99,
+      "burn": 6314.54,
+      "transfer": 40363.96,
       "count": 97
      }
     }
    },
    "2026-07-23": {
-    "mint": 2767.58,
-    "burn": 1091.28,
-    "transfer": 20438.58,
+    "mint": 2766.91,
+    "burn": 1091.01,
+    "transfer": 20433.67,
     "count": 177,
     "_chains": {
      "Base": {
-      "mint": 2767.58,
-      "burn": 1091.28,
-      "transfer": 20438.58,
+      "mint": 2766.91,
+      "burn": 1091.01,
+      "transfer": 20433.67,
       "count": 177
      }
     }
    },
    "2026-07-22": {
     "mint": 0.0,
-    "burn": 963.59,
-    "transfer": 9195.16,
+    "burn": 963.36,
+    "transfer": 9192.95,
     "count": 77,
     "_chains": {
      "Base": {
       "mint": 0.0,
-      "burn": 963.59,
-      "transfer": 9195.16,
+      "burn": 963.36,
+      "transfer": 9192.95,
       "count": 77
      }
     }
    },
    "2026-07-21": {
-    "mint": 195.42,
-    "burn": 2106.82,
-    "transfer": 12541.1,
+    "mint": 195.37,
+    "burn": 2106.32,
+    "transfer": 12538.09,
     "count": 105,
     "_chains": {
      "Base": {
-      "mint": 195.42,
-      "burn": 2106.82,
-      "transfer": 12541.1,
+      "mint": 195.37,
+      "burn": 2106.32,
+      "transfer": 12538.09,
       "count": 105
      }
     }
    },
    "2026-07-20": {
-    "mint": 4670.72,
-    "burn": 8461.16,
-    "transfer": 72988.14,
+    "mint": 4669.59,
+    "burn": 8459.12,
+    "transfer": 72970.59,
     "count": 204,
     "_chains": {
      "Base": {
-      "mint": 4670.72,
-      "burn": 8461.16,
-      "transfer": 72988.14,
+      "mint": 4669.59,
+      "burn": 8459.12,
+      "transfer": 72970.59,
       "count": 204
      }
     }
    },
    "2026-07-19": {
     "mint": 0.0,
-    "burn": 1516.43,
-    "transfer": 13395.34,
+    "burn": 1516.07,
+    "transfer": 13392.12,
     "count": 32,
     "_chains": {
      "Base": {
       "mint": 0.0,
-      "burn": 1516.43,
-      "transfer": 13395.34,
+      "burn": 1516.07,
+      "transfer": 13392.12,
       "count": 32
      }
     }
    },
    "2026-07-18": {
-    "mint": 4847.2,
+    "mint": 4846.03,
     "burn": 0.0,
-    "transfer": 30594.43,
+    "transfer": 30587.07,
     "count": 118,
     "_chains": {
      "Base": {
-      "mint": 4847.2,
+      "mint": 4846.03,
       "burn": 0.0,
-      "transfer": 30594.43,
+      "transfer": 30587.07,
       "count": 118
      }
     }
    },
    "2026-07-17": {
+    "mint": 3786.8,
+    "burn": 1957.47,
+    "transfer": 40608.16,
+    "count": 143,
+    "_chains": {
+     "Base": {
+      "mint": 3786.8,
+      "burn": 1957.47,
+      "transfer": 40608.16,
+      "count": 143
+     }
+    }
+   },
+   "2026-07-15": {
     "mint": 0.0,
-    "burn": 1957.94,
-    "transfer": 17578.56,
-    "count": 77,
+    "burn": 355.92,
+    "transfer": 11294.79,
+    "count": 91,
     "_chains": {
      "Base": {
       "mint": 0.0,
-      "burn": 1957.94,
-      "transfer": 17578.56,
-      "count": 77
+      "burn": 355.92,
+      "transfer": 11294.79,
+      "count": 91
+     }
+    }
+   },
+   "2026-07-14": {
+    "mint": 9497.79,
+    "burn": 15805.87,
+    "transfer": 112040.06,
+    "count": 226,
+    "_chains": {
+     "Base": {
+      "mint": 9497.79,
+      "burn": 15805.87,
+      "transfer": 112040.06,
+      "count": 226
+     }
+    }
+   },
+   "2026-07-13": {
+    "mint": 6580.32,
+    "burn": 5462.0,
+    "transfer": 72755.65,
+    "count": 181,
+    "_chains": {
+     "Base": {
+      "mint": 6580.32,
+      "burn": 5462.0,
+      "transfer": 72755.65,
+      "count": 181
+     }
+    }
+   },
+   "2026-07-11": {
+    "mint": 2044.24,
+    "burn": 0.0,
+    "transfer": 15282.33,
+    "count": 71,
+    "_chains": {
+     "Base": {
+      "mint": 2044.24,
+      "burn": 0.0,
+      "transfer": 15282.33,
+      "count": 71
+     }
+    }
+   },
+   "2026-07-10": {
+    "mint": 3783.28,
+    "burn": 0.0,
+    "transfer": 46972.11,
+    "count": 161,
+    "_chains": {
+     "Base": {
+      "mint": 3783.28,
+      "burn": 0.0,
+      "transfer": 46972.11,
+      "count": 161
+     }
+    }
+   },
+   "2026-07-08": {
+    "mint": 0.0,
+    "burn": 887.82,
+    "transfer": 12466.01,
+    "count": 96,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 887.82,
+      "transfer": 12466.01,
+      "count": 96
+     }
+    }
+   },
+   "2026-07-07": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 10536.8,
+    "count": 120,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 10536.8,
+      "count": 120
+     }
+    }
+   },
+   "2026-07-06": {
+    "mint": 0.0,
+    "burn": 6827.77,
+    "transfer": 42683.73,
+    "count": 194,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 6827.77,
+      "transfer": 42683.73,
+      "count": 194
+     }
+    }
+   },
+   "2026-07-05": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 4989.36,
+    "count": 35,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 4989.36,
+      "count": 35
+     }
+    }
+   },
+   "2026-06-28": {
+    "mint": 83.48,
+    "burn": 0.0,
+    "transfer": 9579.13,
+    "count": 146,
+    "_chains": {
+     "Base": {
+      "mint": 83.48,
+      "burn": 0.0,
+      "transfer": 9579.13,
+      "count": 146
+     }
+    }
+   },
+   "2026-06-27": {
+    "mint": 3664.75,
+    "burn": 0.0,
+    "transfer": 35729.02,
+    "count": 231,
+    "_chains": {
+     "Base": {
+      "mint": 3664.75,
+      "burn": 0.0,
+      "transfer": 35729.02,
+      "count": 231
+     }
+    }
+   },
+   "2026-06-24": {
+    "mint": 7370.67,
+    "burn": 706.26,
+    "transfer": 68175.83,
+    "count": 383,
+    "_chains": {
+     "Base": {
+      "mint": 7370.67,
+      "burn": 706.26,
+      "transfer": 68175.83,
+      "count": 383
+     }
+    }
+   },
+   "2026-06-23": {
+    "mint": 3652.16,
+    "burn": 0.0,
+    "transfer": 50419.73,
+    "count": 234,
+    "_chains": {
+     "Base": {
+      "mint": 3652.16,
+      "burn": 0.0,
+      "transfer": 50419.73,
+      "count": 234
+     }
+    }
+   },
+   "2026-06-20": {
+    "mint": 1012.45,
+    "burn": 0.0,
+    "transfer": 24250.62,
+    "count": 116,
+    "_chains": {
+     "Base": {
+      "mint": 1012.45,
+      "burn": 0.0,
+      "transfer": 24250.62,
+      "count": 116
+     }
+    }
+   },
+   "2026-06-18": {
+    "mint": 3092.6,
+    "burn": 0.0,
+    "transfer": 70850.89,
+    "count": 285,
+    "_chains": {
+     "Base": {
+      "mint": 3092.6,
+      "burn": 0.0,
+      "transfer": 70850.89,
+      "count": 285
+     }
+    }
+   },
+   "2026-06-17": {
+    "mint": 1385.32,
+    "burn": 1400.98,
+    "transfer": 33988.56,
+    "count": 243,
+    "_chains": {
+     "Base": {
+      "mint": 1385.32,
+      "burn": 1400.98,
+      "transfer": 33988.56,
+      "count": 243
+     }
+    }
+   },
+   "2026-06-12": {
+    "mint": 0.0,
+    "burn": 2478.03,
+    "transfer": 29174.19,
+    "count": 234,
+    "_chains": {
+     "Base": {
+      "mint": 0.0,
+      "burn": 2478.03,
+      "transfer": 29174.19,
+      "count": 234
      }
     }
    }
   },
   "BRLA": {
    "2026-08-03": {
-    "mint": 1482077.78,
-    "burn": 1375214.58,
-    "transfer": 6030468.37,
-    "count": 2000,
+    "mint": 1530498.11,
+    "burn": 1516250.82,
+    "transfer": 6549554.41,
+    "count": 3427,
     "_chains": {
      "Polygon": {
-      "mint": 1482077.78,
-      "burn": 1375214.58,
-      "transfer": 6030468.37,
-      "count": 2000
+      "mint": 1530498.11,
+      "burn": 1516250.82,
+      "transfer": 6549554.41,
+      "count": 3427
+     }
+    }
+   },
+   "2026-08-02": {
+    "mint": 73583.34,
+    "burn": 244236.47,
+    "transfer": 869067.3,
+    "count": 2507,
+    "_chains": {
+     "Polygon": {
+      "mint": 73583.34,
+      "burn": 244236.47,
+      "transfer": 869067.3,
+      "count": 2507
+     }
+    }
+   },
+   "2026-08-01": {
+    "mint": 50543.94,
+    "burn": 146587.85,
+    "transfer": 491752.36,
+    "count": 2597,
+    "_chains": {
+     "Polygon": {
+      "mint": 50543.94,
+      "burn": 146587.85,
+      "transfer": 491752.36,
+      "count": 2597
+     }
+    }
+   },
+   "2026-07-31": {
+    "mint": 342956.48,
+    "burn": 330723.69,
+    "transfer": 1766440.55,
+    "count": 1469,
+    "_chains": {
+     "Polygon": {
+      "mint": 342956.48,
+      "burn": 330723.69,
+      "transfer": 1766440.55,
+      "count": 1469
      }
     }
    }
@@ -1816,27 +2314,27 @@
    "2026-08-03": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 2314135.87,
-    "count": 289,
+    "transfer": 2340468.0,
+    "count": 302,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 2314135.87,
-      "count": 289
+      "transfer": 2340468.0,
+      "count": 302
      }
     }
    },
    "2026-08-02": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 439535.9,
+    "transfer": 439166.26,
     "count": 168,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 439535.9,
+      "transfer": 439166.26,
       "count": 168
      }
     }
@@ -1844,104 +2342,546 @@
    "2026-08-01": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 224646.15,
+    "transfer": 224457.23,
     "count": 182,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 224646.15,
+      "transfer": 224457.23,
       "count": 182
      }
     }
    },
    "2026-07-31": {
-    "mint": 15230.85,
-    "burn": 338705.04,
-    "transfer": 3124595.18,
+    "mint": 15218.04,
+    "burn": 338420.2,
+    "transfer": 3121967.44,
     "count": 362,
     "_chains": {
      "Polygon": {
-      "mint": 15230.85,
-      "burn": 338705.04,
-      "transfer": 3124595.18,
+      "mint": 15218.04,
+      "burn": 338420.2,
+      "transfer": 3121967.44,
       "count": 362
      }
     }
    },
    "2026-07-30": {
     "mint": 0.0,
-    "burn": 2927.86,
-    "transfer": 1019271.85,
+    "burn": 2925.4,
+    "transfer": 1018414.65,
     "count": 229,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
-      "burn": 2927.86,
-      "transfer": 1019271.85,
+      "burn": 2925.4,
+      "transfer": 1018414.65,
       "count": 229
      }
     }
    },
    "2026-07-29": {
     "mint": 0.0,
-    "burn": 28436.35,
-    "transfer": 918635.35,
+    "burn": 28412.43,
+    "transfer": 917862.79,
     "count": 217,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
-      "burn": 28436.35,
-      "transfer": 918635.35,
+      "burn": 28412.43,
+      "transfer": 917862.79,
       "count": 217
      }
     }
    },
    "2026-07-28": {
-    "mint": 14255.55,
-    "burn": 62686.05,
-    "transfer": 694625.81,
+    "mint": 14243.56,
+    "burn": 62633.33,
+    "transfer": 694041.64,
     "count": 249,
     "_chains": {
      "Polygon": {
-      "mint": 14255.55,
-      "burn": 62686.05,
-      "transfer": 694625.81,
+      "mint": 14243.56,
+      "burn": 62633.33,
+      "transfer": 694041.64,
       "count": 249
      }
     }
    },
    "2026-07-27": {
     "mint": 0.0,
-    "burn": 85254.31,
-    "transfer": 1885432.9,
+    "burn": 85182.61,
+    "transfer": 1883847.27,
     "count": 257,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
-      "burn": 85254.31,
-      "transfer": 1885432.9,
+      "burn": 85182.61,
+      "transfer": 1883847.27,
       "count": 257
      }
     }
    },
    "2026-07-26": {
     "mint": 0.0,
-    "burn": 2838.4,
-    "transfer": 9586.57,
-    "count": 47,
+    "burn": 50731.77,
+    "transfer": 67592.74,
+    "count": 168,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
-      "burn": 2838.4,
-      "transfer": 9586.57,
-      "count": 47
+      "burn": 50731.77,
+      "transfer": 67592.74,
+      "count": 168
+     }
+    }
+   },
+   "2026-07-25": {
+    "mint": 75267.26,
+    "burn": 34601.39,
+    "transfer": 399882.73,
+    "count": 158,
+    "_chains": {
+     "Polygon": {
+      "mint": 75267.26,
+      "burn": 34601.39,
+      "transfer": 399882.73,
+      "count": 158
+     }
+    }
+   },
+   "2026-07-24": {
+    "mint": 63913.03,
+    "burn": 10466.79,
+    "transfer": 4814600.91,
+    "count": 296,
+    "_chains": {
+     "Polygon": {
+      "mint": 63913.03,
+      "burn": 10466.79,
+      "transfer": 4814600.91,
+      "count": 296
+     }
+    }
+   },
+   "2026-07-23": {
+    "mint": 16896.28,
+    "burn": 3191.81,
+    "transfer": 1879230.08,
+    "count": 290,
+    "_chains": {
+     "Polygon": {
+      "mint": 16896.28,
+      "burn": 3191.81,
+      "transfer": 1879230.08,
+      "count": 290
+     }
+    }
+   },
+   "2026-07-22": {
+    "mint": 0.0,
+    "burn": 25792.85,
+    "transfer": 2729551.41,
+    "count": 274,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 25792.85,
+      "transfer": 2729551.41,
+      "count": 274
+     }
+    }
+   },
+   "2026-07-21": {
+    "mint": 71809.83,
+    "burn": 26345.86,
+    "transfer": 4423603.07,
+    "count": 359,
+    "_chains": {
+     "Polygon": {
+      "mint": 71809.83,
+      "burn": 26345.86,
+      "transfer": 4423603.07,
+      "count": 359
+     }
+    }
+   },
+   "2026-07-20": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 5069955.32,
+    "count": 316,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 5069955.32,
+      "count": 316
+     }
+    }
+   },
+   "2026-07-19": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 179253.97,
+    "count": 150,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 179253.97,
+      "count": 150
+     }
+    }
+   },
+   "2026-07-18": {
+    "mint": 0.0,
+    "burn": 4615.01,
+    "transfer": 281825.18,
+    "count": 121,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 4615.01,
+      "transfer": 281825.18,
+      "count": 121
+     }
+    }
+   },
+   "2026-07-17": {
+    "mint": 9199.04,
+    "burn": 5543.42,
+    "transfer": 2599816.25,
+    "count": 254,
+    "_chains": {
+     "Polygon": {
+      "mint": 9199.04,
+      "burn": 5543.42,
+      "transfer": 2599816.25,
+      "count": 254
+     }
+    }
+   },
+   "2026-07-16": {
+    "mint": 147024.75,
+    "burn": 25479.39,
+    "transfer": 3315649.48,
+    "count": 236,
+    "_chains": {
+     "Polygon": {
+      "mint": 147024.75,
+      "burn": 25479.39,
+      "transfer": 3315649.48,
+      "count": 236
+     }
+    }
+   },
+   "2026-07-15": {
+    "mint": 215636.3,
+    "burn": 407447.73,
+    "transfer": 4260506.59,
+    "count": 306,
+    "_chains": {
+     "Polygon": {
+      "mint": 215636.3,
+      "burn": 407447.73,
+      "transfer": 4260506.59,
+      "count": 306
+     }
+    }
+   },
+   "2026-07-14": {
+    "mint": 230992.35,
+    "burn": 0.0,
+    "transfer": 5885104.52,
+    "count": 355,
+    "_chains": {
+     "Polygon": {
+      "mint": 230992.35,
+      "burn": 0.0,
+      "transfer": 5885104.52,
+      "count": 355
+     }
+    }
+   },
+   "2026-07-13": {
+    "mint": 127933.88,
+    "burn": 30668.19,
+    "transfer": 4643239.83,
+    "count": 332,
+    "_chains": {
+     "Polygon": {
+      "mint": 127933.88,
+      "burn": 30668.19,
+      "transfer": 4643239.83,
+      "count": 332
+     }
+    }
+   },
+   "2026-07-12": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 207653.12,
+    "count": 133,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 207653.12,
+      "count": 133
+     }
+    }
+   },
+   "2026-07-11": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 201770.9,
+    "count": 193,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 201770.9,
+      "count": 193
+     }
+    }
+   },
+   "2026-07-10": {
+    "mint": 58021.06,
+    "burn": 9808.71,
+    "transfer": 1594109.43,
+    "count": 244,
+    "_chains": {
+     "Polygon": {
+      "mint": 58021.06,
+      "burn": 9808.71,
+      "transfer": 1594109.43,
+      "count": 244
+     }
+    }
+   },
+   "2026-07-09": {
+    "mint": 63354.93,
+    "burn": 232054.26,
+    "transfer": 1945112.1,
+    "count": 259,
+    "_chains": {
+     "Polygon": {
+      "mint": 63354.93,
+      "burn": 232054.26,
+      "transfer": 1945112.1,
+      "count": 259
+     }
+    }
+   },
+   "2026-07-08": {
+    "mint": 68453.55,
+    "burn": 85353.75,
+    "transfer": 4804682.62,
+    "count": 316,
+    "_chains": {
+     "Polygon": {
+      "mint": 68453.55,
+      "burn": 85353.75,
+      "transfer": 4804682.62,
+      "count": 316
+     }
+    }
+   },
+   "2026-07-07": {
+    "mint": 64880.85,
+    "burn": 201359.61,
+    "transfer": 6270218.05,
+    "count": 377,
+    "_chains": {
+     "Polygon": {
+      "mint": 64880.85,
+      "burn": 201359.61,
+      "transfer": 6270218.05,
+      "count": 377
+     }
+    }
+   },
+   "2026-07-06": {
+    "mint": 196033.0,
+    "burn": 0.0,
+    "transfer": 5997123.21,
+    "count": 376,
+    "_chains": {
+     "Polygon": {
+      "mint": 196033.0,
+      "burn": 0.0,
+      "transfer": 5997123.21,
+      "count": 376
+     }
+    }
+   },
+   "2026-07-05": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 132509.3,
+    "count": 98,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 132509.3,
+      "count": 98
+     }
+    }
+   },
+   "2026-07-04": {
+    "mint": 6.86,
+    "burn": 0.0,
+    "transfer": 81431.12,
+    "count": 113,
+    "_chains": {
+     "Polygon": {
+      "mint": 6.86,
+      "burn": 0.0,
+      "transfer": 81431.12,
+      "count": 113
+     }
+    }
+   },
+   "2026-07-03": {
+    "mint": 196038.88,
+    "burn": 215636.5,
+    "transfer": 3067162.11,
+    "count": 314,
+    "_chains": {
+     "Polygon": {
+      "mint": 196038.88,
+      "burn": 215636.5,
+      "transfer": 3067162.11,
+      "count": 314
+     }
+    }
+   },
+   "2026-07-02": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 3951299.63,
+    "count": 345,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 3951299.63,
+      "count": 345
+     }
+    }
+   },
+   "2026-07-01": {
+    "mint": 117619.8,
+    "burn": 0.0,
+    "transfer": 1690351.21,
+    "count": 280,
+    "_chains": {
+     "Polygon": {
+      "mint": 117619.8,
+      "burn": 0.0,
+      "transfer": 1690351.21,
+      "count": 280
+     }
+    }
+   },
+   "2026-06-30": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 1282214.93,
+    "count": 365,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 1282214.93,
+      "count": 365
+     }
+    }
+   },
+   "2026-06-29": {
+    "mint": 0.0,
+    "burn": 98016.5,
+    "transfer": 2519616.37,
+    "count": 268,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 98016.5,
+      "transfer": 2519616.37,
+      "count": 268
+     }
+    }
+   },
+   "2026-06-28": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 1051427.23,
+    "count": 126,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 1051427.23,
+      "count": 126
+     }
+    }
+   },
+   "2026-06-27": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 364292.61,
+    "count": 87,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 364292.61,
+      "count": 87
+     }
+    }
+   },
+   "2026-06-26": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 6434443.08,
+    "count": 371,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 6434443.08,
+      "count": 371
+     }
+    }
+   },
+   "2026-06-25": {
+    "mint": 0.0,
+    "burn": 0.0,
+    "transfer": 3047684.51,
+    "count": 154,
+    "_chains": {
+     "Polygon": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 3047684.51,
+      "count": 154
      }
     }
    }
   }
  },
  "events": [
+  {
+   "date": "2026-08-03",
+   "symbol": "BRZ",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 185214.0,
+   "tx": "0x69b556dd813ecdb9a75d225ffa94f18716cbe9b9824225d9473b8c313a313360"
+  },
   {
    "date": "2026-08-03",
    "symbol": "BRLV",
@@ -2072,6 +3012,46 @@
   },
   {
    "date": "2026-07-31",
+   "symbol": "BRLA",
+   "chain": "Polygon",
+   "kind": "burn",
+   "usd": 258768.0,
+   "tx": "0xdc8386e8b41d803a2f039efb9715d9e61eb9b24ff95b5818496c71414eccf6e3"
+  },
+  {
+   "date": "2026-07-31",
+   "symbol": "BRLA",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 258768.0,
+   "tx": "0x18b6faff962361a33e14fcfcdffe1719a727b99b4a83a273dee8b623c2fe21cd"
+  },
+  {
+   "date": "2026-07-31",
+   "symbol": "BRLA",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 195357.0,
+   "tx": "0x4623575b97736041340025035c432a3b2758319c99192e95e9e8fbf45932a829"
+  },
+  {
+   "date": "2026-07-31",
+   "symbol": "BRLA",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 195357.0,
+   "tx": "0x4623575b97736041340025035c432a3b2758319c99192e95e9e8fbf45932a829"
+  },
+  {
+   "date": "2026-07-31",
+   "symbol": "BRLA",
+   "chain": "Polygon",
+   "kind": "mint",
+   "usd": 195357.0,
+   "tx": "0x4623575b97736041340025035c432a3b2758319c99192e95e9e8fbf45932a829"
+  },
+  {
+   "date": "2026-07-31",
    "symbol": "BRL1",
    "chain": "Polygon",
    "kind": "burn",
@@ -2151,52 +3131,228 @@
    "tx": "0x2054f27bf29a32e99e2ccd07303a8352d0dad94371a2ed9c4509ced58c0805cd"
   },
   {
-   "date": "2026-07-03",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "mint",
-   "usd": 1428973.0,
-   "tx": "0xf0dceb1d952acac9bf18666401554b27b9048c1221e3c56295a39e017a0ac658"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 264682.0,
+   "tx": "0xb5ff38f338cf625612aa0ca56ef9e9bd45d080b7b808297d33c9508695be0e03"
   },
   {
-   "date": "2026-07-01",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "burn",
-   "usd": 1170358.0,
-   "tx": "0x827ccf7600e47cfb2cd44de783f643b87b468b8838fce7f5e8acb3a8a31524d6"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 114870.0,
+   "tx": "0x28b4bc6391ce4bf1e5b200f92fd616b8306f952596cd31d7661b9e8a04c4f288"
   },
   {
-   "date": "2026-06-22",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "mint",
-   "usd": 196471.0,
-   "tx": "0x362483ee1b5d174dda5ff28fa6a9113f4e8e995183d0c936db32c3d998306457"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 148763.0,
+   "tx": "0xff2f7471f45606eef545cfa485543888bc9f3203eed3812524b0df4222b68ee6"
   },
   {
-   "date": "2026-05-15",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "mint",
-   "usd": 196471.0,
-   "tx": "0xe3dcc488f8a73a23539b4302c10b57e370a2704d059d87c7289aa63b2c19f5b2"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 286208.0,
+   "tx": "0x34bea037409fd4a9fc6d2b8cfb70d6dafb7f5d9c1da59ca60a9f85c400b0f11c"
   },
   {
-   "date": "2026-05-15",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "mint",
-   "usd": 4892128.0,
-   "tx": "0x5e678c1be06b6677181d175cb4d7b53e722dd56bde69d29b5ad94283e432ba2e"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 294050.0,
+   "tx": "0x83fe7309f87bf3981c604c439ebb95baa35188be833a0425641acc22114ffea6"
   },
   {
-   "date": "2026-05-14",
-   "symbol": "BRLV",
-   "chain": "Base",
-   "kind": "mint",
-   "usd": 5894130.0,
-   "tx": "0x862f334af3486d4357fe422994f613147b9ed94bc61471168e29fd2e592b7259"
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 294050.0,
+   "tx": "0xbc2add40698e46f81876a9369cb643b56fd01e3ed8ac0bdec964024d694089ad"
+  },
+  {
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 294050.0,
+   "tx": "0x154daa7a3e35dae5b919ba2bea7bfed79845a705ee68ce437ee0edc1a81be16f"
+  },
+  {
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 195837.0,
+   "tx": "0x34b318f6684912a0ce368d144f22a7e430a2eab478fda5b42a7ca68b44d7301b"
+  },
+  {
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 107716.0,
+   "tx": "0x175bbba4fd196ac7689fbac907f91a93b0972eebb7260d38a14edd901c997b32"
+  },
+  {
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 107680.0,
+   "tx": "0x85e34162717775e753cea48e2cbc4d7b07c9c870b0b6571c9c5a4b9e1de6aceb"
+  },
+  {
+   "date": "2026-07-24",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 107667.0,
+   "tx": "0x8b9f673914c85baead6f696a8a26c4daeab66503e2616bafee046fa1cde4be5b"
+  },
+  {
+   "date": "2026-07-23",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 200615.0,
+   "tx": "0x7cc5548f795c94315d18aa5f54bdf5534a1de2ed7da8c8758593e10cf9eb6d75"
+  },
+  {
+   "date": "2026-07-23",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 154429.0,
+   "tx": "0x22fc6179749ffac4d5325ecc820d0f889d6f8c281813ac5bccbedd9d8ca8425c"
+  },
+  {
+   "date": "2026-07-22",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 387707.0,
+   "tx": "0x0f31b7b0c20301490e785e2ab6daafffddbcb4e59a4aa864c73d39e5ec63eebf"
+  },
+  {
+   "date": "2026-07-22",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 390117.0,
+   "tx": "0xd39de6a04829e2c066fb05c3fb3b26fa718d8d99daf7f570bcb69a45c6fdf418"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 243319.0,
+   "tx": "0xf71f519b106ad7bf144995c3319bd38c277a66bfe461ec7336116e4103b54284"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 261578.0,
+   "tx": "0xe25964fdfa3f8507e69966c62e4fe51d9f849da3f312013f553fadfed207a78e"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 235240.0,
+   "tx": "0x130518df56399c0e03b0c5d619d1abe6d0550c7515ee0f67dc748dc78ebf5646"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 235240.0,
+   "tx": "0x3b5b4a11da426d682a34ab5ee658c7241f1101b88de2748b942d4f55abdf3da4"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 415291.0,
+   "tx": "0x5e7c50fd9b253adef132843c9f378c6764c0b2c93d76b9336457f757a1ae556e"
+  },
+  {
+   "date": "2026-07-21",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 156824.0,
+   "tx": "0xb58f7359fe6981c9bdca6bfc84fc4ff9dd3036edab5e1b238cc5d14d553cb1e8"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 149366.0,
+   "tx": "0x98f08cf789ee31af83ff6614a01ce2e60ab1f7c7223e3f0be8ade7391140b44f"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 228385.0,
+   "tx": "0x37842f224ac6293c944108fa270d551c30a56b1cb1cb1c7af8340c99cebc4dff"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 135829.0,
+   "tx": "0x100cb381e658eca066cc370094379716fbdb7faef022bd85143397b65ca66257"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 196439.0,
+   "tx": "0xe08c3e43a530561730a0e2e33d33b06b014bde38239fdb6c187231ce0b3801f7"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 109663.0,
+   "tx": "0x1469df1f3250df7ed4f72fb2c46d12c5a6cccaad75b4b060c0a59ff984b26702"
+  },
+  {
+   "date": "2026-07-20",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 109663.0,
+   "tx": "0xad788d961d5b7ddc1eef3d37c4e12807d114fd4e8f74ee3ddd138a07bce58b58"
+  },
+  {
+   "date": "2026-07-17",
+   "symbol": "BRL1",
+   "chain": "Polygon",
+   "kind": "transfer",
+   "usd": 204128.0,
+   "tx": "0x6654289d848a7f95a4008acd6c0a7eb183c197cf82eefa4c3ee90a3f94f25318"
   }
  ],
  "meta": {
@@ -2205,7 +3361,11 @@
    "chains_scanned": [
     "Base"
    ],
-   "page_capped": true,
+   "page_capped": false,
+   "chain_since": {
+    "Base": "2026-05-05"
+   },
+   "scan_since": "2026-05-05",
    "note": null
   },
   "BRZ": {
@@ -2216,6 +3376,12 @@
     "Base"
    ],
    "page_capped": true,
+   "chain_since": {
+    "Polygon": "2026-08-03",
+    "Ethereum": "2026-05-05",
+    "Base": "2026-06-12"
+   },
+   "scan_since": "2026-08-03",
    "note": "EVM chains only \u2014 non-EVM legs not yet scanned; totals are a floor, labeled"
   },
   "BRLA": {
@@ -2224,6 +3390,10 @@
     "Polygon"
    ],
    "page_capped": true,
+   "chain_since": {
+    "Polygon": "2026-08-01"
+   },
+   "scan_since": "2026-08-01",
    "note": "EVM chains only \u2014 non-EVM legs not yet scanned; totals are a floor, labeled"
   },
   "BBRL": {
@@ -2236,6 +3406,10 @@
     "Polygon"
    ],
    "page_capped": true,
+   "chain_since": {
+    "Polygon": "2026-06-26"
+   },
+   "scan_since": "2026-06-26",
    "note": null
   },
   "cREAL": {
@@ -2243,7 +3417,7 @@
    "note": "no EVM chains scanned yet (XRPL/DefiLlama-sourced) \u2014 use third-party anchor, never a guess"
   }
  },
- "generated_at": "2026-08-03T20:13:20Z",
+ "generated_at": "2026-08-03T21:17:08Z",
  "errors": [],
- "method": "Blockscout token-transfer pages per contract; type=token_minting/burning or zero-address => mint/burn, else transfer; USD at current price; events >= $100,000; page cap 40/chain/run; incremental 3-day rescan window."
+ "method": "Blockscout token-transfer pages per contract; type=token_minting/burning or zero-address => mint/burn, else transfer; USD at current price; events >= $100,000; page cap 200/chain/run; incremental 3-day rescan window."
 }
