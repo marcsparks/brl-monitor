@@ -42,7 +42,12 @@ Static site (index.html, vanilla JS) + Python-stdlib collector + GitHub Actions 
 
 ## v1.1 backlog (priority order)
 1. XRPL volume scan for BBRL (issuer account_tx — rippling means issued-currency payments touch the issuer account) — the volume league's biggest missing number.
-2. Validate BBRL/BRL1 volumes against rwa.xyz anchors.
+2. Direct Celo contract reads for cREAL + BRZ/BRLA non-EVM remainders — DefiLlama is unreliable from GitHub Actions IPs (repeated failures Aug 3); Celo is EVM-compatible, Blockscout instance exists.
+3. Validate BBRL/BRL1 volumes against rwa.xyz anchors.
+
+## Ops notes (Aug 3, 2026)
+- CoinGecko blocks GitHub Actions IPs → pre-launch history lives in data/backfill_coingecko.json (fetched once via browser, weekly grid); collect.py merges it below launch day. backfill.py kept for reference but cannot run in Actions.
+- history.json hygiene filter in collect.py drops any pre-launch day carrying per-token "supply" (the v0 smoke-seed shape) — safe to keep permanently.
 3. Receita monthly ingestion (per-asset volumes, history to 2019) → replace USD-league share labels with official absolutes.
 4. Per-issuer pages: supply/holder history, concentration, peg chart; issuer fee-schedule links (linked, never transcribed).
 5. License tracker → BCB register watcher (open-data CSV diff → alert). Oct 30 census report pre-drafted.
