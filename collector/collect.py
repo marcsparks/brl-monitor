@@ -175,6 +175,15 @@ def main():
             price = 1.0 / ptax
             row["provenance"].append(prov("1:1 BRL peg x BCB PTAX (no market price source)",
                                           "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados"))
+        if not row["chains"]:
+            # every supply source for this token failed this run — rule 3:
+            # render "—", never a fabricated (or misleading zero) value
+            row["supply"] = None
+            row["usd"] = None
+            row["price_usd"] = price
+            row["source_failed"] = True
+            out["tokens"].append(row)
+            continue
         row["supply"] = round(row["supply"], 2)
         row["price_usd"] = price
         row["usd"] = round(row["supply"] * price, 2) if price else None

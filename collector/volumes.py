@@ -14,15 +14,16 @@ Honesty rules:
 Usage: python collector/volumes.py [--offline] [--backfill-days N]
 Run AFTER collect.py (uses data/latest.json for prices).
 """
-import json, sys, datetime, pathlib
+import json, os, sys, datetime, pathlib
 from collect import get_json, now_iso, OFFLINE  # noqa: F401  (shared fetch + offline mode)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-PAGE_CAP = 40          # max pages per chain per run (rate-limit + Actions-minutes guard)
+PAGE_CAP = int(os.environ.get("VOLUMES_PAGE_CAP") or 40)  # pages/chain/run (rate-limit + Actions guard)
 EVENT_MIN_USD = 100_000
 BACKFILL_DAYS = 90
-if "--backfill-days" in sys.argv:
+EXPLICIT_BACKFILL = "--backfill-days" in sys.argv
+if EXPLICIT_BACKFILL:
     BACKFILL_DAYS = int(sys.argv[sys.argv.index("--backfill-days") + 1])
 
 ZERO = {"0x0000000000000000000000000000000000000000",
@@ -82,9 +83,12 @@ def main():
     vpath = DATA / "volumes.json"
     vol = json.loads(vpath.read_text()) if vpath.exists() else {"daily": {}, "events": [], "meta": {}}
     today = datetime.date.today()
-    # incremental: rescan last 3 days (finality/lag); first run: BACKFILL_DAYS
+    # incremental: rescan last 3 days (finality/lag); first run OR explicit
+    # --backfill-days: scan back BACKFILL_DAYS (re-scanned days are overwritten
+    # per chain, so a deep re-backfill is idempotent and only ever adds depth)
     have_any = bool(vol["daily"])
-    since = (today - datetime.timedelta(days=3 if have_any else BACKFILL_DAYS)).isoformat()
+    deep = (not have_any) or EXPLICIT_BACKFILL
+    since = (today - datetime.timedelta(days=BACKFILL_DAYS if deep else 3)).isoformat()
 
     events = []
     errors = []
@@ -98,6 +102,8 @@ def main():
             continue
         tok_daily = vol["daily"].setdefault(sym, {})
         capped_any = False
+        prev_since = ((vol["meta"].get(sym) or {}).get("chain_since") or {})
+        chain_since = dict(prev_since)
         for c in evm_chains:
             api_base = c["api"]  # .../api/v2/tokens/0x...
             try:
@@ -109,6 +115,15 @@ def main():
                     w.setdefault("_chains", {})[c["chain"]] = {
                         "mint": round(v["mint"], 2), "burn": round(v["burn"], 2),
                         "transfer": round(v["transfer"], 2), "count": v["count"]}
+                # honest scan-start: earliest COMPLETE day for this chain.
+                # If the page cap cut the walk mid-day, that earliest day is
+                # partial — the first complete day is the next one.
+                if daily:
+                    start = min(daily)
+                    if capped:
+                        start = (datetime.date.fromisoformat(start) + datetime.timedelta(days=1)).isoformat()
+                    if c["chain"] not in chain_since or start < chain_since[c["chain"]]:
+                        chain_since[c["chain"]] = start
             except Exception as e:  # noqa: BLE001
                 errors.append({"source": f"{sym}/{c['chain']}", "error": str(e)})
         # roll per-chain window data up into day totals
@@ -118,10 +133,15 @@ def main():
                 for k in ("mint", "burn", "transfer"):
                     w[k] = round(sum(x[k] for x in ch.values()), 2)
                 w["count"] = sum(x["count"] for x in ch.values())
+        # token-level complete-window start = the LATEST of its chains' starts
+        # (before that date at least one scanned chain has no complete data)
+        scan_since = max(chain_since.values()) if chain_since else None
         vol["meta"][sym] = {
             "coverage": "full" if len(evm_chains) == all_chains else "partial",
             "chains_scanned": [c["chain"] for c in evm_chains],
             "page_capped": capped_any,
+            "chain_since": chain_since,
+            "scan_since": scan_since,
             "note": None if len(evm_chains) == all_chains else
                     "EVM chains only — non-EVM legs not yet scanned; totals are a floor, labeled",
         }
