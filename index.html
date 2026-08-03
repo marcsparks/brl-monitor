@@ -112,7 +112,7 @@
 
   <div class="panel" id="volume">
     <h2>Volume league — BRL stablecoins by value moved <span class="tag t-complete">on-chain events</span>
-      <span class="toggle" id="ptoggle"><span data-p="30">30d</span><span data-p="90">90d</span><span data-p="365">1y</span><span data-p="0">all</span></span>
+      <span class="toggle" id="ptoggle"><span data-p="30">30d</span><span data-p="90">90d</span><span data-p="180">180d</span><span data-p="365">1y</span><span data-p="0">all</span></span>
     </h2>
     <div class="ps">Float = outstanding supply. Volume = value transferred on-chain in the period (mint/burn + transfers). Velocity = volume ÷ float, monthly. Coverage per token is declared — non-EVM legs not yet scanned show as a floor with a third-party anchor, never a guess. <span id="volwindow"></span> <a href="#methodology">Method ↓</a></div>
     <div class="chartbox"><svg id="volchart" width="100%" height="210" viewBox="0 0 1120 210" preserveAspectRatio="none"></svg><div class="tt" id="voltt"></div></div>
@@ -244,20 +244,20 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
   // only offer periods the data can actually fill (window grows daily — toggles appear on their own)
   let period=30;
   {
-    const avail={30:spanDays>=2,90:spanDays>=45,365:spanDays>=180,0:spanDays>=400};
+    const avail={30:spanDays>=2,90:spanDays>=45,180:spanDays>=100,365:spanDays>=270,0:spanDays>=100};
     let biggest=30;
     document.querySelectorAll("#ptoggle span").forEach(el=>{
       const p=+el.dataset.p;
       const ok=avail[p];
       el.style.display=ok?"":"none";
-      if(ok&&(p===0||p>biggest))biggest=(p===0?9999:p);
+      if(ok&&p>biggest)biggest=p;   // default to the largest FIXED period; "all" stays opt-in
     });
-    period=biggest===9999?0:biggest;
+    period=biggest;
     document.querySelectorAll("#ptoggle span").forEach(el=>{
-      el.classList.toggle("on",+el.dataset.p===(period===0?0:period)&&!(period!==0&&+el.dataset.p===0));
+      el.classList.toggle("on",+el.dataset.p===period);
     });
   }
-  const plabel=()=>period===30?"30d":period===90?"90d":period===365?"1y":"all";
+  const plabel=()=>period===30?"30d":period===90?"90d":period===180?"180d":period===365?"1y":"all";
   function volCompute(){
     if(!vol||!vol.daily||!Object.keys(vol.daily).length)return null;
     const today=new Date();
@@ -280,7 +280,7 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
       const covFrom=cut>first?cut:first;                 // days this token actually covers in the period
       const days_n=Math.max(1,Math.round((today-new Date(covFrom))/864e5));
       rows.push({sym,mv,mb,float:t.usd,vel:t.usd?mv*(30/days_n)/t.usd:null,color:t.color||1,
-                 meta:(vol.meta||{})[sym]||{},since});
+                 meta:(vol.meta||{})[sym]||{},since,first});
     }
     rows.sort((a,b)=>b.mv-a.mv);
     return{rows,series};
@@ -339,6 +339,18 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
       g+=`<polyline points="${up}" fill="none" stroke="var(--s${r.color})" stroke-width="1.6"/>`;
       lower=upper;
     }
+    // scan-start markers: tokens whose scan begins after the chart start get a
+    // dashed line — left of it their data is UNSCANNED (a floor), not zero
+    let mi=0;
+    for(const r of c.rows){
+      const fi=r.first?dates.indexOf(r.first):-1;
+      if(fi>0){
+        g+=`<line x1="${X(fi)}" y1="${Y(0)}" x2="${X(fi)}" y2="${P.t+6}" stroke="var(--s${r.color})" stroke-dasharray="3,3" opacity="0.7"/>`;
+        const flip=X(fi)>W-120;
+        g+=`<text x="${X(fi)+(flip?-4:4)}" y="${P.t+14+mi*12}" font-size="10" fill="var(--s${r.color})" text-anchor="${flip?"end":"start"}">${r.sym} scan starts</text>`;
+        mi++;
+      }
+    }
     svg.innerHTML=g;
     $("vollegend").innerHTML=c.rows.map(r=>`<span><span class="dot" style="background:var(--s${r.color})"></span>${r.sym}</span>`).join("")
       +`<span style="margin-left:auto;color:var(--muted)">cumulative value moved since period start</span>`;
@@ -347,7 +359,7 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
     svg.onmousemove=e=>{const rc=svg.getBoundingClientRect(),fx=(e.clientX-rc.left)*(W/rc.width);
       let i=Math.round((fx-P.l)/((W-P.l-P.r)/(dates.length-1)));i=Math.max(0,Math.min(dates.length-1,i));
       tt2.style.display="block";
-      tt2.innerHTML=`<b>${dates[i]}</b> · total ${fmtUsd(stackTop[i])}<br>`+c.rows.map(r=>`<span class="dot" style="background:var(--s${r.color})"></span>${r.sym} ${fmtUsd(cum[r.sym][i])}`).join(" · ");
+      tt2.innerHTML=`<b>${dates[i]}</b> · total ${fmtUsd(stackTop[i])}<br>`+c.rows.map(r=>`<span class="dot" style="background:var(--s${r.color})"></span>${r.sym} ${r.first&&dates[i]<r.first?'<span style="color:var(--muted)">not scanned yet</span>':fmtUsd(cum[r.sym][i])}`).join(" · ");
       tt2.style.left=Math.min(e.clientX-rc.left+12,rc.width-260)+"px";tt2.style.top=(e.clientY-rc.top-14)+"px"};
     svg.onmouseleave=()=>tt2.style.display="none";
   }
