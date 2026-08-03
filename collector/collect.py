@@ -190,6 +190,11 @@ def main():
         try:
             v = fetch_dexscreener(p["api"])
             if v:
+                # market-depth metric: constant-product approximation — quote-side reserve
+                # ≈ liquidity/2; ticket causing ~1% price impact ≈ 1% of quote reserve.
+                # Documented on methodology page; an indicative bound, not an execution quote.
+                if v.get("liquidity_usd"):
+                    v["max_ticket_1pct_usd"] = round(0.01 * v["liquidity_usd"] / 2, 0)
                 out["dex"][p["id"]] = {**v, "label": p["label"], **prov("DexScreener", p["page"])}
         except Exception as e:  # noqa: BLE001
             out["errors"].append({"source": p["id"], "error": str(e)})
