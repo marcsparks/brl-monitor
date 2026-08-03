@@ -266,15 +266,18 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
     for(const[sym,days]of Object.entries(vol.daily)){
       const since=scanSince(sym)||"0000";
       let mv=0,mb=0;const s={};
+      // count EVERYTHING scanned (a labeled floor beats discarding real events);
+      // `since` marks where the window is complete — displayed per token
       for(const[d,v]of Object.entries(days)){
-        if(d<cut||d<since)continue;              // only complete-window days count
+        if(d<cut)continue;
         const tot=(v.mint||0)+(v.burn||0)+(v.transfer||0);
         mv+=tot;mb+=(v.mint||0)+(v.burn||0);
         s[d]=(s[d]||0)+tot;
       }
       series[sym]=s;
       const t=tokMap[sym]||{};
-      const covFrom=cut>since?cut:since;         // days this token actually covers in the period
+      const first=Object.keys(days).sort()[0]||since;   // earliest scanned day
+      const covFrom=cut>first?cut:first;                 // days this token actually covers in the period
       const days_n=Math.max(1,Math.round((today-new Date(covFrom))/864e5));
       rows.push({sym,mv,mb,float:t.usd,vel:t.usd?mv*(30/days_n)/t.usd:null,color:t.color||1,
                  meta:(vol.meta||{})[sym]||{},since});
@@ -299,8 +302,9 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
     // table
     $("volbody").innerHTML=c.rows.map(r=>{
       const cov=r.meta.coverage;
-      const covChip=cov==="full"?'<span class="chipg">full</span>':cov==="partial"?'<span class="chip">EVM only — floor</span>':'<span class="chip">not scanned</span>';
-      const sinceChip=r.since?` <span class="chip" title="complete event data for this token starts here">since ${r.since.slice(5)}</span>`:"";
+      let covChip=cov==="full"?'<span class="chipg">full</span>':cov==="partial"?'<span class="chip">EVM only — floor</span>':'<span class="chip">not scanned</span>';
+      if(r.meta.page_capped)covChip+=' <span class="chip" title="a busy chain hit the per-run page cap — earliest days are partially scanned; totals are a floor">capped — floor</span>';
+      const sinceChip=r.since?` <span class="chip" title="event data is COMPLETE for all this token's scanned chains from this date; earlier scanned days are partial (floor)">complete since ${r.since.slice(5)}</span>`:"";
       return`<tr>
         <td class="tok"><span class="dot" style="background:var(--s${r.color})"></span>${r.sym}<span class="iss">${(tokMap[r.sym]||{}).issuer||""}</span></td>
         <td class="num" style="font-weight:700">${r.mv?fmtUsd(r.mv):"—"}</td>
