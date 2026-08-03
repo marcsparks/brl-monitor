@@ -26,6 +26,9 @@ jobs:
         run: python collector/backfill.py
       - name: Collect
         run: python collector/collect.py
+      - name: Volumes scan
+        run: cd collector && python volumes.py
+        continue-on-error: true
       - name: Commit data
         run: |
           git config user.name "brl-monitor-bot"
