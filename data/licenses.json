@@ -1,0 +1,19 @@
+{
+  "_note": "Hand-maintained until BCB registers populate (post Oct 30, 2026). Every status MUST cite a public source. 'unknown' means: no public record found — which is itself the honest status.",
+  "updated": "2026-08-03",
+  "deadline": "2026-10-30",
+  "firms": [
+    {"name": "Braza Bank", "observed": "BBRL issuer · FX bank", "status": "authorized_bank",
+     "status_label": "Authorized (FX bank — pre-existing BCB license)",
+     "source": "https://www.bcb.gov.br/estabilidadefinanceira/encontreinstituicao"},
+    {"name": "Transfero (BRZ)", "observed": "BRZ issuer", "status": "unknown",
+     "status_label": "No public VASP filing record found yet", "source": null},
+    {"name": "Avenia (BRLA)", "observed": "BRLA issuer · ramps", "status": "unknown",
+     "status_label": "No public VASP filing record found yet", "source": null},
+    {"name": "Mercado Bitcoin", "observed": "exchange · BRL1 consortium", "status": "unknown",
+     "status_label": "No public BR-VASP record yet (MiCA filing in Portugal is public)",
+     "source": "https://www.mercadobitcoin.com.br"},
+    {"name": "Crown (BRLV)", "observed": "bond-backed BRL token", "status": "other_perimeter",
+     "status_label": "Different regulatory perimeter (securities-backed issuance)", "source": null}
+  ]
+}

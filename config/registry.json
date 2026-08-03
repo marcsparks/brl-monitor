@@ -1,0 +1,93 @@
+{
+  "tokens": [
+    {
+      "symbol": "BRLV", "name": "Crown BRLV", "issuer": "Crown", "backing": "Brazilian govt bonds, yield-shared",
+      "coingecko_id": "crown-brlv", "color": 1,
+      "chains": [
+        {"chain": "Base", "type": "blockscout",
+         "api": "https://base.blockscout.com/api/v2/tokens/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36",
+         "explorer": "https://base.blockscout.com/token/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36"}
+      ]
+    },
+    {
+      "symbol": "BRZ", "name": "Brazilian Digital Token", "issuer": "Transfero", "backing": "1:1 fiat",
+      "coingecko_id": "brz", "defillama_symbol": "BRZ", "color": 2,
+      "chains": [
+        {"chain": "Polygon", "type": "blockscout",
+         "api": "https://polygon.blockscout.com/api/v2/tokens/0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc",
+         "explorer": "https://polygon.blockscout.com/token/0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc"},
+        {"chain": "Ethereum", "type": "blockscout",
+         "api": "https://eth.blockscout.com/api/v2/tokens/0x01d33FD36ec67c6ada32cf36b31e88ee190b1839",
+         "explorer": "https://eth.blockscout.com/token/0x01d33FD36ec67c6ada32cf36b31e88ee190b1839"},
+        {"chain": "Base", "type": "blockscout",
+         "api": "https://base.blockscout.com/api/v2/tokens/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
+         "explorer": "https://base.blockscout.com/token/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4"},
+        {"chain": "Solana +5 (via DefiLlama)", "type": "defillama_note",
+         "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
+         "explorer": "https://defillama.com/stablecoin/brazilian-digital",
+         "note": "Solana/BNB/Avalanche/etc circulating from DefiLlama, minus directly-read EVM chains. Stellar leg excluded: 2B issued to issuer treasury but only 8 funded holders — dormant, not circulating."}
+      ]
+    },
+    {
+      "symbol": "BRLA", "name": "BRLA Digital", "issuer": "Avenia", "backing": "1:1 fiat",
+      "coingecko_id": "brla-digital-brla", "defillama_symbol": "BRLA", "color": 3,
+      "chains": [
+        {"chain": "Polygon", "type": "blockscout",
+         "api": "https://polygon.blockscout.com/api/v2/tokens/0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
+         "explorer": "https://polygon.blockscout.com/token/0xE6A537a407488807F0bbeb0038B79004f19DDDFb"},
+        {"chain": "Celo +2 (via DefiLlama)", "type": "defillama_note",
+         "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
+         "explorer": "https://defillama.com/stablecoin/brla-digital",
+         "note": "Celo/Gnosis/Moonbeam circulating taken from DefiLlama chain breakdown"}
+      ]
+    },
+    {
+      "symbol": "BBRL", "name": "Braza BRL", "issuer": "Braza Bank", "backing": "1:1 fiat (FX bank)",
+      "coingecko_id": null, "peg": "BRL", "color": 4,
+      "chains": [
+        {"chain": "XRPL", "type": "xrpscan",
+         "api": "https://api.xrpscan.com/api/v1/account/rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt/obligations",
+         "explorer": "https://xrpscan.com/account/rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt",
+         "currency_hex_prefix": "4242524C"}
+      ]
+    },
+    {
+      "symbol": "BRL1", "name": "BRL1", "issuer": "MB · Bitso · Foxbit · Cainvest", "backing": "1:1 fiat, consortium",
+      "coingecko_id": "brl1", "color": 5,
+      "chains": [
+        {"chain": "Polygon", "type": "blockscout",
+         "api": "https://polygon.blockscout.com/api/v2/tokens/0x5c067c80c00ecd2345b05e83a3e758ef799c40b5",
+         "explorer": "https://polygon.blockscout.com/token/0x5c067c80c00ecd2345b05e83a3e758ef799c40b5"}
+      ]
+    },
+    {
+      "symbol": "cREAL", "name": "Celo Real", "issuer": "Mento (Celo)", "backing": "crypto-collateralised",
+      "coingecko_id": "celo-real-creal", "defillama_symbol": "CREAL", "color": 6,
+      "chains": [
+        {"chain": "Celo (via DefiLlama)", "type": "defillama_note",
+         "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
+         "explorer": "https://defillama.com/stablecoin/celo-brazilian-real",
+         "note": "supply taken from DefiLlama; verify Celo contract in v1.1"}
+      ]
+    }
+  ],
+  "official_series": [
+    {"id": "ptax_usd_sell", "sgs": 1, "label": "PTAX USD (venda)",
+     "api": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados",
+     "source_page": "https://dadosabertos.bcb.gov.br/"},
+    {"id": "selic_target", "sgs": 432, "label": "Selic target",
+     "api": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados",
+     "source_page": "https://dadosabertos.bcb.gov.br/"},
+    {"id": "cdi_daily", "sgs": 12, "label": "CDI (daily)",
+     "api": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados",
+     "source_page": "https://dadosabertos.bcb.gov.br/"}
+  ],
+  "dex_pools": [
+    {"id": "brz_usdt0_polygon", "label": "BRZ/USDT0 · Uniswap · Polygon",
+     "api": "https://api.dexscreener.com/latest/dex/pairs/polygon/0x4Af62a93775C093Af3e32949EF23C9a323d20817",
+     "page": "https://dexscreener.com/polygon/0x4Af62a93775C093Af3e32949EF23C9a323d20817"},
+    {"id": "brla_usdc_polygon", "label": "BRLA/USDC · Uniswap V3 · Polygon",
+     "api": "https://api.dexscreener.com/latest/dex/pairs/polygon/0x0E7754127dEDd4097be750825Dbb4669bc32c956",
+     "page": "https://dexscreener.com/polygon/0x0E7754127dEDd4097be750825Dbb4669bc32c956"}
+  ]
+}

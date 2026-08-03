@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRL Monitor — Brazil's stablecoin & tokenization economy, measured</title>
+<meta name="description" content="Complete, verifiable data on Brazil's on-chain real: every BRL stablecoin, every issuer, official statistics — every number linked to its source.">
+<style>
+  :root{
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300;
+    --accent:#2a78d6; --accent-deep:#1c5cab; --up:#006300; --warn:#fab219; --crit:#d03b3b; --good:#0ca30c;
+    --gray-bg:rgba(137,135,129,.12); --good-bg:rgba(12,163,12,.10); --warn-bg:rgba(250,178,25,.14); --crit-bg:rgba(208,59,59,.09);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink-2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300;
+      --accent:#3987e5; --accent-deep:#86b6ef; --up:#0ca30c;
+      --gray-bg:rgba(137,135,129,.18); --good-bg:rgba(12,163,12,.16); --warn-bg:rgba(250,178,25,.14); --crit-bg:rgba(208,59,59,.16);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--page);color:var(--ink);font-size:14px;line-height:1.5}
+  a{color:var(--accent);text-decoration:none}
+  header.top{display:flex;align-items:center;gap:24px;padding:13px 28px;background:var(--surface);border-bottom:1px solid var(--grid);flex-wrap:wrap}
+  .brand{font-weight:750;font-size:17px;letter-spacing:.05em}
+  .brand em{font-style:normal;color:var(--accent)}
+  .brand .sub{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:0}
+  nav{display:flex;gap:18px;font-size:13.5px;color:var(--ink-2)}
+  nav a{color:var(--ink-2)} nav a:hover{color:var(--ink)}
+  .countdown{background:var(--warn-bg);border-bottom:1px solid var(--grid);padding:7px 28px;font-size:12.5px;color:var(--ink-2);text-align:center}
+  .countdown b{color:var(--ink)}
+  .errbar{display:none;background:var(--crit-bg);border-bottom:1px solid var(--grid);padding:6px 28px;font-size:12px;color:var(--ink-2);text-align:center}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 28px}
+  .tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 9px;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .t-complete{background:var(--good-bg);color:var(--ink)} .t-complete::before{content:"●";color:var(--good);font-size:9px}
+  .t-official{background:var(--good-bg);color:var(--ink)} .t-official::before{content:"■";color:var(--good);font-size:9px}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+  .tile{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:15px 18px}
+  .tile .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+  .tile .v{font-size:24px;font-weight:720;margin-top:5px;font-variant-numeric:tabular-nums}
+  .tile .d{font-size:12px;color:var(--ink-2);margin-top:4px}
+  .panel{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:18px 22px;margin-top:16px}
+  .panel h2{font-size:15px;font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .panel .ps{font-size:12.5px;color:var(--muted);margin:2px 0 12px}
+  .row2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
+  @media(max-width:900px){.row2{grid-template-columns:1fr}}
+  .row2 .panel{margin-top:0}
+  table{border-collapse:collapse;width:100%}
+  th{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1px solid var(--grid);white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid var(--grid);font-size:13px;white-space:nowrap;vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  .num{font-variant-numeric:tabular-nums;text-align:right}
+  .tok{font-weight:700}
+  .tok .iss{display:block;font-weight:400;font-size:11.5px;color:var(--muted)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  .sharebar{height:8px;border-radius:4px;background:var(--gray-bg);overflow:hidden;min-width:80px}
+  .sharebar div{height:100%;border-radius:4px}
+  .pos{color:var(--up);font-weight:600}
+  .neg{color:var(--crit);font-weight:600}
+  .chip{font-size:11px;background:var(--gray-bg);border-radius:999px;padding:2px 8px;color:var(--ink-2)}
+  .verify{font-size:11px;color:var(--accent);margin-left:4px}
+  .src{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:var(--gray-bg);color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;margin-left:5px;vertical-align:2px;position:relative;font-style:normal}
+  .src:hover{background:var(--accent);color:#fff}
+  .src::after{content:attr(data-tip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--page);font-size:11px;font-weight:400;padding:7px 10px;border-radius:8px;white-space:pre-line;width:max-content;max-width:300px;text-align:left;opacity:0;pointer-events:none;transition:opacity .12s;z-index:20;line-height:1.45}
+  .src:hover::after{opacity:1}
+  .feed{font-size:13px}
+  .feed .ev{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--grid);align-items:baseline}
+  .feed .ev:last-child{border-bottom:none}
+  .feed .t{color:var(--muted);font-size:11.5px;min-width:70px}
+  .chartbox{position:relative}
+  .tt{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--grid);border-radius:8px;padding:6px 10px;font-size:12px;display:none;box-shadow:0 2px 10px rgba(0,0,0,.08);white-space:nowrap;z-index:5}
+  .rcards{display:flex;gap:14px;flex-wrap:wrap}
+  .rcards a{flex:1;min-width:240px;background:var(--gray-bg);border-radius:10px;padding:14px 16px;color:var(--ink);font-size:13px}
+  .rcards a span{color:var(--ink-2)}
+  footer{margin-top:24px;padding:16px 28px 44px;border-top:1px solid var(--grid);color:var(--muted);font-size:11.5px;line-height:1.6;max-width:1180px;margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">BRL <em>MONITOR</em><span class="sub">Brazil's stablecoin &amp; tokenization economy, measured</span></div>
+  <nav><a href="#league">Stablecoins</a><a href="#tokenization">Tokenization</a><a href="#official">Official data</a><a href="#licenses">Licenses</a><a href="#research">Research</a><a href="#methodology">Methodology</a></nav>
+</header>
+<div class="countdown">⏱ <b><span id="days">—</span> days to the Oct 30 VASP filing deadline</b> — when Brazil's regulated stablecoin market becomes a public census · <a href="#licenses">tracker ↓</a></div>
+<div class="errbar" id="errbar"></div>
+
+<div class="wrap">
+  <div class="tiles">
+    <div class="tile"><div class="k">Total on-chain BRL</div><div class="v" id="t_total">…</div><div class="d"><span id="t_total_d"></span> <span class="tag t-complete">complete</span><i class="src" id="t_total_src" data-tip="loading…">ⓘ</i></div></div>
+    <div class="tile"><div class="k">30d net issuance (all issuers)</div><div class="v" id="t_iss">…</div><div class="d" id="t_iss_d">accumulating — needs 30d of snapshots</div></div>
+    <div class="tile"><div class="k">PTAX USD/BRL</div><div class="v" id="t_ptax">…</div><div class="d" id="t_ptax_d"><span class="tag t-official">BCB, official</span></div></div>
+    <div class="tile"><div class="k">Data freshness</div><div class="v" id="t_fresh">…</div><div class="d">last collector run (UTC) · runs 2×/day</div></div>
+  </div>
+
+  <div class="panel" id="league">
+    <h2>The league table — BRL stablecoins by issuer <span class="tag t-complete">every mint, burn &amp; holder — complete</span></h2>
+    <div class="ps">On-chain reads from verified contracts. Every supply links to the public explorer — check the chain yourself. Failed sources show "—", never an invented number.</div>
+    <table><thead><tr><th>Token · issuer</th><th>Share</th><th class="num">Supply</th><th class="num">≈USD</th><th class="num">Holders</th><th class="num">7d net issuance</th><th>Chains</th><th>Backing</th></tr></thead>
+    <tbody id="league_body"><tr><td colspan="8" style="color:var(--muted)">loading data/latest.json…</td></tr></tbody></table>
+  </div>
+
+  <div class="panel">
+    <h2>Total on-chain BRL — history <span class="tag t-complete">on-chain + pre-launch CoinGecko backfill</span></h2>
+    <div class="ps" id="hist_note">Daily series. From launch day, values are direct on-chain reads; earlier history is backfilled from CoinGecko market-cap data (listed tokens) and labeled as such.</div>
+    <div class="chartbox"><svg id="chart" width="100%" height="200" viewBox="0 0 760 200" preserveAspectRatio="none"></svg><div class="tt" id="tt"></div></div>
+  </div>
+
+  <div class="row2">
+    <div class="panel" id="tokenization">
+      <h2>Tokenized Brazil — asset census <span class="tag t-complete">public chains</span></h2>
+      <div class="ps">Brazilian real-world-asset tokens on public rails. Private/permissioned rails excluded and labeled — a source boundary, stated.</div>
+      <table><thead><tr><th>Asset</th><th class="num">Size</th><th>Type</th><th>Source</th></tr></thead><tbody>
+        <tr><td class="tok">BRLV backing book<span class="iss">Crown — govt-bond-backed BRL token</span></td><td class="num" id="tk_brlv">—</td><td><span class="chip">tokenized govt bonds</span></td><td><a class="verify" href="https://base.blockscout.com/token/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36" target="_blank">chain ↗</a></td></tr>
+        <tr><td class="tok">TESOURO<span class="iss">Etherfuse — tokenized BR sovereign notes</span></td><td class="num">~$0.75M</td><td><span class="chip">sovereign notes</span></td><td><a class="verify" href="https://app.rwa.xyz/assets/TESOURO" target="_blank">rwa.xyz ↗</a></td></tr>
+        <tr><td class="tok">nOPAL<span class="iss">Nest/Plume — FX-hedged BR receivables</span></td><td class="num">~$48M</td><td><span class="chip">private credit (USD)</span></td><td><a class="verify" href="https://docs.nest.credit/about/available-vaults/" target="_blank">vault ↗</a></td></tr>
+        <tr><td class="tok">AmFi pools<span class="iss">Polygon — permissioned credit tokens</span></td><td class="num">readable</td><td><span class="chip">private credit</span></td><td><a class="verify" href="https://polygon.blockscout.com/address/0x5acad7EDCcD4846F99335E26a7e6398D869dEc4f" target="_blank">chain ↗</a></td></tr>
+      </tbody></table>
+      <div class="ps" style="margin-top:8px">Sizes for non-league assets refresh weekly, hand-verified; full automation in v1.1.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Issuance feed <span class="tag t-complete">from daily snapshots</span></h2>
+      <div class="ps">Day-over-day supply changes per issuer. Individual tx-level feed ships in v1.1.</div>
+      <div class="feed" id="feed"><div class="ev"><span class="t">—</span><span style="color:var(--muted)">First events appear after the second daily snapshot.</span></div></div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="panel" id="official">
+      <h2>Official series <span class="tag t-official">complete by law</span></h2>
+      <div class="ps">Brazil officially measures this market — links go to the publishers.</div>
+      <table><tbody id="official_body"></tbody></table>
+      <div class="ps" style="margin-top:8px">Receita monthly per-asset volumes + BCB balance-of-payments stablecoin line: ingestion in v1.1 — links on the <a href="#methodology">methodology</a> page meanwhile.</div>
+    </div>
+
+    <div class="panel" id="licenses">
+      <h2>License tracker <span class="tag t-official">public records</span></h2>
+      <div class="ps" id="lic_note"></div>
+      <table><thead><tr><th>Firm</th><th>Observed</th><th>Status</th></tr></thead><tbody id="lic_body"></tbody></table>
+    </div>
+  </div>
+
+  <div class="panel" id="research">
+    <h2>Research — where estimates live (never on this dashboard)</h2>
+    <div class="ps">The dashboard shows only complete datasets. Questions needing estimation get essays with methodology shown.</div>
+    <div class="rcards">
+      <a href="#"><b>How big is Brazil's informal dollar market?</b><br><span>Official census vs third-party estimates — coming</span></a>
+      <a href="#"><b>Where does Tether's treasury send USDT?</b><br><span>Observed allocations to labeled BR venues — coming</span></a>
+      <a href="#"><b>The Oct 30 census: who filed, who didn't</b><br><span>Live tracker → day-one report</span></a>
+    </div>
+  </div>
+</div>
+
+<footer id="methodology"><b>Methodology contract:</b> this dashboard shows ONLY datasets that are 100% complete within their declared perimeter — <b>complete by construction</b> (on-chain: every mint, burn, transfer and holder of enumerated contracts; figures link to public explorers) or <b>complete by law</b> (BCB / Receita / CVM mandatory reporting; figures link to official publications). Every number carries source + timestamp (hover ⓘ). Failed sources display "—" with an error notice — values are never estimated to fill a gap. Partial or estimated analyses appear only in Research essays. Private/permissioned rails are excluded and labeled. Key official sources: <a href="https://dadosabertos.bcb.gov.br/">BCB open data</a> · <a href="https://www.gov.br/receitafederal/pt-br">Receita Federal</a> · <a href="https://www.bcb.gov.br/estabilidadefinanceira/encontreinstituicao">BCB authorized institutions</a>. Informational only; not investment advice. · © 2026</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmtUsd=v=>v==null?"—":(v>=1e9?"$"+(v/1e9).toFixed(2)+"B":v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v).toLocaleString());
+const fmtM=v=>v==null?"—":(Math.abs(v)>=1e6?(v/1e6).toFixed(1)+"M":Math.round(v).toLocaleString());
+$("days").textContent=Math.max(0,Math.ceil((new Date("2026-10-30T00:00:00-03:00")-Date.now())/86400000));
+
+async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new Error(p+": "+r.status);return r.json()}
+
+(async()=>{
+  let latest,hist,lic;
+  try{latest=await j("data/latest.json")}catch(e){$("errbar").style.display="block";$("errbar").textContent="data/latest.json not found — run the collector (see README).";return}
+  try{hist=await j("data/history.json")}catch(e){hist={days:[]}}
+  try{lic=await j("data/licenses.json")}catch(e){lic=null}
+
+  if(latest.errors&&latest.errors.length){$("errbar").style.display="block";
+    $("errbar").textContent=latest.errors.length+" source(s) failed this run — affected values show as “—”, never estimated. ("+latest.errors.map(e=>e.source).join(", ")+")"}
+
+  $("t_total").textContent=fmtUsd(latest.total_onchain_brl_usd);
+  $("t_total_d").textContent=latest.tokens.length+" issuers · 6 chains";
+  $("t_total_src").dataset.tip="Sum of verified contracts, read on-chain\n"+latest.generated_at+"\ncomplete by construction — per-token links in table";
+  const iss=latest.tokens.reduce((a,t)=>a+(t.net_issuance_30d||0),0);
+  const has30=latest.tokens.some(t=>t.net_issuance_30d!=null);
+  $("t_iss").textContent=has30?(iss>=0?"+":"")+fmtM(iss):"…";
+  if(has30)$("t_iss_d").textContent="net supply change, 30d, all issuers";
+  const p=latest.official&&latest.official.ptax_usd_sell;
+  if(p){$("t_ptax").textContent=p.value.toFixed(4);
+    $("t_ptax_d").innerHTML='ref '+p.ref_date+' · <a class="verify" target="_blank" href="'+p.url+'">BCB SGS ↗</a> <span class="tag t-official">official</span>'}
+  else $("t_ptax").textContent="—";
+  $("t_fresh").textContent=(latest.generated_at||"").slice(5,16).replace("T"," ");
+
+  // league table
+  const tb=$("league_body");tb.innerHTML="";
+  const maxShare=Math.max(...latest.tokens.map(t=>t.share||0),1);
+  for(const t of latest.tokens){
+    const ex=(t.chains[0]||{}).explorer;
+    const d7=t.net_issuance_7d;
+    const tip=(t.provenance||[]).map(p=>p.source+"\n"+p.fetched_at).slice(0,3).join("\n");
+    tb.insertAdjacentHTML("beforeend",`<tr>
+      <td class="tok"><span class="dot" style="background:var(--s${t.color})"></span>${t.symbol}<span class="iss">${t.issuer}</span></td>
+      <td><div class="sharebar"><div style="width:${t.share?100*t.share/maxShare:0}%;background:var(--s${t.color})"></div></div><span style="font-size:11px;color:var(--muted)">${t.share!=null?t.share.toFixed(1)+"%":"—"}</span></td>
+      <td class="num">${fmtM(t.supply)}${ex?` <a class="verify" target="_blank" href="${ex}">verify ↗</a>`:""}</td>
+      <td class="num">${fmtUsd(t.usd)}<i class="src" data-tip="${tip}">ⓘ</i></td>
+      <td class="num">${t.holders_known?t.holders.toLocaleString():"—"}</td>
+      <td class="num ${d7>0?"pos":d7<0?"neg":""}">${d7==null?"—":(d7>=0?"+":"")+fmtM(d7)}</td>
+      <td>${t.chains.map(c=>`<span class="chip">${c.chain}</span>`).join(" ")}</td>
+      <td><span class="chip">${t.backing}</span></td></tr>`);
+  }
+  const brlv=latest.tokens.find(t=>t.symbol==="BRLV");
+  if(brlv&&brlv.usd)$("tk_brlv").textContent=fmtUsd(brlv.usd);
+
+  // feed from history deltas
+  const days=hist.days||[];
+  if(days.length>=2){
+    const evs=[];
+    for(let i=days.length-1;i>0&&evs.length<8;i--){
+      for(const[sym,v]of Object.entries(days[i].tokens||{})){
+        const prev=(days[i-1].tokens||{})[sym];
+        if(!prev||v.supply==null||prev.supply==null)continue;
+        const d=v.supply-prev.supply;
+        if(Math.abs(d)>100000)evs.push({date:days[i].date,sym,d});
+      }
+    }
+    if(evs.length){$("feed").innerHTML=evs.slice(0,8).map(e=>
+      `<div class="ev"><span class="t">${e.date.slice(5)}</span><span>${e.d>0?"🟢":"🟠"} <b>${e.sym}</b> ${e.d>0?"mint":"burn"} <b>${e.d>0?"+":""}${fmtM(e.d)}</b></span></div>`).join("")}
+  }
+
+  // chart
+  const pts=days.filter(d=>d.total_usd).map(d=>({x:d.date,y:d.total_usd/1e6}));
+  if(pts.length>1){
+    const svg=$("chart"),W=760,H=200,P={l:44,r:14,t:12,b:24};
+    const mx=Math.max(...pts.map(p=>p.y))*1.15;
+    const X=i=>P.l+i*(W-P.l-P.r)/(pts.length-1),Y=v=>H-P.b-v/mx*(H-P.t-P.b);
+    let g="";
+    [0,.5,1].forEach(f=>{const v=mx*f;g+=`<line x1="${P.l}" y1="${Y(v)}" x2="${W-P.r}" y2="${Y(v)}" stroke="var(--grid)"/><text x="${P.l-8}" y="${Y(v)+4}" text-anchor="end" font-size="10" fill="var(--muted)">$${Math.round(v)}M</text>`});
+    const step=Math.max(1,Math.floor(pts.length/6));
+    pts.forEach((p,i)=>{if(i%step===0)g+=`<text x="${X(i)}" y="${H-6}" text-anchor="middle" font-size="10" fill="var(--muted)">${p.x.slice(2,7)}</text>`});
+    const line=pts.map((p,i)=>`${X(i)},${Y(p.y)}`).join(" ");
+    g+=`<polygon points="${X(0)},${Y(0)} ${line} ${X(pts.length-1)},${Y(0)}" fill="var(--s1)" opacity="0.12"/><polyline points="${line}" fill="none" stroke="var(--s1)" stroke-width="2"/>`;
+    svg.innerHTML=g;
+    const tt=$("tt");
+    svg.addEventListener("mousemove",e=>{const r=svg.getBoundingClientRect(),fx=(e.clientX-r.left)*(W/r.width);
+      let i=Math.round((fx-P.l)/((W-P.l-P.r)/(pts.length-1)));i=Math.max(0,Math.min(pts.length-1,i));
+      tt.style.display="block";tt.innerHTML=pts[i].x+" · <b>$"+pts[i].y.toFixed(1)+"M</b>";
+      tt.style.left=(e.clientX-r.left+12)+"px";tt.style.top=(e.clientY-r.top-10)+"px"});
+    svg.addEventListener("mouseleave",()=>tt.style.display="none");
+  }
+
+  // official series
+  const ob=$("official_body");
+  for(const[k,v]of Object.entries(latest.official||{})){
+    ob.insertAdjacentHTML("beforeend",`<tr><td class="tok">${v.label}</td><td class="num">${v.value.toLocaleString()}</td><td><span class="chip">ref ${v.ref_date}</span> <a class="verify" target="_blank" href="${v.url}">SGS ↗</a></td></tr>`);
+  }
+
+  // licenses
+  if(lic){$("lic_note").textContent="Hand-verified from public records · updated "+lic.updated+" · becomes a live census after Oct 30.";
+    $("lic_body").innerHTML=lic.firms.map(f=>{
+      const style=f.status==="authorized_bank"?"background:var(--good-bg)":f.status==="unknown"?"background:var(--crit-bg)":"background:var(--gray-bg)";
+      const src=f.source?` <a class="verify" target="_blank" href="${f.source}">src ↗</a>`:"";
+      return`<tr><td class="tok">${f.name}</td><td style="font-size:12px;color:var(--ink-2)">${f.observed}</td><td><span class="chip" style="${style}">${f.status_label}</span>${src}</td></tr>`}).join("")}
+})();
+</script>
+</body>
+</html>
