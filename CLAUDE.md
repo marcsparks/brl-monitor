@@ -32,9 +32,17 @@ Static site (index.html, vanilla JS) + Python-stdlib collector + GitHub Actions 
 - Market depth: max_ticket_1pct ≈ 1% × liquidity/2 (constant-product approx, documented as indicative).
 - Period toggle (30d/90d/1y/all) driving stacked chart + table from volumes.json.
 
-## v0.2.1 / v1.1 backlog (priority order)
+## Shipped in v0.2.1 (Aug 2026)
+- Hero chart → cumulative stacked area (daily; end of curve = period total); hover tooltip.
+- Honest scan windows: volumes.py records per-chain `chain_since` (+1 day when page-capped, since the cap cuts mid-day) → token `scan_since`; UI sums ONLY days ≥ scan_since, shows "since MM-DD" per token, hides period toggles the data can't fill (they unlock as the window grows). Velocity normalizes over days actually covered.
+- Failed-source tokens: collect.py sets supply/usd=None + source_failed=true (never a misleading 0); UI renders "—" + "source failed this run" chip (cREAL case).
+- Float league: snapshot timestamp in header; Δ float (period) column from history.json, driven by the same period toggle as the volume league; supply/≈USD ⓘ tooltips; backing chips wrap (.wraptd).
+- Workflow inputs: volumes_pages (env VOLUMES_PAGE_CAP) + volumes_days (--backfill-days, forces deep re-backfill; idempotent since window days are overwritten per chain).
+- CoinGecko history backfill run on live repo (backfill=yes) → ~13 months of float history.
+
+## v1.1 backlog (priority order)
 1. XRPL volume scan for BBRL (issuer account_tx — rippling means issued-currency payments touch the issuer account) — the volume league's biggest missing number.
-2. First volumes run only backfills within PAGE_CAP — for busy tokens, run volumes.py locally with a higher cap or add a paged backfill workflow input; validate BBRL/BRL1 against rwa.xyz anchors.
+2. Validate BBRL/BRL1 volumes against rwa.xyz anchors.
 3. Receita monthly ingestion (per-asset volumes, history to 2019) → replace USD-league share labels with official absolutes.
 4. Per-issuer pages: supply/holder history, concentration, peg chart; issuer fee-schedule links (linked, never transcribed).
 5. License tracker → BCB register watcher (open-data CSV diff → alert). Oct 30 census report pre-drafted.

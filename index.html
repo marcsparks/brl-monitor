@@ -67,6 +67,8 @@
   .pos{color:var(--up);font-weight:600}
   .neg{color:var(--crit);font-weight:600}
   .chip{font-size:11px;background:var(--gray-bg);border-radius:999px;padding:2px 8px;color:var(--ink-2)}
+  .wraptd{white-space:normal!important;max-width:170px}
+  .chipwrap{white-space:normal;display:inline-block;line-height:1.35;border-radius:9px}
   .chipg{font-size:11px;background:var(--good-bg);border-radius:999px;padding:2px 8px}
   .verify{font-size:11px;color:var(--accent);margin-left:4px}
   .src{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:var(--gray-bg);color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;margin-left:5px;vertical-align:2px;position:relative;font-style:normal}
@@ -110,13 +112,13 @@
 
   <div class="panel" id="volume">
     <h2>Volume league — BRL stablecoins by value moved <span class="tag t-complete">on-chain events</span>
-      <span class="toggle" id="ptoggle"><span data-p="30">30d</span><span data-p="90">90d</span><span data-p="365" class="on">1y</span><span data-p="0">all</span></span>
+      <span class="toggle" id="ptoggle"><span data-p="30">30d</span><span data-p="90">90d</span><span data-p="365">1y</span><span data-p="0">all</span></span>
     </h2>
-    <div class="ps">Float = outstanding supply. Volume = value transferred on-chain in the period (mint/burn + transfers). Velocity = volume ÷ float, monthly. Coverage per token is declared — non-EVM legs not yet scanned show as a floor with a third-party anchor, never a guess. <a href="#methodology">Method ↓</a></div>
+    <div class="ps">Float = outstanding supply. Volume = value transferred on-chain in the period (mint/burn + transfers). Velocity = volume ÷ float, monthly. Coverage per token is declared — non-EVM legs not yet scanned show as a floor with a third-party anchor, never a guess. <span id="volwindow"></span> <a href="#methodology">Method ↓</a></div>
     <div class="chartbox"><svg id="volchart" width="100%" height="210" viewBox="0 0 1120 210" preserveAspectRatio="none"></svg><div class="tt" id="voltt"></div></div>
     <div class="legend" id="vollegend"></div>
     <table style="margin-top:8px">
-      <thead><tr><th>Token · issuer</th><th class="num">Volume (period) ▼</th><th class="num">of which mint/burn</th><th class="num">Float today</th><th class="num">Velocity /mo</th><th>Coverage</th></tr></thead>
+      <thead><tr><th>Token · issuer</th><th class="num" id="volh">Volume ▼</th><th class="num">of which mint/burn</th><th class="num">Float today</th><th class="num">Velocity /mo<i class="src" data-tip="Volume ÷ float, normalized to 30 days over the days actually scanned for that token — periods a token doesn't cover are not counted against it.">ⓘ</i></th><th>Coverage · scanned since</th></tr></thead>
       <tbody id="volbody"><tr><td colspan="6" style="color:var(--muted)">Volume data accumulates from the first volumes-scan run — check back after the next collector cycle.</td></tr></tbody>
     </table>
     <div class="note" id="volnote"></div>
@@ -124,14 +126,14 @@
 
   <div class="panel" id="league">
     <h2>Float league — BRL stablecoins by outstanding supply <span class="tag t-complete">every mint, burn &amp; holder — complete</span></h2>
-    <div class="ps">On-chain reads from verified contracts. Every supply links to the public explorer — check the chain yourself. Failed sources show "—", never an invented number.</div>
-    <table><thead><tr><th>Token · issuer</th><th>Share</th><th class="num">Supply</th><th class="num">≈USD</th><th class="num">Holders<i class="src" data-tip="Holder counts from each chain's public explorer (Blockscout holders_count), summed across directly-read chains.&#10;'—' = chains without holder-count sources (XRPL trustlines, DefiLlama-sourced) — v1.1.">ⓘ</i></th><th class="num">7d net issuance<i class="src" data-tip="Net supply change over 7 days from our daily snapshots. Fills once 7+ days of snapshots exist; cannot be backfilled.">ⓘ</i></th><th>Chains</th><th>Backing</th></tr></thead>
+    <div class="ps">On-chain reads from verified contracts — a <b>snapshot as of <span id="fl_asof">…</span> UTC</b> (same collection run as the tiles above). Every supply links to the public explorer — check the chain yourself. Failed sources show "—", never an invented number. The Δ column follows the period toggle in the volume league, so both tables read on the same clock.</div>
+    <table><thead><tr><th>Token · issuer</th><th>Share</th><th class="num">Supply<i class="src" data-tip="Outstanding token supply on-chain right now — a stock (how much exists), not a flow.&#10;Snapshot at collection time; volume (value moved) is the table above.">ⓘ</i></th><th class="num">≈USD<i class="src" data-tip="Supply × current market price (CoinGecko/explorer), or × 1/PTAX for tokens priced at the 1:1 BRL peg (labeled in the per-row ⓘ).">ⓘ</i></th><th class="num">Holders<i class="src" data-tip="Holder counts from each chain's public explorer (Blockscout holders_count), summed across directly-read chains.&#10;'—' = chains without holder-count sources (XRPL trustlines, DefiLlama-sourced) — v1.1.">ⓘ</i></th><th class="num" id="fl_dh">Δ float<i class="src" data-tip="Change in USD float over the selected period, from the daily history series below (CoinGecko market-cap backfill pre-launch, direct on-chain reads from launch).&#10;'—' = history doesn't reach that far back for this token.">ⓘ</i></th><th>Chains</th><th>Backing</th></tr></thead>
     <tbody id="league_body"><tr><td colspan="8" style="color:var(--muted)">loading…</td></tr></tbody></table>
   </div>
 
   <div class="panel">
     <h2>Total on-chain BRL — history <span class="tag t-complete">on-chain + pre-launch CoinGecko backfill</span></h2>
-    <div class="ps">Daily float series. From launch day, values are direct on-chain reads; earlier history is CoinGecko market-cap backfill (listed tokens), labeled as such.</div>
+    <div class="ps">Daily float series, from <b id="hist_since">—</b>. From launch day (2026-08-03), values are direct on-chain reads; earlier history is CoinGecko market-cap backfill (listed tokens), labeled as such.</div>
     <div class="chartbox"><svg id="chart" width="100%" height="190" viewBox="0 0 760 190" preserveAspectRatio="none"></svg><div class="tt" id="tt"></div></div>
   </div>
 
@@ -229,92 +231,165 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
   const exOrigin=sym=>{const t=tokMap[sym];const ex=t&&t.chains[0]&&t.chains[0].explorer;return ex?ex.split("/token/")[0]:null};
 
   // ---------- VOLUME LEAGUE ----------
-  let period=365;
+  // per-token honest scan window: meta.scan_since (collector), else earliest scanned day
+  const scanSince=sym=>{
+    const m=(vol&&vol.meta||{})[sym]||{};
+    if(m.scan_since)return m.scan_since;
+    const ds=Object.keys((vol&&vol.daily||{})[sym]||{}).sort();
+    return ds[0]||null;
+  };
+  const allSince=(()=>{if(!vol||!vol.daily)return null;
+    const s=Object.keys(vol.daily).map(scanSince).filter(Boolean).sort();return s[0]||null})();
+  const spanDays=allSince?Math.round((Date.now()-new Date(allSince))/864e5):0;
+  // only offer periods the data can actually fill (window grows daily — toggles appear on their own)
+  let period=30;
+  {
+    const avail={30:spanDays>=2,90:spanDays>=45,365:spanDays>=180,0:spanDays>=400};
+    let biggest=30;
+    document.querySelectorAll("#ptoggle span").forEach(el=>{
+      const p=+el.dataset.p;
+      const ok=avail[p];
+      el.style.display=ok?"":"none";
+      if(ok&&(p===0||p>biggest))biggest=(p===0?9999:p);
+    });
+    period=biggest===9999?0:biggest;
+    document.querySelectorAll("#ptoggle span").forEach(el=>{
+      el.classList.toggle("on",+el.dataset.p===(period===0?0:period)&&!(period!==0&&+el.dataset.p===0));
+    });
+  }
+  const plabel=()=>period===30?"30d":period===90?"90d":period===365?"1y":"all";
   function volCompute(){
     if(!vol||!vol.daily||!Object.keys(vol.daily).length)return null;
     const today=new Date();
     const cut=period?new Date(today-period*864e5).toISOString().slice(0,10):"0000";
     const rows=[];const series={};
     for(const[sym,days]of Object.entries(vol.daily)){
+      const since=scanSince(sym)||"0000";
       let mv=0,mb=0;const s={};
       for(const[d,v]of Object.entries(days)){
-        if(d<cut)continue;
+        if(d<cut||d<since)continue;              // only complete-window days count
         const tot=(v.mint||0)+(v.burn||0)+(v.transfer||0);
         mv+=tot;mb+=(v.mint||0)+(v.burn||0);
-        const bucket=period&&period<=31?d:d.slice(0,7);
-        s[bucket]=(s[bucket]||0)+tot;
+        s[d]=(s[d]||0)+tot;
       }
       series[sym]=s;
       const t=tokMap[sym]||{};
-      const days_n=period||365;
+      const covFrom=cut>since?cut:since;         // days this token actually covers in the period
+      const days_n=Math.max(1,Math.round((today-new Date(covFrom))/864e5));
       rows.push({sym,mv,mb,float:t.usd,vel:t.usd?mv*(30/days_n)/t.usd:null,color:t.color||1,
-                 meta:(vol.meta||{})[sym]||{}});
+                 meta:(vol.meta||{})[sym]||{},since});
     }
     rows.sort((a,b)=>b.mv-a.mv);
     return{rows,series};
   }
   function volRender(){
     const c=volCompute();
-    const anchors={BBRL:"https://app.rwa.xyz/assets/BBRL",cREAL:null};
+    const anchors={BBRL:"https://app.rwa.xyz/assets/BBRL"};
+    $("volh").innerHTML=`Volume (${plabel()}) ▼`;
+    if(allSince)$("volwindow").innerHTML=`<b>Scan window: since ${allSince}</b> (90-day backfill at launch; the window grows every day — longer periods unlock as data accumulates).`;
     if(!c){$("volnote").textContent="";$("t_vol").textContent="…";return}
-    // 30d tile
+    // 30d tile — complete-window days only
     const cut30=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
-    let v30=0;for(const days of Object.values(vol.daily))for(const[d,v]of Object.entries(days))if(d>=cut30)v30+=(v.mint||0)+(v.burn||0)+(v.transfer||0);
+    let v30=0;
+    for(const[sym,days]of Object.entries(vol.daily)){
+      const since=scanSince(sym)||"0000";
+      for(const[d,v]of Object.entries(days))if(d>=cut30&&d>=since)v30+=(v.mint||0)+(v.burn||0)+(v.transfer||0);
+    }
     $("t_vol").textContent=fmtUsd(v30);
     // table
     $("volbody").innerHTML=c.rows.map(r=>{
       const cov=r.meta.coverage;
-      const covCell=cov==="full"?'<span class="chipg">full</span>':cov==="partial"?'<span class="chip">EVM only — floor</span>':'<span class="chip">not scanned</span>';
+      const covChip=cov==="full"?'<span class="chipg">full</span>':cov==="partial"?'<span class="chip">EVM only — floor</span>':'<span class="chip">not scanned</span>';
+      const sinceChip=r.since?` <span class="chip" title="complete event data for this token starts here">since ${r.since.slice(5)}</span>`:"";
       return`<tr>
         <td class="tok"><span class="dot" style="background:var(--s${r.color})"></span>${r.sym}<span class="iss">${(tokMap[r.sym]||{}).issuer||""}</span></td>
         <td class="num" style="font-weight:700">${r.mv?fmtUsd(r.mv):"—"}</td>
         <td class="num">${r.mv?Math.round(100*r.mb/r.mv)+"%":"—"}</td>
         <td class="num">${fmtUsd(r.float)}</td>
         <td class="num" style="font-weight:650">${r.vel==null?"—":r.vel<0.05?"<0.1×":"~"+(r.vel<1?r.vel.toFixed(1):Math.round(r.vel))+"×"}</td>
-        <td>${covCell}</td></tr>`}).join("")
+        <td>${covChip}${sinceChip}</td></tr>`}).join("")
       + (tokMap.BBRL?`<tr><td class="tok"><span class="dot" style="background:var(--s4)"></span>BBRL<span class="iss">Braza</span></td><td class="num"><span class="chip">XRPL scan in v0.2.1</span> <a class="verify" target="_blank" href="${anchors.BBRL}">third-party anchor ↗</a></td><td class="num">—</td><td class="num">${fmtUsd(tokMap.BBRL.usd)}</td><td class="num">—</td><td><span class="chip">not scanned</span></td></tr>`:"");
     $("volnote").innerHTML='<b>Reading:</b> velocity ~≥10×/mo = settlement rail · ~1–3× = ramp · <1× = savings/vault. Coverage "floor" = real chains missing, so true volume is at least this. Method + treasury-wallet exclusions on the <a href="#methodology">methodology page</a>.';
-    // chart: stacked bars per bucket
-    const buckets=[...new Set([].concat(...Object.values(c.series).map(s=>Object.keys(s))))].sort();
-    const svg=$("volchart"),W=1120,H=210,P={l:50,r:10,t:10,b:22};
-    if(!buckets.length){svg.innerHTML="";return}
-    const totals=buckets.map(b=>c.rows.reduce((a,r)=>a+(c.series[r.sym][b]||0),0));
-    const mx=Math.max(...totals)*1.12||1,bw=(W-P.l-P.r)/buckets.length*0.62;
-    const X=i=>P.l+(i+0.19)*(W-P.l-P.r)/buckets.length,Y=v=>H-P.b-v/mx*(H-P.t-P.b);
+    // chart: cumulative stacked area, daily resolution — end of curve = period total
+    const svg=$("volchart"),W=1120,H=210,P={l:56,r:10,t:10,b:22};
+    const today=new Date();
+    const start=new Date(Math.max(new Date(allSince),period?today-period*864e5:new Date(allSince)));
+    const dates=[];for(let d=new Date(start);d<=today;d.setDate(d.getDate()+1))dates.push(d.toISOString().slice(0,10));
+    if(dates.length<2){svg.innerHTML="";return}
+    // cumulative per token over the date axis
+    const cum={};for(const r of c.rows){let a=0;cum[r.sym]=dates.map(d=>{a+=(c.series[r.sym][d]||0);return a})}
+    const stackTop=dates.map((_,i)=>c.rows.reduce((a,r)=>a+cum[r.sym][i],0));
+    const mx=Math.max(...stackTop)*1.08||1;
+    const X=i=>P.l+i*(W-P.l-P.r)/(dates.length-1),Y=v=>H-P.b-v/mx*(H-P.t-P.b);
     let g="";
     [0,.5,1].forEach(f=>{const v=mx*f;g+=`<line x1="${P.l}" y1="${Y(v)}" x2="${W-P.r}" y2="${Y(v)}" stroke="var(--grid)"/><text x="${P.l-8}" y="${Y(v)+4}" text-anchor="end" font-size="10" fill="var(--muted)">${fmtUsd(v)}</text>`});
-    const step=Math.max(1,Math.floor(buckets.length/10));
-    buckets.forEach((bkt,i)=>{if(i%step===0)g+=`<text x="${X(i)+bw/2}" y="${H-6}" text-anchor="middle" font-size="10" fill="var(--muted)">${bkt.slice(2)}</text>`});
-    buckets.forEach((bkt,i)=>{let y0=0;
-      for(const r of c.rows){const v=c.series[r.sym][bkt]||0;if(!v)continue;
-        const y1=Y(y0),y2=Y(y0+v);
-        g+=`<rect x="${X(i)}" y="${y2}" width="${bw}" height="${Math.max(1,y1-y2-1)}" rx="2" fill="var(--s${r.color})"><title>${bkt} ${r.sym}: ${fmtUsd(v)}</title></rect>`;
-        y0+=v;}});
+    const step=Math.max(1,Math.floor(dates.length/9));
+    dates.forEach((d,i)=>{if(i%step===0)g+=`<text x="${X(i)}" y="${H-6}" text-anchor="middle" font-size="10" fill="var(--muted)">${d.slice(5)}</text>`});
+    // draw areas bottom-up — table order, so the #1 token sits at the bottom of the stack
+    let lower=dates.map(()=>0);
+    for(const r of c.rows){
+      const upper=lower.map((v,i)=>v+cum[r.sym][i]);
+      const up=upper.map((v,i)=>`${X(i)},${Y(v)}`).join(" ");
+      const lo=lower.map((v,i)=>`${X(i)},${Y(v)}`).reverse().join(" ");
+      g+=`<polygon points="${up} ${lo}" fill="var(--s${r.color})" opacity="0.55"/>`;
+      g+=`<polyline points="${up}" fill="none" stroke="var(--s${r.color})" stroke-width="1.6"/>`;
+      lower=upper;
+    }
     svg.innerHTML=g;
-    $("vollegend").innerHTML=c.rows.map(r=>`<span><span class="dot" style="background:var(--s${r.color})"></span>${r.sym}</span>`).join("");
+    $("vollegend").innerHTML=c.rows.map(r=>`<span><span class="dot" style="background:var(--s${r.color})"></span>${r.sym}</span>`).join("")
+      +`<span style="margin-left:auto;color:var(--muted)">cumulative value moved since period start</span>`;
+    // hover tooltip: per-token cumulative at date
+    const tt2=$("voltt");
+    svg.onmousemove=e=>{const rc=svg.getBoundingClientRect(),fx=(e.clientX-rc.left)*(W/rc.width);
+      let i=Math.round((fx-P.l)/((W-P.l-P.r)/(dates.length-1)));i=Math.max(0,Math.min(dates.length-1,i));
+      tt2.style.display="block";
+      tt2.innerHTML=`<b>${dates[i]}</b> · total ${fmtUsd(stackTop[i])}<br>`+c.rows.map(r=>`<span class="dot" style="background:var(--s${r.color})"></span>${r.sym} ${fmtUsd(cum[r.sym][i])}`).join(" · ");
+      tt2.style.left=Math.min(e.clientX-rc.left+12,rc.width-260)+"px";tt2.style.top=(e.clientY-rc.top-14)+"px"};
+    svg.onmouseleave=()=>tt2.style.display="none";
   }
   document.querySelectorAll("#ptoggle span").forEach(s=>s.onclick=()=>{
     document.querySelectorAll("#ptoggle span").forEach(x=>x.classList.remove("on"));
-    s.classList.add("on");period=+s.dataset.p;volRender();});
+    s.classList.add("on");period=+s.dataset.p;volRender();floatRender();});
   volRender();
 
   // ---------- FLOAT LEAGUE ----------
-  const tb=$("league_body");tb.innerHTML="";
-  const maxShare=Math.max(...latest.tokens.map(t=>t.share||0),1);
-  for(const t of latest.tokens){
-    const ex=(t.chains[0]||{}).explorer;
-    const d7=t.net_issuance_7d;
-    const tip=(t.provenance||[]).map(p=>p.source+"\n"+p.fetched_at).slice(0,3).join("\n");
-    tb.insertAdjacentHTML("beforeend",`<tr>
-      <td class="tok"><span class="dot" style="background:var(--s${t.color})"></span>${t.symbol}<span class="iss">${t.issuer}</span></td>
-      <td><div class="sharebar"><div style="width:${t.share?100*t.share/maxShare:0}%;background:var(--s${t.color})"></div></div><span style="font-size:11px;color:var(--muted)">${t.share!=null?t.share.toFixed(1)+"%":"—"}</span></td>
-      <td class="num">${fmtM(t.supply)}${ex?` <a class="verify" target="_blank" href="${ex}">verify ↗</a>`:""}</td>
-      <td class="num">${fmtUsd(t.usd)}<i class="src" data-tip="${tip}">ⓘ</i></td>
-      <td class="num">${t.holders_known?t.holders.toLocaleString():"—"}</td>
-      <td class="num ${d7>0?"pos":d7<0?"neg":""}">${d7==null?"—":(d7>=0?"+":"")+fmtM(d7)}</td>
-      <td>${t.chains.map(c=>`<span class="chip">${c.chain}</span>`).join(" ")}</td>
-      <td><span class="chip">${t.backing}</span></td></tr>`);
+  $("fl_asof").textContent=(latest.generated_at||"").replace("T"," ").replace("Z","");
+  // Δ float over the selected period, from the daily history series
+  function floatDelta(sym,cur){
+    const days=(hist.days||[]);if(!days.length||cur==null)return null;
+    const target=period?new Date(Date.now()-period*864e5).toISOString().slice(0,10):"0000";
+    let old=null;
+    for(const d of days){                       // earliest day at/after the cutoff with a value
+      const v=((d.tokens||{})[sym]||{}).usd;
+      if(v!=null&&d.date>=target){old=v;break}
+    }
+    if(old==null)return null;
+    return{d:cur-old,pct:old?100*(cur-old)/old:null};
   }
+  function floatRender(){
+    $("fl_dh").innerHTML=`Δ float (${plabel()})<i class="src" data-tip="Change in USD float over the selected period, from the daily history series below (CoinGecko market-cap backfill pre-launch, direct on-chain reads from launch).&#10;'—' = history doesn't reach that far back for this token.">ⓘ</i>`;
+    const tb=$("league_body");tb.innerHTML="";
+    const maxShare=Math.max(...latest.tokens.map(t=>t.share||0),1);
+    for(const t of latest.tokens){
+      const failed=t.source_failed||!(t.chains&&t.chains.length);
+      const ex=(t.chains&&t.chains[0]||{}).explorer;
+      const tip=(t.provenance||[]).map(p=>p.source+"\n"+p.fetched_at).slice(0,3).join("\n")||"source failed this run";
+      const dv=failed?null:floatDelta(t.symbol,t.usd);
+      const chainCell=failed
+        ?'<span class="chip" style="background:var(--crit-bg)">source failed this run — retries next cycle</span>'
+        :t.chains.map(c=>`<span class="chip">${c.chain}</span>`).join(" ");
+      tb.insertAdjacentHTML("beforeend",`<tr>
+        <td class="tok"><span class="dot" style="background:var(--s${t.color})"></span>${t.symbol}<span class="iss">${t.issuer}</span></td>
+        <td>${failed?'<span style="color:var(--muted)">—</span>':`<div class="sharebar"><div style="width:${t.share?100*t.share/maxShare:0}%;background:var(--s${t.color})"></div></div><span style="font-size:11px;color:var(--muted)">${t.share!=null?t.share.toFixed(1)+"%":"—"}</span>`}</td>
+        <td class="num">${failed?"—":fmtM(t.supply)}${!failed&&ex?` <a class="verify" target="_blank" href="${ex}">verify ↗</a>`:""}</td>
+        <td class="num">${failed?"—":fmtUsd(t.usd)}<i class="src" data-tip="${tip}">ⓘ</i></td>
+        <td class="num">${t.holders_known?t.holders.toLocaleString():"—"}</td>
+        <td class="num ${dv&&dv.d>0?"pos":dv&&dv.d<0?"neg":""}">${dv==null?"—":(dv.d>=0?"+":"−")+fmtUsd(Math.abs(dv.d))+(dv.pct!=null?` <span style="font-size:11px;color:var(--muted)">(${dv.pct>=0?"+":""}${dv.pct.toFixed(0)}%)</span>`:"")}</td>
+        <td>${chainCell}</td>
+        <td class="wraptd"><span class="chip chipwrap">${t.backing}</span></td></tr>`);
+    }
+  }
+  floatRender();
   const brlv=tokMap.BRLV; if(brlv&&brlv.usd)$("tk_brlv").textContent=fmtUsd(brlv.usd);
 
   // ---------- FEED ----------
@@ -334,6 +409,7 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
 
   // ---------- FLOAT HISTORY ----------
   const pts=(hist.days||[]).filter(d=>d.total_usd).map(d=>({x:d.date,y:d.total_usd/1e6}));
+  if(pts.length)$("hist_since").textContent=pts[0].x+" ("+pts.length+" days)";
   if(pts.length>1){
     const svg=$("chart"),W=760,H=190,P2={l:44,r:14,t:12,b:24};
     const mx=Math.max(...pts.map(q=>q.y))*1.15;
@@ -355,7 +431,7 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
 
   // ---------- USD LEAGUE ----------
   if(usd){
-    $("usdnote").textContent="Ranked by official share of stablecoin volume on Brazilian venues (Receita mandatory reporting). Assets, not venues — venue-level dollar analysis lives in Research. Updated "+usd.updated+".";
+    $("usdnote").innerHTML="Ranked by official share of stablecoin volume on Brazilian venues (Receita mandatory reporting). <b>These are publication-period figures</b> — each share refers to the period of its linked official source (e.g. H1 2026), not a live snapshot. Assets, not venues — venue-level dollar analysis lives in Research. Last reviewed "+usd.updated+".";
     $("usdbody").innerHTML=usd.assets.map(a=>`<tr>
       <td class="tok">${a.symbol} <span style="font-weight:400;color:var(--muted)">${a.issuer}</span>${a.note?`<i class="src" data-tip="${a.note}">ⓘ</i>`:""}</td>
       <td class="num" style="font-weight:700">${a.share_label==="tracking"?'<span class="chip">tracking</span>':a.share_label}${a.source?` <a class="verify" target="_blank" href="${a.source}">src ↗</a>`:""}</td>
