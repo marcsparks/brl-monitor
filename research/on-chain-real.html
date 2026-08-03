@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The on-chain real, measured for the first time — BRL Monitor Research</title>
+<style>
+  :root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink-2:#52514e;--muted:#898781;--grid:#e1e0d9;--accent:#2a78d6;--warn-bg:rgba(250,178,25,.14);--gray-bg:rgba(137,135,129,.12)}
+  @media (prefers-color-scheme:dark){:root{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink-2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--accent:#3987e5;--warn-bg:rgba(250,178,25,.14);--gray-bg:rgba(137,135,129,.18)}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--page);color:var(--ink);line-height:1.65;font-size:15.5px}
+  header{padding:13px 28px;background:var(--surface);border-bottom:1px solid var(--grid);font-weight:750;letter-spacing:.05em}
+  header em{font-style:normal;color:var(--accent)}
+  header a{color:var(--ink);text-decoration:none}
+  .banner{background:var(--gray-bg);padding:7px 28px;font-size:12.5px;color:var(--ink-2);text-align:center}
+  article{max-width:680px;margin:0 auto;padding:40px 24px 80px}
+  h1{font-size:30px;line-height:1.25;letter-spacing:-.01em}
+  .meta{color:var(--muted);font-size:13px;margin:10px 0 28px}
+  p{margin:16px 0;color:var(--ink-2)}
+  p b,p a{color:var(--ink)} a{color:var(--accent)}
+  h2{font-size:20px;margin:30px 0 6px}
+  .stat{background:var(--surface);border:1px solid var(--grid);border-radius:12px;padding:16px 20px;margin:22px 0;font-size:14.5px;color:var(--ink-2)}
+  .stat b{color:var(--ink)}
+  .src{font-size:12.5px;color:var(--muted);border-top:1px solid var(--grid);margin-top:34px;padding-top:14px;line-height:1.8}
+</style>
+</head>
+<body>
+<header><a href="../index.html">BRL <em>MONITOR</em></a> · Research</header>
+<div class="banner">Research essay — analysis and context. Dashboard figures are complete-by-construction or complete-by-law; essays may additionally cite third-party estimates, always named.</div>
+<article>
+<h1>The on-chain real, measured for the first time</h1>
+<div class="meta">BRL Monitor Research · August 2026 · every figure links to its source</div>
+
+<p>Brazil's currency has quietly developed a second body. Alongside the real in your bank account, there is now a real that lives on public blockchains — six tokens, issued by a bank, a Paradigm-backed startup, two ramp companies, an exchange consortium and a DeFi protocol. Until now, nobody counted it. This site exists to count it, and this essay is the first reading.</p>
+
+<div class="stat"><b>US$166 million</b> of BRL-pegged tokens circulate on public chains today, across six issuers and six blockchains — every unit individually visible on-chain. Twelve months ago the comparable figure was roughly a third of that.</div>
+
+<h2>The seven-month coup</h2>
+<p>The story of the past year is <b>Crown's BRLV</b>. Launched around December 2025 with backing from <a href="https://www.theblock.co/post/381596/crypto-vc-paradigm-bets-13-5-million-on-stablecoin-startup-crown-in-first-brazil-investment">Paradigm's first-ever Brazil investment</a>, it is not a payments stablecoin but a yield-sharing token backed by Brazilian government bonds — the country's ~14% policy rate, wrapped in an ERC-20. In seven months it went from zero to the <b>largest BRL token on any blockchain</b> (<a href="https://base.blockscout.com/token/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36">≈R$390M, verify on-chain</a>), overtaking Transfero's BRZ, which had led the category since 2019.</p>
+<p>The holder data tells you who is buying. BRLV has <b>fewer than a hundred holders</b> — family offices and institutions entering the famous Brazilian carry trade through a token instead of a brokerage account. At the other pole, Avenia's BRLA has <b>over nineteen thousand holders</b> — retail-scale distribution through apps and ramps. Same peg, opposite markets: one token is a bond desk, the other is plumbing.</p>
+
+<h2>The measured market behind it</h2>
+<p>The on-chain real is the small, perfectly-visible tip of something much larger and officially measured. Brazil's central bank now reports that companies bought <b>US$14.7 billion of stablecoins abroad in the first half of 2026</b> — more than double a year earlier (<a href="https://investnews.com.br/investimentos/compras-de-stablecoins-no-exterior-mais-que-dobram-no-brasil-mostra-bc/">BCB external-sector statistics</a>). The tax authority's mandatory reporting shows <a href="https://news.symplexia.com/pt-br/2026/07/nova-economia/cryptomoedas/usdt-responde-por-quase-90-das-operacoes-com-stablecoins-no-brasil-revela-receita-federal/">USDT alone accounts for ~90% of domestic stablecoin operations</a>. No other country publishes this level of official measurement — Brazil is, by law, the best-measured stablecoin market in the world. What was missing was a public interface to that measurement, plus the on-chain layer officials don't track. That combination is this site.</p>
+
+<h2>What happens on October 30</h2>
+<p>Under the central bank's new crypto framework (Resolutions 519/520/521), every company providing crypto services in Brazil must file for authorization by <b>October 30, 2026</b> — and non-filers must wind down within 30 days. When the authorized list publishes, a market that has operated on reputation becomes a public census: who is licensed, who filed, and who has been visibly operating without either. Our <a href="../index.html#licenses">license tracker</a> is counting down; the day the register populates, this page's sequel writes itself.</p>
+
+<h2>Method, in one paragraph</h2>
+<p>Every number on the BRL Monitor dashboard is either <b>complete by construction</b> — read directly from verified token contracts, where a blockchain records every mint, burn, transfer and holder — or <b>complete by law</b>, taken from mandatory official statistics (BCB, Receita, CVM) and linked to the publication. Where a figure can't meet that bar, the dashboard shows a dash, and the analysis moves here, to Research, with its assumptions in the open. The pipeline is <a href="https://github.com/marcsparks/brl-monitor">open source</a> and runs twice a day.</p>
+
+<div class="src"><b>Sources:</b> on-chain figures — public explorers (linked inline, contract-level); Crown/Paradigm — The Block, Dec 2025; BCB balance-of-payments stablecoin line — via InvestNews/BCB, Jul 2026; Receita per-asset shares — via Receita Federal reporting, Jul 2026; VASP framework — Resolutions BCB 519/520/521 (Nov 2025, in force Feb 2026). This essay is informational only and is not investment advice.</div>
+</article>
+</body>
+</html>
