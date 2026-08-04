@@ -97,6 +97,38 @@ def fetch_sgs(series_id, last_n=5):
     d = datetime.datetime.strptime(last["data"], "%d/%m/%Y").date().isoformat()
     return {"value": float(last["valor"]), "ref_date": d}
 
+def _rpc_call(rpc, to, data, timeout=25):
+    """Minimal JSON-RPC eth_call (POST). Returns hex string result or raises."""
+    if OFFLINE:
+        key = "rpc_" + to.lower() + "_" + data
+        p = FIXTURES / (key + ".json")
+        if p.exists():
+            return json.loads(p.read_text())["result"]
+        raise FileNotFoundError(f"no rpc fixture for {to} {data}")
+    body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": "eth_call",
+                       "params": [{"to": to, "data": data}, "latest"]}).encode()
+    req = urllib.request.Request(rpc, data=body,
+                                 headers={**UA, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        j = json.loads(r.read().decode())
+    if "error" in j:
+        raise ValueError(str(j["error"])[:120])
+    return j["result"]
+
+def fetch_evm_rpc(chain):
+    """Read an ERC-20 on any EVM chain via JSON-RPC eth_call — no explorer needed.
+    Used for chains without a Blockscout instance (e.g. XDC Network).
+    totalSupply() = 0x18160ddd, decimals() = 0x313ce567."""
+    to = chain["contract"]
+    rpc = chain["rpc"]
+    sup_hex = _rpc_call(rpc, to, "0x18160ddd")
+    supply_raw = int(sup_hex, 16) if sup_hex and sup_hex != "0x" else 0
+    try:
+        dec = int(_rpc_call(rpc, to, "0x313ce567"), 16)
+    except Exception:  # noqa: BLE001
+        dec = 18
+    return {"supply": supply_raw / 10**dec, "holders": None, "price_usd": None}
+
 def fetch_dexscreener(api):
     j = get_json(api)
     pair = j.get("pair") or (j.get("pairs") or [None])[0]
@@ -110,7 +142,8 @@ def fetch_dexscreener(api):
 
 def main():
     registry = json.loads((ROOT / "config" / "registry.json").read_text())
-    out = {"generated_at": now_iso(), "tokens": [], "official": {}, "dex": {}, "errors": []}
+    out = {"generated_at": now_iso(), "tokens": [], "official": {}, "dex": {}, "errors": [],
+           "known_unmeasured": registry.get("known_unmeasured", {})}
 
     # official series first — PTAX doubles as the 1:1-peg fallback price source
     for s in registry["official_series"]:
@@ -147,6 +180,8 @@ def main():
                     r = fetch_xrpscan(c["api"], c["currency_hex_prefix"])
                 elif c["type"] == "stellar_expert":
                     r = fetch_stellar_expert(c["api"], c.get("decimals", 7))
+                elif c["type"] == "evm_rpc":
+                    r = fetch_evm_rpc(c)
                 elif c["type"] == "defillama_note":
                     if seen_defillama:
                         continue
