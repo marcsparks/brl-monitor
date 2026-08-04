@@ -1,0 +1,10 @@
+{
+ "address_hash": "0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+ "decimals": "18",
+ "name": "Brazilian real",
+ "symbol": "WBRL",
+ "type": "ERC-20",
+ "total_supply": "4200000000000000000000000",
+ "holders_count": "310",
+ "exchange_rate": "0.195692"
+}
