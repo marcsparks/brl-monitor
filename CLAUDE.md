@@ -45,6 +45,14 @@ Static site (index.html, vanilla JS) + Python-stdlib collector + GitHub Actions 
 2. Direct Celo contract reads for cREAL + BRZ/BRLA non-EVM remainders — DefiLlama is unreliable from GitHub Actions IPs (repeated failures Aug 3); Celo is EVM-compatible, Blockscout instance exists.
 3. Validate BBRL/BRL1 volumes against rwa.xyz anchors.
 
+## Shipped in v0.3 (Aug 4, 2026) — coverage expansion
+- Universe widened past the original 6 after Fintrender report review. Added two VERIFIED public tokens: **wBRL** (Ripio, reserve-backed, same 0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0 on 8 EVM chains — we read Base/Polygon/Ethereum directly, floor; ~$1.5M) and **BRLD** (Liqi, Brazil Real Digital, ~117M supply / ~$23M / 10.5k holders on public XDC Network).
+- New collector reader `evm_rpc`: JSON-RPC eth_call totalSupply()/decimals() for EVM chains with no Blockscout instance (XDC). Priced 1:1 via PTAX (peg=BRL). Offline fixtures keyed `rpc_<contract>_<selector>.json`.
+- `known_unmeasured` block in registry.json (→ latest.json → UI panel "Known BRL tokens — not yet publicly measurable"): BRLN (Núclea, permissioned), BRD (CF Inovação, no contract), BRS (Nora, unverified), VRL (SmartPay, unconfirmed), ABRL (no contract), DREX (permissioned CBDC, paused), jBRL (synthetic — excluded from float league), BRLP (Solana/BNB, no supply). All with issuer-primary sources.
+- IMPORTANT: the Fintrender report's ticker→issuer table is SCRAMBLED (pairs BRLV w/ AmFi, BRD w/ Liqi, etc). Every issuer/chain fact was re-verified against issuer primary sources, not the report. cREAL is now also branded "BRLm" by Mento (same Celo contract) — that resolves the report's "BRLM".
+- Palette extended to --s7 (purple, wBRL) / --s8 (teal, BRLD). Tile chain-count is now dynamic.
+- v1.1 candidates surfaced but not added: BRLP BSC leg (0x7ce3...3f36) + Solana leg once a Solana reader exists; BRD Solana SPL (GNzvFdZ...eBZj) pending issuer disambiguation; wBRL Celo/Gnosis/BNB legs via DefiLlama remainder.
+
 ## Ops notes (Aug 3, 2026)
 - CoinGecko blocks GitHub Actions IPs → pre-launch history lives in data/backfill_coingecko.json (fetched once via browser, weekly grid); collect.py merges it below launch day. backfill.py kept for reference but cannot run in Actions.
 - history.json hygiene filter in collect.py drops any pre-launch day carrying per-token "supply" (the v0 smoke-seed shape) — safe to keep permanently.
