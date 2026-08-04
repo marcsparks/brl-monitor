@@ -61,16 +61,56 @@
       ]
     },
     {
-      "symbol": "cREAL", "name": "Celo Real", "issuer": "Mento (Celo)", "backing": "crypto-collateralised",
+      "symbol": "cREAL", "name": "Celo Real (rebranded BRLm)", "issuer": "Mento (Celo)", "backing": "crypto-collateralised",
       "coingecko_id": "celo-real-creal", "defillama_symbol": "CREAL", "color": 6,
       "chains": [
         {"chain": "Celo (via DefiLlama)", "type": "defillama_note",
          "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
          "explorer": "https://defillama.com/stablecoin/celo-brazilian-real",
-         "note": "supply taken from DefiLlama; verify Celo contract in v1.1"}
+         "note": "supply taken from DefiLlama; verify Celo contract in v1.1. Mento now brands cREAL as 'BRLm' — same contract 0xe8537a3d056da446677b9e9d6c5db704eaab4787."}
+      ]
+    },
+    {
+      "symbol": "wBRL", "name": "Wrapped BRL", "issuer": "Ripio", "backing": "1:1 BRL bank deposits",
+      "coingecko_id": "brazilian-real", "peg": "BRL", "color": 7,
+      "chains": [
+        {"chain": "Base", "type": "blockscout",
+         "api": "https://base.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+         "explorer": "https://base.blockscout.com/token/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0"},
+        {"chain": "Polygon", "type": "blockscout",
+         "api": "https://polygon.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+         "explorer": "https://polygon.blockscout.com/token/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0"},
+        {"chain": "Ethereum", "type": "blockscout",
+         "api": "https://eth.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+         "explorer": "https://eth.blockscout.com/token/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0"}
+      ]
+    },
+    {
+      "symbol": "BRLD", "name": "Brazil Real Digital", "issuer": "Liqi", "backing": "BR Treasury securities (Selic)",
+      "coingecko_id": null, "peg": "BRL", "color": 8,
+      "chains": [
+        {"chain": "XDC Network", "type": "evm_rpc",
+         "rpc": "https://rpc.ankr.com/xdc",
+         "contract": "0xfb67c0ca9366e5ae08ffed2f00de59d7e0537dfb",
+         "api": "https://rpc.ankr.com/xdc",
+         "explorer": "https://xdcscan.com/token/0xfb67c0ca9366e5ae08ffed2f00de59d7e0537dfb"}
       ]
     }
   ],
+  "known_unmeasured": {
+    "_note": "BRL-pegged tokens that exist but are NOT publicly measurable on-chain (permissioned ledgers, undisclosed contracts, or unverified deployments), plus synthetics tracked separately. Listed for completeness with sources — never given a fabricated supply figure. Verified against issuer primary sources, not the (scrambled) Fintrender report table.",
+    "reviewed": "2026-08-04",
+    "items": [
+      {"symbol": "BRLN", "issuer": "Núclea", "reason": "permissioned Núclea Chain — no public explorer; public-network access is a future plan only", "source": "https://www.nuclea.com.br/brln/"},
+      {"symbol": "BRD", "issuer": "CF Inovação (Tony Volpon)", "reason": "issuer has not disclosed chain or contract; a Solana 'BRD' from BRD Capital exists but the issuer link is unconfirmed", "source": "https://www.coindesk.com/business/2026/01/07/former-brazil-central-bank-official-unveils-real-pegged-stablecoin-with-yield-sharing"},
+      {"symbol": "BRS", "issuer": "Nora Finance", "reason": "issuer claims public Ethereum + Solana deployment but publishes no verified contract yet", "source": "https://www.norafinance.xyz/"},
+      {"symbol": "VRL", "issuer": "SmartPay", "reason": "a Polygon token named 'Virtual/VRL' exists but the issuer link is unconfirmed and on-chain activity is near zero", "source": "https://smartpay.com.vc/vrl-virtual/"},
+      {"symbol": "ABRL", "issuer": "reported: BR settlement rails", "reason": "reported XRPL→Polygon migration; no verified contract found on any authoritative source", "source": "https://static.poder360.com.br/uploads/2026/06/Fintrender-Stablecoin-Report-En.pdf"},
+      {"symbol": "DREX / Real Digital", "issuer": "Banco Central do Brasil", "reason": "permissioned CBDC pilot (Hyperledger Besu); blockchain component paused in 2025, relaunch pending", "source": "https://www.bcb.gov.br/estabilidadefinanceira/drex"},
+      {"symbol": "jBRL", "issuer": "Jarvis Network", "reason": "synthetic (USDC-collateralised via Synthereum), not reserve-backed — a different instrument from fiat-backed reais; measurable but excluded from the float league", "source": "https://polygonscan.com/token/0xf2f77fe7b8e66571e0fca7104c4d670bf1c8d722"},
+      {"symbol": "BRLP", "issuer": "PagFinance", "reason": "payments token on Solana + BNB Chain; issuer does not publish circulating supply", "source": "https://brlp.money"}
+    ]
+  },
   "official_series": [
     {"id": "ptax_usd_sell", "sgs": 1, "label": "PTAX USD (venda)",
      "api": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados",
