@@ -53,6 +53,13 @@ Static site (index.html, vanilla JS) + Python-stdlib collector + GitHub Actions 
 - Palette extended to --s7 (purple, wBRL) / --s8 (teal, BRLD). Tile chain-count is now dynamic.
 - v1.1 candidates surfaced but not added: BRLP BSC leg (0x7ce3...3f36) + Solana leg once a Solana reader exists; BRD Solana SPL (GNzvFdZ...eBZj) pending issuer disambiguation; wBRL Celo/Gnosis/BNB legs via DefiLlama remainder.
 
+## Shipped in v0.4 (Aug 5, 2026) — concentration guardrail + reconciliation
+- **Holder-concentration guardrail** (collect.py fetch_concentration): for Blockscout legs, reads top holders, classifies pool (DEX liquidity = circulating) vs wallet/contract, computes non-pool top1/top5 shares (raw values, decimals cancel, clamped ≤100% for proxy/bridged tokens whose live balances exceed reported supply). Flags: dormant (top1≥90% → leg EXCLUDED as treasury/bridge, recorded in row.excluded_legs), concentrated (top1≥25% or top5≥60% → ⚠, treat as upper bound), distributed (● green). Token-level row.distribution = concentration of its largest checked leg.
+- **cREAL moved from evm_rpc (forno.celo.org) → Celo Blockscout** (celo.blockscout.com) so it gets supply + concentration automatically (reads "distributed"; Mento now brands it "BRLm", same contract 0xe8537a…).
+- **Reconciliation panel** (registry.json `reconciliation` block → latest.json → UI #reconciliation): per token, our circulating float beside CoinGecko live market cap (row.cg_mcap, captured from simple/price include_market_cap — works from Actions) and curated issuer/press figures where there's no CG listing. Every gap explained in-row (circulating vs total supply): BRZ +~$37M dormant treasury (Stellar/Avax/BNB), BRLA CG counts ~60% Polygon vault, wBRL we read 3 of 8 chains (floor), BRLV/BRL1/cREAL match, BRLD/BBRL no CG listing → press reference. Gap <8% renders "match".
+- **◌ "distribution not yet verified" badge** in float league for tokens whose concentration we can't check (no public top-holders API: XRPL/BBRL, XDC/BRLD) — honest marker, not silent blank. Non-EVM concentration (#1) is thus transparently labeled rather than faked.
+- Offline fixtures added: cREAL celo.blockscout token+holders; CG price fixture carries usd_market_cap for all listed tokens.
+
 ## Ops notes (Aug 3, 2026)
 - CoinGecko blocks GitHub Actions IPs → pre-launch history lives in data/backfill_coingecko.json (fetched once via browser, weekly grid); collect.py merges it below launch day. backfill.py kept for reference but cannot run in Actions.
 - history.json hygiene filter in collect.py drops any pre-launch day carrying per-token "supply" (the v0 smoke-seed shape) — safe to keep permanently.
