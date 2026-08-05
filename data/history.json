@@ -874,6 +874,44 @@
      "supply": null
     }
    }
+  },
+  {
+   "date": "2026-08-05",
+   "total_usd": 144267126.63,
+   "tokens": {
+    "BRLV": {
+     "usd": 72751670.59,
+     "supply": 374002275.29
+    },
+    "BBRL": {
+     "usd": 24101854.6,
+     "supply": 123047198.3
+    },
+    "BRLD": {
+     "usd": 22998832.62,
+     "supply": 117415940.15
+    },
+    "BRZ": {
+     "usd": 14511089.73,
+     "supply": 74591421.49
+    },
+    "BRLA": {
+     "usd": 6229553.96,
+     "supply": 32005188.82
+    },
+    "BRL1": {
+     "usd": 2582270.61,
+     "supply": 13275909.54
+    },
+    "wBRL": {
+     "usd": 876033.83,
+     "supply": 4554421.29
+    },
+    "cREAL": {
+     "usd": 215820.69,
+     "supply": 1112431.9
+    }
+   }
   }
  ],
  "note": "smoke-test seed; replaced by backfill + live runs",
