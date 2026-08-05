@@ -204,7 +204,8 @@ def fetch_dexscreener(api):
 def main():
     registry = json.loads((ROOT / "config" / "registry.json").read_text())
     out = {"generated_at": now_iso(), "tokens": [], "official": {}, "dex": {}, "errors": [],
-           "known_unmeasured": registry.get("known_unmeasured", {})}
+           "known_unmeasured": registry.get("known_unmeasured", {}),
+           "reconciliation": registry.get("reconciliation", {})}
 
     # official series first — PTAX doubles as the 1:1-peg fallback price source
     for s in registry["official_series"]:
@@ -228,6 +229,9 @@ def main():
                "chains": [], "provenance": []}
         price = None
         cg_row = cg.get(t.get("coingecko_id") or "", {})
+        # live CoinGecko market cap for the reconciliation panel (total supply,
+        # treasury included) — compared against our circulating float in the UI
+        row["cg_mcap"] = cg_row.get("usd_market_cap")
         if cg_row.get("usd"):
             price = float(cg_row["usd"])
             row["provenance"].append(prov("CoinGecko (price)",
