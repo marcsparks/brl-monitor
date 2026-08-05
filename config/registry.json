@@ -11,7 +11,8 @@
     },
     {
       "symbol": "BRZ", "name": "Brazilian Digital Token", "issuer": "Transfero", "backing": "1:1 fiat",
-      "coingecko_id": "brz", "defillama_symbol": "BRZ", "color": 2,
+      "coingecko_id": "brz", "color": 2,
+      "_note": "Read directly across all major chains (DefiLlama 'symbol not found' made the old remainder silently drop ~$37M). Stellar leg excluded: issued to treasury, ~8 funded holders, dormant. Algorand + Solana legs not yet read (non-EVM) — small remainder vs CoinGecko total.",
       "chains": [
         {"chain": "Polygon", "type": "blockscout",
          "api": "https://polygon.blockscout.com/api/v2/tokens/0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc",
@@ -22,10 +23,18 @@
         {"chain": "Base", "type": "blockscout",
          "api": "https://base.blockscout.com/api/v2/tokens/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
          "explorer": "https://base.blockscout.com/token/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4"},
-        {"chain": "Solana +5 (via DefiLlama)", "type": "defillama_note",
-         "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
-         "explorer": "https://defillama.com/stablecoin/brazilian-digital",
-         "note": "Solana/BNB/Avalanche/etc circulating from DefiLlama, minus directly-read EVM chains. Stellar leg excluded: 2B issued to issuer treasury but only 8 funded holders — dormant, not circulating."}
+        {"chain": "BNB Chain", "type": "evm_rpc",
+         "rpc": "https://bsc-dataseed.binance.org", "api": "https://bsc-dataseed.binance.org",
+         "contract": "0x71be881e9c5d4465b3fff61e89c6f3651e69b5bb",
+         "explorer": "https://bscscan.com/token/0x71be881e9c5d4465b3fff61e89c6f3651e69b5bb"},
+        {"chain": "Avalanche", "type": "evm_rpc",
+         "rpc": "https://api.avax.network/ext/bc/C/rpc", "api": "https://api.avax.network/ext/bc/C/rpc",
+         "contract": "0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f",
+         "explorer": "https://snowtrace.io/token/0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f"},
+        {"chain": "Rootstock", "type": "evm_rpc",
+         "rpc": "https://public-node.rsk.co", "api": "https://public-node.rsk.co",
+         "contract": "0xe355c280131dfaf18bf1c3648aee3c396db6b5fd",
+         "explorer": "https://explorer.rootstock.io/address/0xe355c280131dfaf18bf1c3648aee3c396db6b5fd"}
       ]
     },
     {
