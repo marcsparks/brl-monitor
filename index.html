@@ -126,7 +126,7 @@
 
   <div class="panel" id="league">
     <h2>Float league — BRL stablecoins by outstanding supply <span class="tag t-complete">every mint, burn &amp; holder — complete</span></h2>
-    <div class="ps">On-chain reads from verified contracts — a <b>snapshot as of <span id="fl_asof">…</span> UTC</b> (same collection run as the tiles above). Every supply links to the public explorer — check the chain yourself. Failed sources show "—", never an invented number. The Δ column follows the period toggle in the volume league, so both tables read on the same clock.</div>
+    <div class="ps">On-chain reads from verified contracts — a <b>snapshot as of <span id="fl_asof">…</span> UTC</b> (same collection run as the tiles above). Every supply links to the public explorer — check the chain yourself. Failed sources show "—", never an invented number. The Δ column follows the period toggle in the volume league, so both tables read on the same clock. <b>Distribution check:</b> we read each token's top holders — <span class="src" style="background:var(--good-bg)">●</span> = cleanly distributed, <span class="src" style="background:var(--warn-bg);font-weight:700">⚠</span> = concentrated (a few wallets hold most supply, may include issuer treasury — treat the figure as an upper bound), and a chain leg held ~entirely by one address is excluded as dormant treasury (like BRZ's Stellar/BNB legs).</div>
     <table><thead><tr><th>Token · issuer</th><th>Share</th><th class="num">Supply<i class="src" data-tip="Outstanding token supply on-chain right now — a stock (how much exists), not a flow.&#10;Snapshot at collection time; volume (value moved) is the table above.">ⓘ</i></th><th class="num">≈USD<i class="src" data-tip="Supply × current market price (CoinGecko/explorer), or × 1/PTAX for tokens priced at the 1:1 BRL peg (labeled in the per-row ⓘ).">ⓘ</i></th><th class="num">Holders<i class="src" data-tip="Holder counts from each chain's public explorer (Blockscout holders_count), summed across directly-read chains.&#10;'—' = chains without holder-count sources (XRPL trustlines, DefiLlama-sourced) — v1.1.">ⓘ</i></th><th class="num" id="fl_dh">Δ float<i class="src" data-tip="Change in USD float over the selected period, from the daily history series below (CoinGecko market-cap backfill pre-launch, direct on-chain reads from launch).&#10;'—' = history doesn't reach that far back for this token.">ⓘ</i></th><th>Chains</th><th>Backing</th></tr></thead>
     <tbody id="league_body"><tr><td colspan="8" style="color:var(--muted)">loading…</td></tr></tbody></table>
   </div>
@@ -399,14 +399,23 @@ async function j(p){const r=await fetch(p+"?t="+Date.now());if(!r.ok)throw new E
       const ex=(t.chains&&t.chains[0]||{}).explorer;
       const tip=(t.provenance||[]).map(p=>p.source+"\n"+p.fetched_at).slice(0,3).join("\n")||"source failed this run";
       const dv=failed?null:floatDelta(t.symbol,t.usd);
+      const dist=t.distribution||{};
+      let distBadge="";
+      if(dist.flag==="concentrated"){
+        const rows=(dist.top||[]).map(h=>`${h.pct}%  ${h.kind==="pool"?"DEX pool":h.kind==="wallet"?"wallet":"contract"}  ${(h.addr||"").slice(0,12)}…`).join("\n");
+        distBadge=` <i class="src" style="background:var(--warn-bg);color:var(--ink);font-weight:700" data-tip="Top holders on ${dist.chain}:\n${rows}\n\nTop non-pool holder ${dist.top1_pct}%, top 5 = ${dist.top5_pct}%. Large holders may include issuer treasury (not verified). Figure = total on-chain supply; treat concentrated tokens as an upper bound on circulating.">⚠</i>`;
+      }else if(dist.flag==="distributed"){
+        distBadge=` <span class="src" style="background:var(--good-bg)" title="Holder distribution checked on ${dist.chain}: no single holder dominates — cleanly circulating (top holder ${dist.top1_pct}%).">●</span>`;
+      }
       const chainCell=failed
         ?'<span class="chip" style="background:var(--crit-bg)">source failed this run — retries next cycle</span>'
-        :t.chains.map(c=>`<span class="chip">${c.chain}</span>`).join(" ");
+        :t.chains.map(c=>`<span class="chip">${c.chain}</span>`).join(" ")
+          +((t.excluded_legs||[]).map(x=>` <span class="chip" title="excluded from float: ${x.top1_pct}% held by one address — treasury/bridge, not circulating">⊘ ${x.chain} treasury</span>`).join(""));
       tb.insertAdjacentHTML("beforeend",`<tr>
         <td class="tok"><span class="dot" style="background:var(--s${t.color})"></span>${t.symbol}<span class="iss">${t.issuer}</span></td>
         <td>${failed?'<span style="color:var(--muted)">—</span>':`<div class="sharebar"><div style="width:${t.share?100*t.share/maxShare:0}%;background:var(--s${t.color})"></div></div><span style="font-size:11px;color:var(--muted)">${t.share!=null?t.share.toFixed(1)+"%":"—"}</span>`}</td>
         <td class="num">${failed?"—":fmtM(t.supply)}${!failed&&ex?` <a class="verify" target="_blank" href="${ex}">verify ↗</a>`:""}</td>
-        <td class="num">${failed?"—":fmtUsd(t.usd)}<i class="src" data-tip="${tip}">ⓘ</i></td>
+        <td class="num">${failed?"—":fmtUsd(t.usd)}<i class="src" data-tip="${tip}">ⓘ</i>${distBadge}</td>
         <td class="num">${t.holders_known?t.holders.toLocaleString():"—"}</td>
         <td class="num ${dv&&dv.d>0?"pos":dv&&dv.d<0?"neg":""}">${dv==null?"—":(dv.d>=0?"+":"−")+fmtUsd(Math.abs(dv.d))+(dv.pct!=null?` <span style="font-size:11px;color:var(--muted)">(${dv.pct>=0?"+":""}${dv.pct.toFixed(0)}%)</span>`:"")}</td>
         <td>${chainCell}</td>
