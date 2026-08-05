@@ -61,12 +61,10 @@
       "symbol": "cREAL", "name": "Celo Real (rebranded BRLm)", "issuer": "Mento (Celo)", "backing": "crypto-collateralised",
       "coingecko_id": "celo-real-creal", "peg": "BRL", "color": 6,
       "chains": [
-        {"chain": "Celo", "type": "evm_rpc",
-         "rpc": "https://forno.celo.org",
-         "contract": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
-         "api": "https://forno.celo.org",
+        {"chain": "Celo", "type": "blockscout",
+         "api": "https://celo.blockscout.com/api/v2/tokens/0xe8537a3d056da446677b9e9d6c5db704eaab4787",
          "explorer": "https://celo.blockscout.com/token/0xe8537a3d056da446677b9e9d6c5db704eaab4787",
-         "note": "read directly on Celo via JSON-RPC (DefiLlama was unreliable from Actions). Mento now brands cREAL as 'BRLm' — same contract."}
+         "note": "read on Celo Blockscout (supply + holder-concentration). Mento now brands cREAL as 'BRLm' — same contract."}
       ]
     },
     {
@@ -109,6 +107,60 @@
       {"symbol": "jBRL", "issuer": "Jarvis Network", "reason": "synthetic (USDC-collateralised via Synthereum), not reserve-backed — a different instrument from fiat-backed reais; measurable but excluded from the float league", "source": "https://polygonscan.com/token/0xf2f77fe7b8e66571e0fca7104c4d670bf1c8d722"},
       {"symbol": "BRLP", "issuer": "PagFinance", "reason": "payments token on Solana + BNB Chain; issuer does not publish circulating supply", "source": "https://brlp.money"}
     ]
+  },
+  "reconciliation": {
+    "_note": "Cross-check of OUR on-chain float against third-party aggregators (CoinGecko live market cap) and issuer/press figures. Where they differ, the gap is explained — it is almost always CIRCULATING (what we publish) vs TOTAL SUPPLY (what aggregators report, treasury included). We publish the circulating, on-chain-verified number; this panel shows the others beside it so the difference is transparent, never hidden. cg_mcap is read live each run from CoinGecko; press figures are curated and dated.",
+    "reviewed": "2026-08-05",
+    "items": {
+      "BRZ": {
+        "press_usd": 15000000,
+        "press_label": "DefiLlama + Fintrender (circulating)",
+        "press_url": "https://defillama.com/stablecoin/brz",
+        "note": "Our ~$14M is CIRCULATING on Polygon + Ethereum + Base. CoinGecko's larger figure counts total supply including ~$37M of dormant treasury/bridge mints on Stellar (~2B to treasury, ~8 holders), Avalanche (verified 99.5% held by one address) and BNB Chain (identical round mint). Those are not circulating, so we exclude them; DefiLlama and Fintrender circulating agree with us at ~$14–15M."
+      },
+      "BRLA": {
+        "press_usd": 6000000,
+        "press_label": "DefiLlama (circulating)",
+        "press_url": "https://defillama.com/stablecoin/brla-digital",
+        "note": "Our ~$6M is circulating on Polygon (plus DefiLlama's small Celo/Gnosis/Moonbeam remainder). CoinGecko's larger figure counts total supply, ~60% of which sits locked in a Polygon bridge/vault contract (treasury, not in circulation). Our number matches DefiLlama circulating."
+      },
+      "wBRL": {
+        "press_usd": null,
+        "press_label": "CoinGecko (all chains)",
+        "press_url": "https://www.coingecko.com/en/coins/brazilian-real",
+        "note": "wBRL is deployed on the same contract across 8 EVM chains; we read Base + Polygon + Ethereum DIRECTLY, so our figure is a verified FLOOR, not the full total. CoinGecko aggregates all chains, so its number is higher. We add chains as reliable direct reads become available rather than trusting an unaudited aggregate."
+      },
+      "BRLV": {
+        "press_usd": null,
+        "press_label": "CoinGecko",
+        "press_url": "https://www.coingecko.com/en/coins/crown-brlv",
+        "note": "Our on-chain float on Base matches CoinGecko within rounding — single chain, single verified contract, no treasury gap."
+      },
+      "BRL1": {
+        "press_usd": null,
+        "press_label": "CoinGecko",
+        "press_url": "https://www.coingecko.com/en/coins/brl1",
+        "note": "Single-chain (Polygon) read matches CoinGecko within rounding."
+      },
+      "cREAL": {
+        "press_usd": null,
+        "press_label": "CoinGecko",
+        "press_url": "https://www.coingecko.com/en/coins/celo-real-creal",
+        "note": "Read directly on Celo Blockscout (Mento now brands it 'BRLm', same contract). Matches CoinGecko; supply is small after Mento wound the reserve down."
+      },
+      "BRLD": {
+        "press_usd": 23000000,
+        "press_label": "Liqi (issuer) via XDC explorer",
+        "press_url": "https://xdcscan.com/token/0xfb67c0ca9366e5ae08ffed2f00de59d7e0537dfb",
+        "note": "No CoinGecko listing. We read total supply directly on XDC Network via JSON-RPC; the reference figure is the issuer/explorer number. Holder concentration is not yet verified (no public XDC holders API reachable), so the whole supply is shown but flagged unverified for distribution."
+      },
+      "BBRL": {
+        "press_usd": null,
+        "press_label": "XRPL issuer obligations (direct)",
+        "press_url": "https://xrpscan.com/account/rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt",
+        "note": "No CoinGecko listing. We read issued obligations directly from the Braza XRPL issuer account, priced 1:1 via BCB PTAX. Holder concentration not yet verified on XRPL, so distribution is shown unverified."
+      }
+    }
   },
   "official_series": [
     {"id": "ptax_usd_sell", "sgs": 1, "label": "PTAX USD (venda)",
