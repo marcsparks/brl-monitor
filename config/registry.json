@@ -62,12 +62,14 @@
     },
     {
       "symbol": "cREAL", "name": "Celo Real (rebranded BRLm)", "issuer": "Mento (Celo)", "backing": "crypto-collateralised",
-      "coingecko_id": "celo-real-creal", "defillama_symbol": "CREAL", "color": 6,
+      "coingecko_id": "celo-real-creal", "peg": "BRL", "color": 6,
       "chains": [
-        {"chain": "Celo (via DefiLlama)", "type": "defillama_note",
-         "api": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
-         "explorer": "https://defillama.com/stablecoin/celo-brazilian-real",
-         "note": "supply taken from DefiLlama; verify Celo contract in v1.1. Mento now brands cREAL as 'BRLm' — same contract 0xe8537a3d056da446677b9e9d6c5db704eaab4787."}
+        {"chain": "Celo", "type": "evm_rpc",
+         "rpc": "https://forno.celo.org",
+         "contract": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
+         "api": "https://forno.celo.org",
+         "explorer": "https://celo.blockscout.com/token/0xe8537a3d056da446677b9e9d6c5db704eaab4787",
+         "note": "read directly on Celo via JSON-RPC (DefiLlama was unreliable from Actions). Mento now brands cREAL as 'BRLm' — same contract."}
       ]
     },
     {
