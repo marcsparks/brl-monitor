@@ -51,10 +51,68 @@ def prov(source, url):
 def fetch_blockscout(api):
     j = get_json(api)
     dec = int(j.get("decimals") or 18)
-    supply = int(j["total_supply"]) / 10**dec
+    supply_raw = int(j["total_supply"])
+    supply = supply_raw / 10**dec
     price = float(j["exchange_rate"]) if j.get("exchange_rate") else None
     holders = int(j["holders_count"]) if j.get("holders_count") else None
-    return {"supply": supply, "holders": holders, "price_usd": price}
+    return {"supply": supply, "supply_raw": supply_raw, "holders": holders, "price_usd": price}
+
+# ---- holder-concentration guardrail: auto-detect treasury/dormant mints ----
+# Circulating vs treasury is the hardest completeness problem (BRZ/Stellar, Avax
+# 99.5%-one-holder). For Blockscout legs we read the top holders and flag/exclude.
+
+_POOL_HINTS = ("dex", "pool", "uniswap", "aerodrome", "curve", "pancake", "router",
+               "balancer", "sushi", "velodrome", "gauge", "lending", "aave", "comet")
+
+def _holder_kind(a):
+    """pool = liquidity (counts as circulating), wallet = EOA, contract = other."""
+    tags = []
+    for t in (a.get("public_tags") or []):
+        tags.append(str(t))
+    md = a.get("metadata") or {}
+    for t in (md.get("tags") or []):
+        tags.append(str(t.get("slug", "")) + " " + str(t.get("name", "")))
+    if a.get("name"):
+        tags.append(str(a["name"]))
+    lbl = " ".join(tags).lower()
+    if any(h in lbl for h in _POOL_HINTS):
+        return "pool"
+    return "contract" if a.get("is_contract") else "wallet"
+
+def fetch_concentration(api_base, supply_raw, top=25):
+    """Top holders for a Blockscout token → concentration metrics.
+    Shares use raw values so token decimals cancel. Best-effort: any failure
+    returns None (concentration simply 'unchecked'), never breaks the supply read."""
+    if not supply_raw:
+        return None
+    j = get_json(api_base + "/holders")
+    ranked = []
+    for it in j.get("items", [])[:top]:
+        a = it.get("address") or {}
+        try:
+            v = int(it.get("value") or 0)
+        except (TypeError, ValueError):
+            v = 0
+        ranked.append({"addr": a.get("hash"), "v": v, "kind": _holder_kind(a)})
+    ranked.sort(key=lambda h: -h["v"])
+    if not ranked:
+        return None
+    share = lambda v: v / supply_raw
+    nonpool = [h for h in ranked if h["kind"] != "pool"]  # exclude DEX liquidity
+    top1 = share(ranked[0]["v"])
+    top1_np = share(nonpool[0]["v"]) if nonpool else 0.0
+    top5_np = share(sum(h["v"] for h in nonpool[:5]))
+    if top1_np >= 0.90:
+        flag = "dormant"          # one address ~owns it → treasury/bridge, not circulating
+    elif top1_np >= 0.25 or top5_np >= 0.60:
+        flag = "concentrated"     # ambiguous: may include issuer treasury — flag, don't guess
+    else:
+        flag = "distributed"
+    return {"flag": flag, "top1_pct": round(100 * top1, 1),
+            "top1_nonpool_pct": round(100 * top1_np, 1),
+            "top5_nonpool_pct": round(100 * top5_np, 1),
+            "top": [{"addr": h["addr"], "pct": round(100 * share(h["v"]), 1), "kind": h["kind"]}
+                    for h in ranked[:5]]}
 
 def fetch_xrpscan(api, currency_hex_prefix):
     j = get_json(api)  # [{"currency": "4242524C...", "value": "41262222.97"}]
@@ -194,8 +252,25 @@ def main():
                     r["supply"] = max(0.0, r["supply"] - counted)
                 else:
                     continue
-                row["chains"].append({"chain": c["chain"], "supply": round(r["supply"], 2),
-                                      "explorer": c["explorer"]})
+                # holder-concentration check (Blockscout legs only, best-effort)
+                conc = None
+                if c["type"] == "blockscout" and r.get("supply_raw"):
+                    try:
+                        conc = fetch_concentration(c["api"], r["supply_raw"])
+                    except Exception:  # noqa: BLE001
+                        conc = None
+                # a leg that is ~one-holder dormant (treasury/bridge) is NOT
+                # circulating — exclude it, exactly like the Stellar/Avax legs
+                if conc and conc["flag"] == "dormant":
+                    out["errors"].append({"source": f'{t["symbol"]}/{c["chain"]}',
+                                          "error": f'excluded: dormant leg, top holder {conc["top1_nonpool_pct"]}% (treasury/bridge, not circulating)'})
+                    row.setdefault("excluded_legs", []).append(
+                        {"chain": c["chain"], "reason": "dormant", "top1_pct": conc["top1_nonpool_pct"]})
+                    continue
+                leg = {"chain": c["chain"], "supply": round(r["supply"], 2), "explorer": c["explorer"]}
+                if conc:
+                    leg["concentration"] = conc
+                row["chains"].append(leg)
                 row["supply"] += r["supply"]
                 if r.get("holders"):
                     row["holders"] += r["holders"]
@@ -222,6 +297,16 @@ def main():
         row["supply"] = round(row["supply"], 2)
         row["price_usd"] = price
         row["usd"] = round(row["supply"] * price, 2) if price else None
+        # token-level distribution signal = concentration of its largest scanned leg
+        legs_c = [c for c in row["chains"] if c.get("concentration")]
+        if legs_c:
+            dom = max(legs_c, key=lambda c: c["supply"])
+            cc = dom["concentration"]
+            row["distribution"] = {"flag": cc["flag"], "chain": dom["chain"],
+                                   "top1_pct": cc["top1_nonpool_pct"], "top5_pct": cc["top5_nonpool_pct"],
+                                   "top": cc["top"], "explorer": dom["explorer"]}
+        else:
+            row["distribution"] = {"flag": "unchecked"}
         out["tokens"].append(row)
 
     total = sum(r["usd"] for r in out["tokens"] if r["usd"])
