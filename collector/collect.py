@@ -97,11 +97,14 @@ def fetch_concentration(api_base, supply_raw, top=25):
     ranked.sort(key=lambda h: -h["v"])
     if not ranked:
         return None
-    share = lambda v: v / supply_raw
+    # clamp: some tokens report a total_supply smaller than the sum of live
+    # balances (proxy/bridged/rebasing) — shares can exceed 100%. Cap for
+    # display and flag it, rather than publish a nonsensical >100% figure.
+    share = lambda v: min(1.0, v / supply_raw)
     nonpool = [h for h in ranked if h["kind"] != "pool"]  # exclude DEX liquidity
     top1 = share(ranked[0]["v"])
     top1_np = share(nonpool[0]["v"]) if nonpool else 0.0
-    top5_np = share(sum(h["v"] for h in nonpool[:5]))
+    top5_np = min(1.0, sum(h["v"] for h in nonpool[:5]) / supply_raw)
     if top1_np >= 0.90:
         flag = "dormant"          # one address ~owns it → treasury/bridge, not circulating
     elif top1_np >= 0.25 or top5_np >= 0.60:
