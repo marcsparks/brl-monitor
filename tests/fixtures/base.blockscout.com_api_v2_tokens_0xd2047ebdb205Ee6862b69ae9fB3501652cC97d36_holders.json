@@ -1,0 +1,86 @@
+{
+ "items": [
+  {
+   "address": {
+    "hash": "0x7e99550BE3C12cdD3a3a9c2be735bDd91FD6A3a5",
+    "is_contract": false,
+    "public_tags": [],
+    "metadata": {
+     "tags": []
+    }
+   },
+   "value": "105956900000000000000000000",
+   "token_id": null
+  },
+  {
+   "address": {
+    "hash": "0x42f2943bAFffe2D581F89D24763b77752cd8eb70",
+    "is_contract": false,
+    "public_tags": [],
+    "metadata": {
+     "tags": []
+    }
+   },
+   "value": "100000000000000000000000000",
+   "token_id": null
+  },
+  {
+   "address": {
+    "hash": "0xa415fcEF5212F549f51847c17702E11D93dEd8c8",
+    "is_contract": false,
+    "public_tags": [],
+    "metadata": {
+     "tags": []
+    }
+   },
+   "value": "45752093000000000000000000",
+   "token_id": null
+  },
+  {
+   "address": {
+    "hash": "0xBD334CC08A2bab9aF183E54F0B217d7Ee9371BB6",
+    "is_contract": false,
+    "public_tags": [],
+    "metadata": {
+     "tags": []
+    }
+   },
+   "value": "10000000000000000000000000",
+   "token_id": null
+  },
+  {
+   "address": {
+    "hash": "0x498581fF718922c3f8e6A244956aF099B2652b2b",
+    "is_contract": true,
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "slug": "uniswap-v4-pool-manager",
+       "name": "Uniswap V4: Pool Manager"
+      },
+      {
+       "slug": "dex",
+       "name": "DEX"
+      }
+     ]
+    },
+    "name": "PoolManager"
+   },
+   "value": "63618000000000000000000",
+   "token_id": null
+  },
+  {
+   "address": {
+    "hash": "0x0a215E74ccB8285f39b4c3dA582d5adD8c704c91",
+    "is_contract": false,
+    "public_tags": [],
+    "metadata": {
+     "tags": []
+    }
+   },
+   "value": "2038250000000000000000000",
+   "token_id": null
+  }
+ ]
+}
