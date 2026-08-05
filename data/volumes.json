@@ -2,15 +2,15 @@
  "daily": {
   "BRLV": {
    "2026-08-03": {
-    "mint": 21465.87,
-    "burn": 3318944.0,
-    "transfer": 2804.44,
+    "mint": 21460.81,
+    "burn": 3318162.0,
+    "transfer": 2803.78,
     "count": 14,
     "_chains": {
      "Base": {
-      "mint": 21465.87,
-      "burn": 3318944.0,
-      "transfer": 2804.44,
+      "mint": 21460.81,
+      "burn": 3318162.0,
+      "transfer": 2803.78,
       "count": 14
      }
     }
@@ -18,13 +18,13 @@
    "2026-08-02": {
     "mint": 1.11,
     "burn": 0.0,
-    "transfer": 390.46,
+    "transfer": 390.37,
     "count": 2,
     "_chains": {
      "Base": {
       "mint": 1.11,
       "burn": 0.0,
-      "transfer": 390.46,
+      "transfer": 390.37,
       "count": 2
      }
     }
@@ -2858,39 +2858,39 @@
     }
    },
    "2026-08-04": {
-    "mint": 42858.83,
+    "mint": 42848.73,
     "burn": 0.0,
-    "transfer": 36688.11,
+    "transfer": 36679.47,
     "count": 46,
     "_chains": {
      "Base": {
-      "mint": 42858.83,
+      "mint": 42848.73,
       "burn": 0.0,
-      "transfer": 36688.11,
+      "transfer": 36679.47,
       "count": 46
      }
     }
    },
    "2026-08-05": {
-    "mint": 0.21,
+    "mint": 195.4,
     "burn": 0.0,
-    "transfer": 12672.44,
-    "count": 11,
+    "transfer": 14122.04,
+    "count": 16,
     "_chains": {
      "Base": {
-      "mint": 0.21,
+      "mint": 195.4,
       "burn": 0.0,
-      "transfer": 12672.44,
-      "count": 11
+      "transfer": 14122.04,
+      "count": 16
      }
     }
    }
   },
   "BRZ": {
    "2026-08-03": {
-    "mint": 11776.36,
+    "mint": 11791.06,
     "burn": 1880.97,
-    "transfer": 70442.58,
+    "transfer": 70595.94,
     "count": 720,
     "_chains": {
      "Polygon": {
@@ -2900,9 +2900,9 @@
       "count": 538
      },
      "Base": {
-      "mint": 5305.76,
+      "mint": 5320.46,
       "burn": 0.0,
-      "transfer": 55365.16,
+      "transfer": 55518.52,
       "count": 182
      }
     }
@@ -3662,13 +3662,13 @@
    "2026-08-02": {
     "mint": 61276.86,
     "burn": 6024.07,
-    "transfer": 399179.31,
+    "transfer": 399202.01,
     "count": 5510,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 8194.76,
+      "transfer": 8217.46,
       "count": 21
      },
      "Polygon": {
@@ -6356,9 +6356,9 @@
     }
    },
    "2026-08-04": {
-    "mint": 30673.9,
+    "mint": 30685.13,
     "burn": 14816.2,
-    "transfer": 304940.74,
+    "transfer": 305565.66,
     "count": 1971,
     "_chains": {
      "Polygon": {
@@ -6370,34 +6370,34 @@
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 193963.58,
+      "transfer": 194500.87,
       "count": 4
      },
      "Base": {
-      "mint": 4057.33,
+      "mint": 4068.56,
       "burn": 0.0,
-      "transfer": 31633.85,
+      "transfer": 31721.48,
       "count": 83
      }
     }
    },
    "2026-08-05": {
-    "mint": 21089.52,
-    "burn": 74914.18,
-    "transfer": 1909533.8,
-    "count": 2139,
+    "mint": 21792.99,
+    "burn": 73071.26,
+    "transfer": 909301.1,
+    "count": 2188,
     "_chains": {
      "Polygon": {
-      "mint": 15587.43,
-      "burn": 74462.97,
-      "transfer": 1849295.74,
+      "mint": 15974.21,
+      "burn": 71013.28,
+      "transfer": 843224.66,
       "count": 2000
      },
      "Base": {
-      "mint": 5502.09,
-      "burn": 451.21,
-      "transfer": 60238.06,
-      "count": 139
+      "mint": 5818.78,
+      "burn": 2057.98,
+      "transfer": 66076.44,
+      "count": 188
      }
     }
    }
@@ -6460,16 +6460,16 @@
     }
    },
    "2026-08-04": {
-    "mint": 22960.91,
-    "burn": 32316.16,
-    "transfer": 195639.65,
-    "count": 810,
+    "mint": 14100.64,
+    "burn": 23448.06,
+    "transfer": 124963.15,
+    "count": 504,
     "_chains": {
      "Polygon": {
-      "mint": 22960.91,
-      "burn": 32316.16,
-      "transfer": 195639.65,
-      "count": 810
+      "mint": 14100.64,
+      "burn": 23448.06,
+      "transfer": 124963.15,
+      "count": 504
      }
     }
    },
@@ -6600,16 +6600,16 @@
     }
    },
    "2026-08-05": {
-    "mint": 24285.43,
-    "burn": 49766.56,
-    "transfer": 447946.22,
-    "count": 1190,
+    "mint": 35009.6,
+    "burn": 76703.62,
+    "transfer": 565723.61,
+    "count": 1496,
     "_chains": {
      "Polygon": {
-      "mint": 24285.43,
-      "burn": 49766.56,
-      "transfer": 447946.22,
-      "count": 1190
+      "mint": 35009.6,
+      "burn": 76703.62,
+      "transfer": 565723.61,
+      "count": 1496
      }
     }
    }
@@ -6618,13 +6618,13 @@
    "2026-08-03": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 2527917.3,
+    "transfer": 2522473.72,
     "count": 368,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 2527917.3,
+      "transfer": 2522473.72,
       "count": 368
      }
     }
@@ -6632,13 +6632,13 @@
    "2026-08-02": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 437985.64,
+    "transfer": 437042.48,
     "count": 168,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 437985.64,
+      "transfer": 437042.48,
       "count": 168
      }
     }
@@ -7176,15 +7176,15 @@
     }
    },
    "2026-08-04": {
-    "mint": 107528.3,
+    "mint": 107296.75,
     "burn": 0.0,
-    "transfer": 2537252.43,
+    "transfer": 2531788.74,
     "count": 290,
     "_chains": {
      "Polygon": {
-      "mint": 107528.3,
+      "mint": 107296.75,
       "burn": 0.0,
-      "transfer": 2537252.43,
+      "transfer": 2531788.74,
       "count": 290
      }
     }
@@ -9850,69 +9850,69 @@
     }
    },
    "2026-08-05": {
-    "mint": 0.0,
-    "burn": 137839.16,
-    "transfer": 911576.64,
-    "count": 98,
+    "mint": 78034.0,
+    "burn": 186588.27,
+    "transfer": 1242293.49,
+    "count": 141,
     "_chains": {
      "Polygon": {
-      "mint": 0.0,
-      "burn": 137839.16,
-      "transfer": 911576.64,
-      "count": 98
+      "mint": 78034.0,
+      "burn": 186588.27,
+      "transfer": 1242293.49,
+      "count": 141
      }
     }
    }
   },
   "wBRL": {
    "2026-08-04": {
-    "mint": 38454.2,
+    "mint": 38747.0,
     "burn": 0.0,
-    "transfer": 105943.14,
+    "transfer": 106749.82,
     "count": 37,
     "_chains": {
      "Base": {
-      "mint": 38454.2,
+      "mint": 38747.0,
       "burn": 0.0,
-      "transfer": 9.32,
+      "transfer": 9.39,
       "count": 22
      },
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 68.45,
+      "transfer": 68.97,
       "count": 4
      },
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 105865.37,
+      "transfer": 106671.46,
       "count": 11
      }
     }
    },
    "2026-08-03": {
     "mint": 0.0,
-    "burn": 9.6,
-    "transfer": 266.43,
+    "burn": 9.67,
+    "transfer": 268.46,
     "count": 49,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 39.01,
+      "transfer": 39.31,
       "count": 33
      },
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 19.61,
+      "transfer": 19.76,
       "count": 5
      },
      "Ethereum": {
       "mint": 0.0,
-      "burn": 9.6,
-      "transfer": 207.81,
+      "burn": 9.67,
+      "transfer": 209.39,
       "count": 11
      }
     }
@@ -9920,19 +9920,19 @@
    "2026-08-02": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 129.5,
+    "transfer": 130.49,
     "count": 29,
     "_chains": {
      "Base": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 13.17,
+      "transfer": 13.27,
       "count": 21
      },
      "Ethereum": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 116.33,
+      "transfer": 117.22,
       "count": 8
      }
     }
@@ -9966,13 +9966,19 @@
    "2026-08-05": {
     "mint": 0.0,
     "burn": 0.0,
-    "transfer": 18.89,
-    "count": 4,
+    "transfer": 107.88,
+    "count": 10,
     "_chains": {
      "Polygon": {
       "mint": 0.0,
       "burn": 0.0,
-      "transfer": 18.89,
+      "transfer": 19.09,
+      "count": 6
+     },
+     "Base": {
+      "mint": 0.0,
+      "burn": 0.0,
+      "transfer": 88.79,
       "count": 4
      }
     }
@@ -10543,7 +10549,7 @@
    "note": "no EVM chains scanned yet (XRPL/DefiLlama-sourced) \u2014 use third-party anchor, never a guess"
   }
  },
- "generated_at": "2026-08-05T12:37:19Z",
+ "generated_at": "2026-08-05T13:54:36Z",
  "errors": [],
  "method": "Blockscout token-transfer pages per contract; type=token_minting/burning or zero-address => mint/burn, else transfer; USD at current price; events >= $100,000; page cap 40/chain/run; incremental 3-day rescan window."
 }

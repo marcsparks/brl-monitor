@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-05T12:34:19Z",
+ "generated_at": "2026-08-05T13:51:24Z",
  "tokens": [
   {
    "symbol": "BRLV",
@@ -7,14 +7,14 @@
    "issuer": "Crown",
    "backing": "Brazilian govt bonds, yield-shared",
    "color": 1,
-   "supply": 374002276.37,
-   "usd": 73017212.42,
+   "supply": 374003276.37,
+   "usd": 73000203.5,
    "holders": 96,
    "holders_known": true,
    "chains": [
     {
      "chain": "Base",
-     "supply": 374002276.37,
+     "supply": 374003276.37,
      "explorer": "https://base.blockscout.com/token/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36"
     }
    ],
@@ -22,16 +22,16 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/crown-brlv",
-     "fetched_at": "2026-08-05T12:34:20Z"
+     "fetched_at": "2026-08-05T13:51:26Z"
     },
     {
      "source": "blockscout",
      "url": "https://base.blockscout.com/api/v2/tokens/0xd2047ebdb205Ee6862b69ae9fB3501652cC97d36",
-     "fetched_at": "2026-08-05T12:34:20Z"
+     "fetched_at": "2026-08-05T13:51:26Z"
     }
    ],
-   "price_usd": 0.195232,
-   "share": 56.33,
+   "price_usd": 0.195186,
+   "share": 56.28,
    "net_issuance_7d": null,
    "net_issuance_30d": null
   },
@@ -41,14 +41,14 @@
    "issuer": "Liqi",
    "backing": "BR Treasury securities (Selic)",
    "color": 8,
-   "supply": 118513278.44,
-   "usd": 23213773.62,
+   "supply": 118470004.21,
+   "usd": 23205297.28,
    "holders": 0,
    "holders_known": false,
    "chains": [
     {
      "chain": "XDC Network",
-     "supply": 118513278.44,
+     "supply": 118470004.21,
      "explorer": "https://xdcscan.com/token/0xfb67c0ca9366e5ae08ffed2f00de59d7e0537dfb"
     }
    ],
@@ -56,16 +56,16 @@
     {
      "source": "evm_rpc",
      "url": "https://rpc.ankr.com/xdc",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:29Z"
     },
     {
      "source": "1:1 BRL peg x BCB PTAX (no market price source)",
      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:29Z"
     }
    ],
    "price_usd": 0.19587487512976712,
-   "share": 17.91,
+   "share": 17.89,
    "net_issuance_7d": null,
    "net_issuance_30d": null
   },
@@ -75,14 +75,14 @@
    "issuer": "Transfero",
    "backing": "1:1 fiat",
    "color": 2,
-   "supply": 74333188.8,
-   "usd": 14383397.7,
+   "supply": 74207365.1,
+   "usd": 14398826.09,
    "holders": 6569,
    "holders_known": true,
    "chains": [
     {
      "chain": "Polygon",
-     "supply": 51171978.56,
+     "supply": 51051323.67,
      "explorer": "https://polygon.blockscout.com/token/0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc"
     },
     {
@@ -92,7 +92,7 @@
     },
     {
      "chain": "Base",
-     "supply": 9156210.24,
+     "supply": 9151041.43,
      "explorer": "https://base.blockscout.com/token/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4"
     }
    ],
@@ -100,25 +100,25 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/brz",
-     "fetched_at": "2026-08-05T12:34:20Z"
+     "fetched_at": "2026-08-05T13:51:26Z"
     },
     {
      "source": "blockscout",
      "url": "https://polygon.blockscout.com/api/v2/tokens/0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     },
     {
      "source": "blockscout",
      "url": "https://eth.blockscout.com/api/v2/tokens/0x01d33FD36ec67c6ada32cf36b31e88ee190b1839",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     },
     {
      "source": "blockscout",
      "url": "https://base.blockscout.com/api/v2/tokens/0xE9185Ee218cae427aF7B9764A011bb89FeA761B4",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     }
    ],
-   "price_usd": 0.193499,
+   "price_usd": 0.194035,
    "share": 11.1,
    "net_issuance_7d": null,
    "net_issuance_30d": null
@@ -129,14 +129,14 @@
    "issuer": "Braza Bank",
    "backing": "1:1 fiat (FX bank)",
    "color": 4,
-   "supply": 48029064.01,
-   "usd": 9407686.92,
+   "supply": 48131071.71,
+   "usd": 9427667.66,
    "holders": 0,
    "holders_known": false,
    "chains": [
     {
      "chain": "XRPL",
-     "supply": 48029064.01,
+     "supply": 48131071.71,
      "explorer": "https://xrpscan.com/account/rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt"
     }
    ],
@@ -144,16 +144,16 @@
     {
      "source": "xrpscan",
      "url": "https://api.xrpscan.com/api/v1/account/rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt/obligations",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "1:1 BRL peg x BCB PTAX (no market price source)",
      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     }
    ],
    "price_usd": 0.19587487512976712,
-   "share": 7.26,
+   "share": 7.27,
    "net_issuance_7d": null,
    "net_issuance_30d": null
   },
@@ -163,19 +163,19 @@
    "issuer": "Avenia",
    "backing": "1:1 fiat",
    "color": 3,
-   "supply": 31136174.32,
-   "usd": 6048419.81,
+   "supply": 31329678.78,
+   "usd": 6095439.64,
    "holders": 19183,
    "holders_known": true,
    "chains": [
     {
      "chain": "Polygon",
-     "supply": 18176386.81,
+     "supply": 18094758.34,
      "explorer": "https://polygon.blockscout.com/token/0xE6A537a407488807F0bbeb0038B79004f19DDDFb"
     },
     {
      "chain": "Celo +2 (via DefiLlama)",
-     "supply": 12959787.52,
+     "supply": 13234920.45,
      "explorer": "https://defillama.com/stablecoin/brla-digital"
     }
    ],
@@ -183,21 +183,21 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/brla-digital-brla",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     },
     {
      "source": "blockscout",
      "url": "https://polygon.blockscout.com/api/v2/tokens/0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     },
     {
      "source": "defillama_note",
      "url": "https://stablecoins.llama.fi/stablecoins?includePrices=true",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:27Z"
     }
    ],
-   "price_usd": 0.194257,
-   "share": 4.67,
+   "price_usd": 0.194558,
+   "share": 4.7,
    "net_issuance_7d": null,
    "net_issuance_30d": null
   },
@@ -207,14 +207,14 @@
    "issuer": "MB \u00b7 Bitso \u00b7 Foxbit \u00b7 Cainvest",
    "backing": "1:1 fiat, consortium",
    "color": 5,
-   "supply": 12570871.54,
-   "usd": 2457680.81,
+   "supply": 12719463.54,
+   "usd": 2481376.54,
    "holders": 262,
    "holders_known": true,
    "chains": [
     {
      "chain": "Polygon",
-     "supply": 12570871.54,
+     "supply": 12719463.54,
      "explorer": "https://polygon.blockscout.com/token/0x5c067c80c00ecd2345b05e83a3e758ef799c40b5"
     }
    ],
@@ -222,16 +222,16 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/brl1",
-     "fetched_at": "2026-08-05T12:34:21Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "blockscout",
      "url": "https://polygon.blockscout.com/api/v2/tokens/0x5c067c80c00ecd2345b05e83a3e758ef799c40b5",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     }
    ],
-   "price_usd": 0.195506,
-   "share": 1.9,
+   "price_usd": 0.195085,
+   "share": 1.91,
    "net_issuance_7d": null,
    "net_issuance_30d": null
   },
@@ -242,7 +242,7 @@
    "backing": "1:1 BRL bank deposits",
    "color": 7,
    "supply": 4554421.29,
-   "usd": 875683.14,
+   "usd": 882350.81,
    "holders": 257,
    "holders_known": true,
    "chains": [
@@ -266,25 +266,25 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/brazilian-real",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "blockscout",
      "url": "https://base.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "blockscout",
      "url": "https://polygon.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "blockscout",
      "url": "https://eth.blockscout.com/api/v2/tokens/0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:29Z"
     }
    ],
-   "price_usd": 0.192271,
+   "price_usd": 0.193735,
    "share": 0.68,
    "net_issuance_7d": null,
    "net_issuance_30d": null
@@ -296,7 +296,7 @@
    "backing": "crypto-collateralised",
    "color": 6,
    "supply": 1100838.97,
-   "usd": 213814.85,
+   "usd": 213813.75,
    "holders": 0,
    "holders_known": false,
    "chains": [
@@ -310,15 +310,15 @@
     {
      "source": "CoinGecko (price)",
      "url": "https://www.coingecko.com/en/coins/celo-real-creal",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     },
     {
      "source": "evm_rpc",
      "url": "https://forno.celo.org",
-     "fetched_at": "2026-08-05T12:34:22Z"
+     "fetched_at": "2026-08-05T13:51:28Z"
     }
    ],
-   "price_usd": 0.194229,
+   "price_usd": 0.194228,
    "share": 0.16,
    "net_issuance_7d": null,
    "net_issuance_30d": null
@@ -331,7 +331,7 @@
    "label": "PTAX USD (venda)",
    "source": "BCB SGS 1",
    "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados",
-   "fetched_at": "2026-08-05T12:34:20Z"
+   "fetched_at": "2026-08-05T13:51:25Z"
   },
   "selic_target": {
    "value": 14.25,
@@ -339,7 +339,7 @@
    "label": "Selic target",
    "source": "BCB SGS 432",
    "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados",
-   "fetched_at": "2026-08-05T12:34:20Z"
+   "fetched_at": "2026-08-05T13:51:25Z"
   },
   "cdi_daily": {
    "value": 0.052531,
@@ -347,29 +347,29 @@
    "label": "CDI (daily)",
    "source": "BCB SGS 12",
    "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados",
-   "fetched_at": "2026-08-05T12:34:20Z"
+   "fetched_at": "2026-08-05T13:51:26Z"
   }
  },
  "dex": {
   "brz_usdt0_polygon": {
-   "price_usd": 0.1934,
-   "liquidity_usd": 85214.26,
-   "vol24h_usd": 363033.56,
-   "max_ticket_1pct_usd": 426.0,
+   "price_usd": 0.1943,
+   "liquidity_usd": 85614.84,
+   "vol24h_usd": 457735.66,
+   "max_ticket_1pct_usd": 428.0,
    "label": "BRZ/USDT0 \u00b7 Uniswap \u00b7 Polygon",
    "source": "DexScreener",
    "url": "https://dexscreener.com/polygon/0x4Af62a93775C093Af3e32949EF23C9a323d20817",
-   "fetched_at": "2026-08-05T12:34:23Z"
+   "fetched_at": "2026-08-05T13:51:29Z"
   },
   "brla_usdc_polygon": {
-   "price_usd": 0.1942,
-   "liquidity_usd": 127505.04,
-   "vol24h_usd": 151030.8,
+   "price_usd": 0.1944,
+   "liquidity_usd": 127621.56,
+   "vol24h_usd": 157304.68,
    "max_ticket_1pct_usd": 638.0,
    "label": "BRLA/USDC \u00b7 Uniswap V3 \u00b7 Polygon",
    "source": "DexScreener",
    "url": "https://dexscreener.com/polygon/0x0E7754127dEDd4097be750825Dbb4669bc32c956",
-   "fetched_at": "2026-08-05T12:34:23Z"
+   "fetched_at": "2026-08-05T13:51:29Z"
   }
  },
  "errors": [],
@@ -427,5 +427,5 @@
    }
   ]
  },
- "total_onchain_brl_usd": 129617669.27
+ "total_onchain_brl_usd": 129704975.27
 }
